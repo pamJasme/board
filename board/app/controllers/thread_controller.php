@@ -50,13 +50,14 @@ class ThreadController extends AppController
 		$thread = new Thread;
 		$comment = new Comment;
 		$page = Param::get('page_next', 'create');
+		$username = $_SESSION['username'];
 
 		switch ($page) {
 			case 'create':
 					break;
 			case 'create_end';
 				$thread->title = Param::get('title');
-				$comment->username = Param::get('username');
+				$comment->username = $username;
 				$comment->body = Param::Get('body');
 				try{
 					$thread->create($comment);

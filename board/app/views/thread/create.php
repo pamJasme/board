@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 $username = $_SESSION['username'] ?>
 <h1>Create a thread</h1>
                 

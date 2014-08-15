@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <h2><?php eh($thread->title) ?></h2>
 
 <?php if ($comment->hasError()): ?>
@@ -32,7 +33,7 @@
 
 <form class="well" method="post" action="<?php eh(url('thread/write')) ?>">
   <label>Your name</label>
-  <input type="text" class="span2" name="username"  value="<?php eh(Param::get('username')) ?>">
+  <input type="text" class="span2" name="username"  value="<?php $_SESSION['username'];?>">
   <label>Comment</label>
   <textarea name="body"><?php eh(Param::get('body')) ?></textarea>
   <br />

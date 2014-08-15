@@ -16,7 +16,8 @@ class UserController extends AppController
 		{	
 			$obj = $registered_user->userValidate($username, $password);
 			$_SESSION['username'] = $obj->username;
-			header('location: thread/index');
+			$_SESSION['password'] = $obj->password;
+			
 			
 		}
 	}

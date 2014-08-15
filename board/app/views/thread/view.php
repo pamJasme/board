@@ -1,4 +1,4 @@
-<h1><?php eh($thread->title) ?></h1>
+<h1><?php eh($thread->title); session_start(); ?></h1>
 
 <?php foreach ($comments as $k => $v): ?>
 <div class="comment">
@@ -14,7 +14,7 @@
 <hr>
 <form class="well" method="post" action="<?php eh(url('thread/write')) ?>">
 	<label>Your name</label>
-	<input type="text" class="span2" name="username" value="<?php eh(Param::get('username'))?>">
+	<input type="text" class="span2" name="username" value="<?php echo $_SESSION['username'];?>" disabled>
 	<label>Comment</label>
 	<textarea name="body"><?php eh(Param::get('body'))?></textarea>
 	<br/>
