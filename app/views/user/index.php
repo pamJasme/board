@@ -8,7 +8,7 @@
 			<td><label>Username </label></td><td><input type='text' name='login_name' value='<?php eh(Param::get('login_name'));?>'></td></tr>
 			<tr><td><label>Password </label></td><td><input type='password' name='login_pword' value='<?php eh(Param::get('login_pword'));?>'></td></tr>
 			<tr><td><button type="submit" style='width:100%'>Login</td>
-			<td><center><button onClick="location.href = 'registration.php'" style='width:50%'>Register</button></td></tr>
+			<td><center>Register <a href='<?php eh(url('user/registration'))?>'>Here</a></td></tr>
 		</tr>		
 	</table>
 </form>
