@@ -1,0 +1,13 @@
+[Wed Aug 13 12:18:43 2014] [error] [client 127.0.0.1] PHP Fatal error:  Class 'SimpleDBI' not found in /home/pamela/board/app/config/database.php on line 11
+[Wed Aug 13 12:19:04 2014] [error] [client 127.0.0.1] PHP Warning:  require_once(/home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php): failed to open stream: No such file or directory in /home/pamela/board/app/config/database.php on line 10
+[Wed Aug 13 12:19:04 2014] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required '/home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/pamela/board/app/config/database.php on line 10
+[Wed Aug 13 13:25:43 2014] [error] [client 127.0.0.1] PHP Warning:  require_once(/home/pamela/board/vendor/SimpleDBI/srcSimpleDBIStatement.php): failed to open stream: No such file or directory in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 8
+[Wed Aug 13 13:25:43 2014] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required '/home/pamela/board/vendor/SimpleDBI/srcSimpleDBIStatement.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 8
+[Wed Aug 13 13:30:21 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '.' in /home/pamela/board/dietcake/core/controller.php on line 2
+[Wed Aug 13 13:59:15 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_ECHO, expecting T_FUNCTION in /home/pamela/board/dietcake/core/exception.php on line 4
+[Wed Aug 13 13:59:34 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_PRINT, expecting T_FUNCTION in /home/pamela/board/dietcake/core/exception.php on line 4
+[Wed Aug 13 13:59:35 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_PRINT, expecting T_FUNCTION in /home/pamela/board/dietcake/core/exception.php on line 4
+[Wed Aug 13 13:59:35 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_PRINT, expecting T_FUNCTION in /home/pamela/board/dietcake/core/exception.php on line 4
+[Wed Aug 13 14:00:28 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_CATCH in /home/pamela/board/dietcake/core/exception.php on line 6
+[Fri Aug 15 10:09:03 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 15 15:07:08 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board/app/webroot/favicon.ico

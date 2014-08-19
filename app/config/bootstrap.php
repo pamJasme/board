@@ -1,4 +1,5 @@
 <?php
+session_start();
 // application
 require_once APP_DIR.'app_controller.php';
 require_once APP_DIR.'app_model.php';
@@ -10,6 +11,14 @@ require_once HELPERS_DIR.'html_helper.php';
 
 // config
 require_once CONFIG_DIR.'log.php';
+require_once CONFIG_DIR.'database.php';
+require_once CONFIG_DIR.'router.php';
+
+//vendor
+require_once VENDOR_DIR.'SimpleDBI/src/SimpleDBI.php';
+
+//helpers
+require_once HELPERS_DIR.'validation_helper.php';
 
 spl_autoload_register(function($name) {
     $filename = Inflector::underscore($name) . '.php';
