@@ -73,5 +73,10 @@ class ThreadController extends AppController
 		$this->set(get_defined_vars());
 		$this->render($page);
 	}
+	public function logout()
+	{
+		session_destroy();
+		redirect('user','index');
+	}
 
 }

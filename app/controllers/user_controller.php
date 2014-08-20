@@ -60,6 +60,9 @@ class UserController extends AppController
 		}catch(ExistingUserException $e) {
 			$status = notice($e->getMessage(), "error");
 			echo $status;
+		}catch(ValidationException $e) {
+			$status = notice($e->getMessage(), "error");
+			echo "$status";
 		}
 
 		
