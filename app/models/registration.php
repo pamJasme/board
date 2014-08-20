@@ -38,7 +38,7 @@ class Registration extends AppModel
 		{
 			throw new ValidationException("Invalid Email Address");
 		}
-		$search = $db->rows("SELECT username, email FROM user_info WHERE username = '$username' AND email = '$email'");
+		$search = $db->rows("SELECT username, email FROM user_info WHERE username = '$username' OR email = '$email'");
 		if($search)
 		{
 			throw new ExistingUserException("Username/Email already used");

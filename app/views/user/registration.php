@@ -1,5 +1,5 @@
 
-<form action="<?php eh(url(''));?>" method="POST">
+<form class="well" action="<?php eh(url(''));?>" method="POST">
 	<table border='0'>
 		<tr><td><label>Username</label></td><td><input type="text" name='username' style="height:25px"></td></tr>
 		<tr><td><label>Password</label></td><td><input type='password' name='pword' style="height:25px"></td></tr>

@@ -4587,3 +4587,128 @@ Stack trace:
 [20-Aug-2014 07:34:44 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
 [20-Aug-2014 07:36:05 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
 [20-Aug-2014 07:36:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:57:51 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[20-Aug-2014 07:58:06 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:58:47 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 16
+[20-Aug-2014 07:58:47 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:58:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:59:18 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:59:24 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:59:25 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:59:39 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:59:44 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:03:37 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:04:40 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 16
+[20-Aug-2014 08:04:40 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:04:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:04:59 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:05:05 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:05:08 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:06:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:06:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:06:54 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[20-Aug-2014 08:06:55 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:08:41 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:17 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 16
+[20-Aug-2014 08:10:17 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:19 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:39 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:40 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:41 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:42 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:44 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:10:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:12:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:12:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:12:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:12:34 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:13:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:13:35 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:14:23 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:14:39 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:14:44 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:14:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:14:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:14:52 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:14:54 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:15:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:15:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:15:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:15:40 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:15:52 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:16:32 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:16:54 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:17:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:17:07 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:17:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:17:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:18:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:18:10 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:18:14 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:18:39 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:20:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:20:34 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:20:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:21:17 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:21:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:21:31 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:21:37 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:21:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:21:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:45:07 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:53:29 UTC] PHP Notice:  Undefined variable: user_name in /home/pamela/board/app/views/thread/view.php on line 33
+[20-Aug-2014 08:54:35 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:54:41 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:54:46 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:54:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:56:40 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:56:43 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[20-Aug-2014 08:59:07 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:59:42 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:59:49 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 16
+[20-Aug-2014 08:59:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 08:59:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:00:19 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:01:15 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:01:22 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[20-Aug-2014 09:04:52 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:05:26 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:06:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:06:35 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:10:56 UTC] PHP Notice:  Undefined property: Registration::$username in /home/pamela/board/app/models/registration.php on line 42
+[20-Aug-2014 09:10:56 UTC] PHP Notice:  Undefined property: Registration::$email in /home/pamela/board/app/models/registration.php on line 42
+[20-Aug-2014 09:10:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:11:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:11:40 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 09:12:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5

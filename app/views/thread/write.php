@@ -42,5 +42,6 @@
   <br />
   <input type="hidden" name="thread_id" value="<?php eh($thread->id) ?>">
   <input type="hidden" name="page_next" value="write_end">
+   <div style="float:right; font-size:20px">&larr;Back to All <a href="index">Threads</a><br></div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

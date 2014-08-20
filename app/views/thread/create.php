@@ -45,5 +45,7 @@ $username = $_SESSION['username'] ?>
   <textarea name="body"><?php eh(Param::get('body')) ?></textarea>
   <br />
   <input type="hidden" name="page_next" value="create_end">
-  <button type="submit" class="btn btn-primary">Submit</button>                
+   <div style="float:right; font-size:20px">&larr;Back to All <a href="index">Threads</a><br></div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
 </form> 

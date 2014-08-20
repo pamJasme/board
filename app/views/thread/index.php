@@ -1,3 +1,4 @@
+<fieldset class='well'>
 <div style='float:right; font-size:15px; font-weight:900'>
 	Welcome <?php echo $_SESSION['username']; ?>
 </div><br>
@@ -6,7 +7,8 @@
   <?php foreach ($threads as $v): ?>
   <li><a href="<?php eh(url('thread/view', array('thread_id' => $v->id))) ?>"><?php eh($v->title) ?></a></li>
   <?php endforeach ?>
-</ul>
+</ul><br>
 <a class="btn btn-medium btn-primary" href="<?php eh(url('thread/create')) ?>">Create</a>
 </div>
+</fieldset>
 

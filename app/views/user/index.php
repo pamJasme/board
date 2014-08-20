@@ -2,7 +2,7 @@
 
 <div class='register' style='margin-top:100px'>
 <center>
-<form action='<?php eh(url(''));?>' method='POST'>
+<form class="well" action='<?php eh(url(''));?>' method='POST'>
 	<table border='0'>
 		<tr>
 			<td><label>Username </label></td><td><input type='text' name='login_name' value='<?php eh(Param::get('login_name'));?>'></td></tr>
