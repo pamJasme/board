@@ -3,21 +3,32 @@ class UserController extends AppController
 {
 	public function index()
 	{
-		$username=Param::get('login_name');
-		$password=Param::get('login_pword');
-		$registered_user= new User;
+		
+		$username = Param::get('login_name');
+		$password = Param::get('login_pword');
 
-		
 		if(!empty($username) AND !empty($password))
-		{	
-		
-			$obj = $registered_user->userValidate($username, $password);
-			$_SESSION['username'] = $obj->username;
-			$_SESSION['password'] = $obj->user_pword;
-			$this->set(get_defined_vars());
-			header('Location: thread/index');
+		{
+			$registered_user = new User;
+			  try {
+	                $obj = $registered_user->userValidate($username, $password);   
+	                $_SESSION['username'] = $obj->username;
+					$_SESSION['password'] = $obj->password;
+	                redirect('thread','index');
+	            } catch (ValidationException $e) {
+	                $status = notice($e->getMessage(),"error");
+	                echo $status;
+	            } catch (RecordNotFoundException $e) {
+	                $status = notice($e->getMessage(),"error");                        
+	                echo $status;
+	            }
+	    }
+	    else
+	    {
+	    	$status = "";
+	    }
+		$this->set(get_defined_vars());
 				
-		}
 
 	}
 	public function registration()
@@ -41,11 +52,18 @@ class UserController extends AppController
         	$infos['$field'] = $value;
         	// /echo $infos['$field'];
         }
-		$user_info = $reg->userRegistration($infos);
+        try{
+			$user_info = $reg->userRegistration($infos);
+		}catch(IncompleteFieldsException $e) {
+			$status = notice($e->getMessage(), "error");
+			echo $status;
+		}catch(ExistingUserException $e) {
+			$status = notice($e->getMessage(), "error");
+			echo $status;
+		}
+
+		
 		$this->set(get_defined_vars());	
     }
     
-	
-
-	
 }

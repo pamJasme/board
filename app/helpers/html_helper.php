@@ -12,3 +12,18 @@ function readable_text($s)
 	$s = nl2br($s);
 	return $s;
 }
+function notice($text, $notice_type = NULL)
+{
+    $msg = "<center>";
+    switch ($notice_type) {
+    case 'error':
+        $msg .= "<font color=red size=2>";
+        break;
+    
+    default:
+        $msg .= "<font color=green size=2>";
+        break;
+    }
+    $msg .= $text. "</font></center>";
+    return $msg;
+}

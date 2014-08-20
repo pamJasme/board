@@ -19,14 +19,13 @@ class Registration extends AppModel
 	}*/
 	public function userRegistration(array $infos)
 	{
-		//var_dump($infos);
+		
 		extract($infos);
 		foreach ($infos as $field => $value) {
 			
 			if(empty($infos['$field']))
 			{
-				unset($infos);
-				return;
+				throw new IncompleteFieldsException("Please fill up all fields");
 			}
 		}
 		$now = new DATETIME('NOW');
@@ -40,12 +39,22 @@ class Registration extends AppModel
 			'email' => $email,
 			'created' => $f_now,
 			);
-		$db->insert('user_info',$defaults);
-		//$row =$db->insert('')*/
-		if($db)
+		$search = $db->rows("SELECT username, email FROM user_info WHERE username = '$username' AND email = '$email'");
+		if($search)
 		{
-			echo "Created";
+			throw new ExistingUserException("Username/Email already used");
+			
+		}
+		$row = $db->insert('user_info',$defaults);
+		//$row =$db->insert('')*/
+		if($row)
+		{
 			unset($infos);
+			echo notice("Successful.");
+		}
+		else
+		{
+			echo "Try again";
 		}
 		
     }
