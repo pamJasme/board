@@ -64,7 +64,7 @@ class UserController extends AppController
 			$status = notice($e->getMessage(), "error");
 			echo "$status";
 		}
-
+		
 		
 		$this->set(get_defined_vars());	
     }

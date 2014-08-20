@@ -1514,3 +1514,7 @@
 2014-08-20T15:03:41.992927+08:00		sql	0.000105	1:(localhost) SELECT * FROM thread; ()
 2014-08-20T15:03:43.695788+08:00		sql	0.000401	1:(localhost) SELECT * FROM thread WHERE id = ?; (12)
 2014-08-20T15:03:43.696520+08:00		sql	0.000327	2:(localhost) SELECT * FROM comment WHERE thread_id = ? ORDER BY created ASC; (12)
+2014-08-20T15:33:22.728493+08:00		sql	0.000544	1:(localhost) SELECT username, email FROM user_info WHERE username = 'robert' AND email = 'r.deguzman@klab.com'; ()
+2014-08-20T15:33:22.804593+08:00		sql	0.075613	2:(localhost) INSERT INTO user_info (username, user_pword, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (robert, 123456, RB, De Guzman, r.deguzman@klab.com, 2014-08-20 03:08:22)
+2014-08-20T15:34:44.771885+08:00		sql	0.000268	1:(localhost) SELECT username, email FROM user_info WHERE username = 'nickjohn' AND email = 'eucarizan@yahoo.com'; ()
+2014-08-20T15:34:44.806576+08:00		sql	0.034467	2:(localhost) INSERT INTO user_info (username, user_pword, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (nickjohn, 101610, NJ, Eucariza, eucarizan@yahoo.com, 2014-08-20 03:08:44)

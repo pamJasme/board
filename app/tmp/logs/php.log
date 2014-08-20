@@ -4551,3 +4551,39 @@ Stack trace:
 #4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
 #5 {main}
   thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[20-Aug-2014 07:23:57 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:24:15 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:24:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:25:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:25:06 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:26:12 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:26:13 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:26:13 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:26:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:26:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:26:34 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:27:07 UTC] PHP Warning:  require(/home/pamela/board/app/controllers/user_user_controller.php): failed to open stream: No such file or directory in /home/pamela/board/app/config/bootstrap.php on line 26
+[20-Aug-2014 07:27:07 UTC] PHP Fatal error:  require(): Failed opening required '/home/pamela/board/app/controllers/user_user_controller.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/pamela/board/app/config/bootstrap.php on line 26
+[20-Aug-2014 07:27:17 UTC] PHP Warning:  require(/home/pamela/board/app/controllers/user_user_controller.php): failed to open stream: No such file or directory in /home/pamela/board/app/config/bootstrap.php on line 26
+[20-Aug-2014 07:27:17 UTC] PHP Fatal error:  require(): Failed opening required '/home/pamela/board/app/controllers/user_user_controller.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/pamela/board/app/config/bootstrap.php on line 26
+[20-Aug-2014 07:27:19 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:28:50 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:28:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:28:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:28:57 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:28:58 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:29:15 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:29:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:29:32 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:29:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:30:11 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:31:31 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:31:34 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:31:36 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:31:36 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:31:37 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:33:08 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:33:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:34:44 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:36:05 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[20-Aug-2014 07:36:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5

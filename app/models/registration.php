@@ -47,7 +47,10 @@ class Registration extends AppModel
 
 		$row = $db->insert('user_info',$defaults);
 		
-		
+		if($row)
+		{
+			die('yeah');
+		}
 		unset($infos);
 		
 		
