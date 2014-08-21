@@ -79,4 +79,7 @@ class ThreadController extends AppController
 		redirect('user','index');
 	}
 
+	
+	
+
 }

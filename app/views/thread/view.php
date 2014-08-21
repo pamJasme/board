@@ -1,5 +1,5 @@
 <div style='float:right; font-size:15px; font-weight:900'>
-  Welcome <?php echo $_SESSION['username']; ?>
+  Welcome <?php echo $_SESSION['username']; $count=0; ?>
 </div><br>
 
 <div style='float:right; font-size:15px; font-weight:900'>
@@ -14,7 +14,7 @@
     
     <div class="meta">
       <table  width='70%' border=0>
-        <tr><td width='4%'><?php eh($k+1) ?></td><td width='25%'>From: <?php eh($v->username) ?>
+        <tr><td width='4%'><?php eh($k+1); $count++; ?></td><td width='25%'>From: <?php eh($v->username) ?>
         <br>Date: <?php eh($v->created) ?></td>
     </div>
 
@@ -26,7 +26,7 @@
   </div>
 
 <?php endforeach ?>
-</fieldset>
+
 <hr>
 <form class="well" method="post" action="<?php eh(url('thread/write')) ?>">
 	<label>Your name</label>
@@ -48,8 +48,10 @@
     }
     else
     {
+      $_SESSION['count'] = $count;
       echo readable_text($v->body);
+      echo "<br>Total number of comments: {$count}";
     }
     
     ?>
-</div>
+

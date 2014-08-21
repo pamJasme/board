@@ -2,8 +2,8 @@
   Welcome <?php echo $_SESSION['username']; ?>
 </div><br>
 <div style='float:right; font-size:15px; font-weight:900'><a class="btn btn-medium btn-primary" name="logout" href="<?php eh(url('thread/logout'));?>">Logout</a></div>
-<?php 
-$username = $_SESSION['username'] ?>
+
+<?php $username = $_SESSION['username'] ?>
 <h1>Create a thread</h1>
                 
 <?php if ($thread->hasError() || $comment->hasError()): ?>
@@ -47,5 +47,4 @@ $username = $_SESSION['username'] ?>
   <input type="hidden" name="page_next" value="create_end">
    <div style="float:right; font-size:20px">&larr;Back to All <a href="index">Threads</a><br></div>
   <button type="submit" class="btn btn-primary">Submit</button>
-
 </form> 

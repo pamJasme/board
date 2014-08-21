@@ -4712,3 +4712,176 @@ Stack trace:
 [20-Aug-2014 09:11:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
 [20-Aug-2014 09:11:40 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
 [20-Aug-2014 09:12:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:36:55 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 16
+[21-Aug-2014 00:36:55 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:38:06 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:38:25 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:40:14 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:40:17 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:40:19 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:40:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:40:38 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:40:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:40:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:41:51 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[21-Aug-2014 00:43:51 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/controllers/thread_controller.php on line 53
+[21-Aug-2014 00:43:51 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/create.php on line 2
+[21-Aug-2014 00:43:51 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/create.php on line 6
+[21-Aug-2014 00:43:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:47:55 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 16
+[21-Aug-2014 00:47:55 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:48:06 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:48:20 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 16
+[21-Aug-2014 00:48:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 00:49:03 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 01:30:24 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 01:30:31 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 01:35:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 01:47:18 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 01:47:54 UTC] PHP Notice:  Undefined variable: comments in /home/pamela/board/app/views/thread/pagination.php on line 2
+[21-Aug-2014 01:47:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/pamela/board/app/views/thread/pagination.php on line 2
+[21-Aug-2014 01:47:54 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 01:48:45 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 01:49:31 UTC] PHP Catchable fatal error:  Argument 1 passed to Model::__construct() must be an array, boolean given, called in /home/pamela/board/app/models/thread.php on line 55 and defined in /home/pamela/board/dietcake/core/model.php on line 8
+[21-Aug-2014 01:51:06 UTC] PHP Catchable fatal error:  Argument 1 passed to Model::__construct() must be an array, boolean given, called in /home/pamela/board/app/models/thread.php on line 55 and defined in /home/pamela/board/dietcake/core/model.php on line 8
+[21-Aug-2014 01:51:24 UTC] PHP Notice:  Undefined variable: comments in /home/pamela/board/app/views/thread/pagination.php on line 2
+[21-Aug-2014 01:51:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/pamela/board/app/views/thread/pagination.php on line 2
+[21-Aug-2014 01:51:24 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 01:54:21 UTC] PHP Fatal error:  Class 'Pagination' not found in /home/pamela/board/app/controllers/thread_controller.php on line 84
+[21-Aug-2014 01:55:13 UTC] PHP Fatal error:  Call to undefined function getComments() in /home/pamela/board/app/controllers/thread_controller.php on line 85
+[21-Aug-2014 01:56:05 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 01:56:16 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 01:58:47 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 01:58:48 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 02:01:41 UTC] PHP Notice:  Undefined variable: comments in /home/pamela/board/app/views/thread/pagination.php on line 2
+[21-Aug-2014 02:01:41 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/pamela/board/app/views/thread/pagination.php on line 2
+[21-Aug-2014 02:01:41 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:02:09 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:02:38 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:07:34 UTC] PHP Notice:  Undefined variable: thread in /home/pamela/board/app/controllers/thread_controller.php on line 84
+[21-Aug-2014 02:07:34 UTC] PHP Fatal error:  Call to a member function getComments() on a non-object in /home/pamela/board/app/controllers/thread_controller.php on line 84
+[21-Aug-2014 02:08:00 UTC] PHP Catchable fatal error:  Argument 1 passed to Model::__construct() must be an array, boolean given, called in /home/pamela/board/app/models/thread.php on line 55 and defined in /home/pamela/board/dietcake/core/model.php on line 8
+[21-Aug-2014 02:13:54 UTC] PHP Catchable fatal error:  Argument 1 passed to Model::__construct() must be an array, boolean given, called in /home/pamela/board/app/models/thread.php on line 55 and defined in /home/pamela/board/dietcake/core/model.php on line 8
+[21-Aug-2014 02:13:54 UTC] PHP Catchable fatal error:  Argument 1 passed to Model::__construct() must be an array, boolean given, called in /home/pamela/board/app/models/thread.php on line 55 and defined in /home/pamela/board/dietcake/core/model.php on line 8
+[21-Aug-2014 02:13:54 UTC] PHP Catchable fatal error:  Argument 1 passed to Model::__construct() must be an array, boolean given, called in /home/pamela/board/app/models/thread.php on line 55 and defined in /home/pamela/board/dietcake/core/model.php on line 8
+[21-Aug-2014 02:28:57 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/pamela/board/app/views/thread/view.php on line 13
+[21-Aug-2014 02:29:03 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 02:47:48 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 02:47:48 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 02:47:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:47:50 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:47:50 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:47:51 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 02:48:41 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:48:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:48:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:48:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:48:44 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 02:49:55 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 02:49:56 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'action does not exist' in /home/pamela/board/dietcake/core/controller.php:37
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/controller.php on line 37
+[21-Aug-2014 02:49:57 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:49:58 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:49:58 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:49:58 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:50:05 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:50:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 02:51:03 UTC] PHP Parse error:  syntax error, unexpected $end in /home/pamela/board/app/views/thread/view.php on line 45
+[21-Aug-2014 02:51:10 UTC] PHP Parse error:  syntax error, unexpected $end in /home/pamela/board/app/views/thread/view.php on line 45
+[21-Aug-2014 02:51:19 UTC] PHP Parse error:  syntax error, unexpected $end in /home/pamela/board/app/views/thread/view.php on line 45
+[21-Aug-2014 03:30:02 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[21-Aug-2014 03:30:09 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 15
+[21-Aug-2014 03:30:09 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 03:39:49 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[21-Aug-2014 03:39:50 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 03:40:26 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 03:41:29 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 03:42:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5

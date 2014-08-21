@@ -1,15 +1,12 @@
 <?php
 class Registration extends AppModel
 {
-
 	public function userRegistration(array $infos)
 	{
 		
 		extract($infos);
 		foreach ($infos as $field => $value) {
-			
-			if(empty($infos['$field']))
-			{
+			if(empty($infos['$field'])){
 				throw new IncompleteFieldsException("Please fill up all fields");
 			}
 		}
@@ -26,36 +23,27 @@ class Registration extends AppModel
 			);
 		$check_uname = validate_between($username,5,8);
 		$check_pass = validate_between($user_pword,6,8);
-		if(!$check_uname OR !ctype_alnum($username))
-		{
+		
+		if(!$check_uname OR !ctype_alnum($username)){
 			throw new ValidationException("Invalid Username : 6-8 Alphanumeric characters");
 		}
-		if(!$check_pass)
-		{
+
+		if(!$check_pass){
 			throw new ValidationException("Password: 6-8 characters");
 		}
-		if(!preg_match("/^[A-z](.*)@(.*)\.(.*)/", $email))
-		{
+
+		if(!preg_match("/^[A-z](.*)@(.*)\.(.*)/", $email)){
 			throw new ValidationException("Invalid Email Address");
 		}
-		$search = $db->rows("SELECT username, email FROM user_info WHERE username = '$username' OR email = '$email'");
-		if($search)
-		{
+
+		$search = $db->rows("SELECT username, email FROM user_info 
+			WHERE username = '$username' OR email = '$email'");
+
+		if($search){
 			throw new ExistingUserException("Username/Email already used");
-			
 		}
 
 		$row = $db->insert('user_info',$defaults);
-		
-		if($row)
-		{
-			die('yeah');
-		}
 		unset($infos);
-		
-		
     }
-
-	
 }
-?>

@@ -27,7 +27,4 @@ function notice($text, $notice_type = NULL)
     $msg .= $text. "</font></center>";
     return $msg;
 }
-function logout()
-{
-	echo "hello";
-}
+

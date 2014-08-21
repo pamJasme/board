@@ -8,3 +8,4 @@
 		<tr><td><label>Email Address&nbsp;</label></td><td><input type='text' name='email' style="height:25px"></td></tr>
 		<tr><td><button class="btn btn-medium btn-primary" type="submit">Register</button></td><td>Go to<a href="index" style="height:25px"> Login </a>Page</td></tr>
 	</table>
+</form>
