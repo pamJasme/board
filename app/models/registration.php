@@ -7,23 +7,21 @@
 class Registration extends AppModel
 {
     /**
-    * Function to validate user registration
+    * To validate user registration
     * @throws IncompleteFieldsException
     * @throws ValidationException
     * @throws ExistingUserException
     * @param $infos(array)
     */
-    public function userRegistration(array $infos)
+    public function userRegistration(array $user_info)
     {
         
-        extract($infos);
-        foreach ($infos as $field => $value) {
-            if(empty($infos['$field'])){
+        extract($user_info);
+        foreach ($user_info as $field => $value) {
+            if(empty($user_info['$field'])){
                 throw new IncompleteFieldsException("Please fill up all fields");
             }
         }
-        $now = new DATETIME('NOW');
-        $f_now = $now->format('Y-m-d h:m:s');
         $db = DB::conn();
         $defaults = array(
             'username' => $username,
@@ -31,13 +29,13 @@ class Registration extends AppModel
             'fname' => $fname,
             'lname' => $lname,
             'email' => $email,
-            'created' => $f_now,
+            'created' => date('Y-m-d H:i:s'),
             );
-        $check_uname = validate_between($username,5,8);
-        $check_pass = validate_between($user_pword,6,8);
+        $check_uname = validate_between($username, 5, 12);
+        $check_pass = validate_between($user_pword, 6, 8);
         
         if(!$check_uname OR !ctype_alnum($username)){
-            throw new ValidationException("Invalid Username : 6-8 Alphanumeric characters");
+            throw new ValidationException("Invalid Username : 6-12 Alphanumeric characters");
         }
 
         if(!$check_pass){
@@ -47,15 +45,14 @@ class Registration extends AppModel
         if(!preg_match("/^[A-z](.*)@(.*)\.(.*)/", $email)){
             throw new ValidationException("Invalid Email Address");
         }
-
-        $search = $db->rows("SELECT username, email FROM user_info 
-            WHERE username = '$username' OR email = '$email'");
-
+        $query = "SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?";
+        $params = array($username, $email);
+        $search = $db->rows($query, $params);
         if($search){
             throw new ExistingUserException("Username/Email already used");
         }
-
-        $row = $db->insert('user_info',$defaults);
-        unset($infos);
+        $row = $db->insert('user_info', $defaults);
+        unset($user_info);
     }
 }

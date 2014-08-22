@@ -3,7 +3,7 @@
 class ThreadController extends AppController
 {
     /**
-    *   To view all threads with limits. Through Pagination.
+    *   To view all threads with limits through Pagination.
     **/
 
     public function index()
@@ -14,6 +14,10 @@ class ThreadController extends AppController
         $threads = Thread::getAll($pagination['max']);
         $this->set(get_defined_vars());
     }
+
+    /**
+    *   To view all comments on a particular thread.
+    **/
 
     public function view()
     {
@@ -57,6 +61,10 @@ class ThreadController extends AppController
         $this->render($page);
     }
 
+    /**
+    * To create new thread with comment.
+    **/
+
     public function create()
     {
         $thread = new Thread;
@@ -86,18 +94,14 @@ class ThreadController extends AppController
         $this->render($page);
     }
 
-    /**
+     /**
     * To destroy user session
     * 
     **/
     
-    public function logout()
+    function logout()
     {
         session_destroy();
         redirect('user','index');
     }
-
-    
-    
-
 }

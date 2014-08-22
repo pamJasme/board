@@ -31,3 +31,12 @@
 [Thu Aug 21 15:07:37 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '}' in /home/pamela/board/app/helpers/pagination_helper.php on line 22, referer: http://board.example.com/thread/view?thread_id=3
 [Thu Aug 21 15:29:19 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_RETURN in /home/pamela/board/app/helpers/pagination_helper.php on line 20, referer: http://board.example.com/thread/view?thread_id=19
 [Fri Aug 22 09:36:36 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 11:32:39 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 11:43:56 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 11:43:57 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 11:43:57 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 11:43:58 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 11:43:58 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 11:43:58 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 11:43:58 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 11:43:59 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board

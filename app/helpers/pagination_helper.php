@@ -4,8 +4,11 @@
 * @param $num_rows
 * @param $pagenum
 **/
+
+//IN PROGRESS
 function pagination($num_rows, $pagenum)
 {
+    define('rows_per_page', 10);
     echo $pagenum;
     $pagination = array();
     if (!(isset($pagenum))){ 
@@ -15,8 +18,7 @@ function pagination($num_rows, $pagenum)
         $pagenum = preg_replace('#[^0-9]#', '', $_GET['pn']);   
     }
 
-    $rows_per_page = 10;
-    $last_page = ceil($num_rows/$rows_per_page);
+    $last_page = ceil($num_rows/rows_per_page);
     
     if($last_page < 1){
         $last_page = 1;
@@ -32,7 +34,7 @@ function pagination($num_rows, $pagenum)
         $pagenum = $last_page;
     }
     
-    $max = 'limit ' .($pagenum - 1) * $rows_per_page.',' .$rows_per_page;
+    $max = 'limit ' .($pagenum - 1) * rows_per_page.',' .rows_per_page;
 
     $control = "";
     if($last_page != 1){

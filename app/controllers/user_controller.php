@@ -9,7 +9,6 @@ class UserController extends AppController
 
     public function index()
     {
-        
         $username = Param::get('login_name');
         $password = Param::get('login_pword');
         $registered_user = new User;
@@ -33,15 +32,14 @@ class UserController extends AppController
                         $status = notice($e->getMessage(),"error");
                         echo $status;
                     } catch (RecordNotFoundException $e) {
-                        $status = notice($e->getMessage(),"error");                        
+                        $status = notice($e->getMessage(),"error");
                         echo $status;
                     }
-        $this->set(get_defined_vars());
-                
+        $this->set(get_defined_vars());           
     }
 
     /**
-    * Function to register new user
+    * To register new user
     * Subject for validations (e.g username length)
     **/
 
@@ -54,7 +52,7 @@ class UserController extends AppController
         $new_email = Param::get('email');
         $reg = new Registration;
         
-        $infos = array(
+        $user_info = array(
             'username' => $new_username,
             'user_pword' => $new_password,
             'fname' => $new_fname,
@@ -62,11 +60,11 @@ class UserController extends AppController
             'email' => $new_email,
             );
 
-        foreach ($infos as $field => $value) {
-            $infos['$field'] = $value;
+        foreach ($user_info as $field => $value) {
+            $user_info['$field'] = $value;
         }
         try{
-            $user_info = $reg->userRegistration($infos);
+            $info = $reg->userRegistration($user_info);
         }catch(IncompleteFieldsException $e) {
             $status = notice($e->getMessage(), "error");
             echo $status;

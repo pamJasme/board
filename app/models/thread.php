@@ -56,8 +56,9 @@ class Thread extends AppModel
         $comments = array();
 
         $db = DB::conn();
-        $rows = $db->rows('SELECT * FROM comment 
-            WHERE thread_id = ? ORDER BY created ASC', array($this->id));
+        $rows = $db->rows(
+            'SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC', array($this->id));
 
         foreach($rows as $row){
             $comments[] = new Comment($row);
