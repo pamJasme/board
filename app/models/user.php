@@ -5,8 +5,9 @@ class User extends AppModel
     /**
     * validation for username and password
     * @throws RecordnotFoundException
+    * @param $username
+    * @param $password
     **/
-    
     public function userValidate($username, $password)
     {
         $db=DB::conn();

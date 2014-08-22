@@ -5,7 +5,6 @@ class ThreadController extends AppController
     /**
     *   To view all threads with limits through Pagination.
     **/
-
     public function index()
     {
         $thread_count = Thread::getNumRows();
@@ -18,7 +17,6 @@ class ThreadController extends AppController
     /**
     *   To view all comments on a particular thread.
     **/
-
     public function view()
     {
         $thread = Thread::get(Param::get('thread_id'));
@@ -31,7 +29,6 @@ class ThreadController extends AppController
     *  @property username
     *       set as the $_SESSION['username']
     **/
-
     public function write()
     {
         $thread = Thread::get(Param::get('thread_id'));
@@ -64,7 +61,6 @@ class ThreadController extends AppController
     /**
     * To create new thread with comment.
     **/
-
     public function create()
     {
         $thread = new Thread;
@@ -94,11 +90,10 @@ class ThreadController extends AppController
         $this->render($page);
     }
 
-     /**
+    /**
     * To destroy user session
     * 
     **/
-    
     function logout()
     {
         session_destroy();

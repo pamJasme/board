@@ -3,7 +3,6 @@
 /**
 * class Registration
 **/
-
 class Registration extends AppModel
 {
     /**

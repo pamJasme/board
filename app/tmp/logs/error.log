@@ -40,3 +40,6 @@
 [Fri Aug 22 11:43:58 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
 [Fri Aug 22 11:43:58 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
 [Fri Aug 22 11:43:59 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board
+[Fri Aug 22 14:45:39 2014] [error] [client 10.3.11.114] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 14:45:44 2014] [error] [client 10.3.10.24] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 14:46:30 2014] [error] [client 10.3.10.210] File does not exist: /home/pamela/board/app/webroot/favicon.ico

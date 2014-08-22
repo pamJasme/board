@@ -5632,3 +5632,103 @@ Stack trace:
 [22-Aug-2014 06:04:25 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
 [22-Aug-2014 06:10:18 UTC] PHP Notice:  Undefined variable: k in /home/pamela/board/app/views/layouts/default.php on line 5
 [22-Aug-2014 06:10:18 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 06:31:00 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:31:01 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:31:01 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:35:48 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:35:52 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[22-Aug-2014 06:39:16 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[22-Aug-2014 06:39:18 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:39:19 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:39:19 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:39:19 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:45:39 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:45:39 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:46:58 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:46:59 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:47:00 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:47:00 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[22-Aug-2014 06:47:11 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 29
+[22-Aug-2014 06:47:11 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:47:19 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:47:23 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:47:27 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:47:42 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:47:44 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[22-Aug-2014 06:47:46 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:47:56 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[22-Aug-2014 06:49:01 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:49:01 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:49:01 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:49:01 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:49:02 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:49:04 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 2
+[22-Aug-2014 06:49:04 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 9
+[22-Aug-2014 06:49:09 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:49:09 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[22-Aug-2014 06:49:10 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/controllers/thread_controller.php on line 73
+[22-Aug-2014 06:49:10 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/create.php on line 2
+[22-Aug-2014 06:49:10 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/create.php on line 6
+[22-Aug-2014 06:49:20 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/controllers/thread_controller.php on line 73
+[22-Aug-2014 06:49:20 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/create.php on line 2
+[22-Aug-2014 06:49:20 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/create.php on line 6
+[22-Aug-2014 06:49:23 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/controllers/thread_controller.php on line 73
+[22-Aug-2014 06:49:23 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/create.php on line 2
+[22-Aug-2014 06:49:23 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/create.php on line 6
+[22-Aug-2014 06:50:25 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[22-Aug-2014 06:50:25 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:50:39 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:50:43 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[22-Aug-2014 06:50:43 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:51:11 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:51:13 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:51:15 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[22-Aug-2014 06:51:17 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:52:14 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:52:15 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72
+[22-Aug-2014 06:52:15 UTC] PHP Notice:  Undefined variable: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 72

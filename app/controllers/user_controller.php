@@ -6,7 +6,6 @@ class UserController extends AppController
     * To check if username and password matched
     * Validation to proceed to Thread page
     **/
-
     public function index()
     {
         $username = Param::get('login_name');
@@ -42,7 +41,6 @@ class UserController extends AppController
     * To register new user
     * Subject for validations (e.g username length)
     **/
-
     public function registration()
     {
         $new_username = Param::get('username');
@@ -78,5 +76,4 @@ class UserController extends AppController
         
         $this->set(get_defined_vars()); 
     }
-    
 }

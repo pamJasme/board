@@ -12,6 +12,11 @@ class Thread extends AppModel
             ),
         );
 
+    /**
+    * To create comment
+    * @param $comment
+    * @throws ValidationException
+    **/
     public function create (Comment $comment)
     {
         $this->validate();
@@ -32,6 +37,9 @@ class Thread extends AppModel
         
     }
 
+    /**
+    * To view all threads with limit
+    **/
     public static function getAll($max)
         {
             $threads = array();
@@ -44,6 +52,10 @@ class Thread extends AppModel
             return $threads;
         }
 
+    /**
+    * To search a thread through thread id
+    * @param $id
+    **/
     public static function get($id)
     {
         $db = DB::conn();
@@ -51,6 +63,9 @@ class Thread extends AppModel
         return new self($row);
     }
 
+    /**
+    * To view comments in ascending order
+    **/
     public function getComments()
     {
         $comments = array();
@@ -66,6 +81,10 @@ class Thread extends AppModel
         return $comments;
     }
 
+    /**
+    * To add comments into a particular thread
+    * @param $comment
+    **/
     public function write(Comment $comment)
     {
         if(!$comment->validate()){
@@ -81,7 +100,6 @@ class Thread extends AppModel
     /**
     * Function to count table rows
     **/
-
     public static function getNumRows()
     {
         $db = DB::conn();

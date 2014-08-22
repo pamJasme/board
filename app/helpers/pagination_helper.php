@@ -69,6 +69,7 @@ function pagination($num_rows, $pagenum)
     $pagination['last_page'] = $last_page;
     $pagination['pagenum'] = $pagenum;
     $pagination['control'] = $control;
+    $pagination['pn'] = $pn;
 
     //$pagination['']
     return $pagination;
