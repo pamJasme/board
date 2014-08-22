@@ -4,9 +4,11 @@ class ThreadController extends AppController
 {
     /**
     *   To view all threads with limits through Pagination.
+    *   sessionchec
     **/
     public function index()
     {
+        check_if_logged_out();
         $thread_count = Thread::getNumRows();
         $pagination = pagination($thread_count, '');
 

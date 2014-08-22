@@ -14,10 +14,11 @@
             <li><a href="<?php eh(url('thread/view', array('thread_id' => $v->id))) ?>">
                 <?php eh($v->title) ?></a></li>
         <?php endforeach ?>
-         <?php echo $pagination['control']; ?>
         </ul><br>
 
-        
-        <a class="btn btn-medium btn-primary" href="<?php eh(url('thread/create')) ?>">Create</a>
+        <a class="btn btn-medium btn-primary" href="<?php eh(url('thread/create')) ?>">Create</a><br><br>
+        <?php echo $pagination['control']; ?>
     </div>
 </fieldset>
+
+

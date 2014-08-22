@@ -6,10 +6,9 @@
 **/
 
 //IN PROGRESS
-function pagination($num_rows, $pagenum)
+function pagination($num_rows, $pagenum, array $set_url = NULL)
 {
     define('rows_per_page', 10);
-    echo $pagenum;
     $pagination = array();
     if (!(isset($pagenum))){ 
         $pagenum = 1; 
@@ -25,7 +24,7 @@ function pagination($num_rows, $pagenum)
     }
 
     if(isset($_GET['pn'])){
-        $pagenum = preg_replace('#[^0-9]', '', $_GET['pn']); 
+        $pagenum = preg_replace('#[^0-9]#', '', $_GET['pn']); 
     }
 
     if($pagenum < 1){
@@ -35,31 +34,32 @@ function pagination($num_rows, $pagenum)
     }
     
     $max = 'limit ' .($pagenum - 1) * rows_per_page.',' .rows_per_page;
-
+    $page_link =& $url_query['pn'];
     $control = "";
     if($last_page != 1){
         if($pagenum > 1){
-            $previous = $pagenum - 1;
-            $control .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$previous.'
-            ">Previous</a> &nbsp; &nbsp;';
+            $page_link = $pagenum - 1;
+            $control .= "<a href='" . url('', $url_query) . "'> 
+                Previous </a> &nbsp; &nbsp;";
             for ($i = $pagenum-4; $i < $pagenum; $i++) { 
                 if($i > 0){
-                    $control .= '<a href"'.$_SERVER['PHP_SELF'].'?pn='.$i.'">'.$i.'</a> &nbsp; ';
+                    $control .= "<a href'". url('', $url_query). "'>$i</a> &nbsp; ";
                 }
             }
         }
 
         $control .= ''.$pagenum.' &nbsp; ';
         for($i = $pagenum + 1; $i <= $last_page; $i++){
-            $control .= '<a href="'.$_SERVER['PHP_SELF'].'?pn='.$i.'</a> &nbsp; ';
+            $page_link = $i;
+            $control .= "<a href='".url('', $url_query)."'>$i</a> &nbsp; ";
             if($i >= $pagenum + 4){
                 break;
             }
         }
 
         if($pagenum != $last_page){
-            $next = $pagenum + 1;
-            $control .= ' &nbsp; &nbsp; <a href="'.$_SERVER['PHP_SELF'].'?pn='.$next.'">Next</a> ';
+            $page_link = $pagenum + 1;
+            $control .= " &nbsp; &nbsp; <a href='".url('', $url_query)."'>Next</a>";
         }
     }//14:25 Video 
 
@@ -69,7 +69,6 @@ function pagination($num_rows, $pagenum)
     $pagination['last_page'] = $last_page;
     $pagination['pagenum'] = $pagenum;
     $pagination['control'] = $control;
-    $pagination['pn'] = $pn;
 
     //$pagination['']
     return $pagination;

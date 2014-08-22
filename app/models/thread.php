@@ -34,23 +34,22 @@ class Thread extends AppModel
         //write first comment at the same time
         $this->write($comment);
         $db->commit();
-        
     }
 
     /**
     * To view all threads with limit
     **/
     public static function getAll($max)
-        {
-            $threads = array();
-            $limits = $max;
-            $db = DB::conn();
-            $rows = $db->rows("SELECT * FROM thread $limits");
-            foreach($rows as $row){
-                $threads[] = new Thread($row);
-            }
-            return $threads;
+    {
+        $threads = array();
+        $limits = $max;
+        $db = DB::conn();
+        $rows = $db->rows("SELECT * FROM thread $limits");
+        foreach($rows as $row){
+            $threads[] = new Thread($row);
         }
+        return $threads;
+    }
 
     /**
     * To search a thread through thread id
@@ -90,11 +89,11 @@ class Thread extends AppModel
         if(!$comment->validate()){
             throw new ValidationException('invalid comment');
         }
-        $db=DB::conn();
-        $db->query(
-            'INSERT INTO comment 
-            SET thread_ID = ?, username = ?, body = ?, created = NOW();',
-            array($this->id, $comment->username, $comment->body));
+            $db = DB::conn();
+            $db->query(
+                'INSERT INTO comment 
+                SET thread_ID = ?, username = ?, body = ?, created = NOW();',
+                array($this->id, $comment->username, $comment->body));
     }
 
     /**

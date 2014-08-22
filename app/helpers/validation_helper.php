@@ -22,3 +22,11 @@ function redirect($controller, $view, array $url_query = null)
     }
     header("location: {$url}");
 }
+
+function check_if_logged_out()
+{
+	if(!isset($_SESSION['username']))
+	{
+		redirect('user', 'index');
+	}
+}

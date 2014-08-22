@@ -43,3 +43,16 @@
 [Fri Aug 22 14:45:39 2014] [error] [client 10.3.11.114] File does not exist: /home/pamela/board/app/webroot/favicon.ico
 [Fri Aug 22 14:45:44 2014] [error] [client 10.3.10.24] File does not exist: /home/pamela/board/app/webroot/favicon.ico
 [Fri Aug 22 14:46:30 2014] [error] [client 10.3.10.210] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:21:02 2014] [error] [client 10.3.10.133] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:21:02 2014] [error] [client 10.3.10.133] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:27:14 2014] [error] [client 10.3.12.29] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:33:06 2014] [error] [client 10.3.10.130] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:33:06 2014] [error] [client 10.3.10.130] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:39:40 2014] [error] [client 10.3.12.62] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:39:40 2014] [error] [client 10.3.12.62] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:40:02 2014] [error] [client 10.3.10.210] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:44:30 2014] [error] [client 10.3.10.131] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:44:30 2014] [error] [client 10.3.10.131] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:47:40 2014] [error] [client 10.3.10.210] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 15:47:40 2014] [error] [client 10.3.10.210] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Fri Aug 22 16:40:18 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ')', expecting '&' or T_VARIABLE in /home/pamela/board/app/helpers/pagination_helper.php on line 9, referer: http://board.example.com/thread/write
