@@ -1,6 +1,12 @@
 <?php
+
 class User extends AppModel
 {
+	/**
+	* validation for username and password
+	* @throws RecordnotFoundException
+	**/
+	
 	public function userValidate($username, $password)
 	{
 		$this->username = $username;

@@ -2,9 +2,16 @@
 
 class ThreadController extends AppController
 {
+	/**
+	*	To view all threads with limits. Through Pagination.
+	**/
+
 	public function index()
 	{
-		$threads = Thread::getAll();
+		$thread_count = Thread::getNumRows();
+		$pagination = pagination($thread_count, '');
+
+		$threads = Thread::getAll($pagination['max']);
 		$this->set(get_defined_vars());
 	}
 
@@ -15,6 +22,11 @@ class ThreadController extends AppController
 
 		$this->set(get_defined_vars());
 	}
+
+	/**
+	*  @property username
+	*		set as the $_SESSION['username']
+	**/
 
 	public function write()
 	{
@@ -73,6 +85,12 @@ class ThreadController extends AppController
 		$this->set(get_defined_vars());
 		$this->render($page);
 	}
+
+	/**
+	* To destroy user session
+	* 
+	**/
+	
 	public function logout()
 	{
 		session_destroy();

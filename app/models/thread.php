@@ -32,12 +32,12 @@ class Thread extends AppModel
 		
 	}
 
-	public static function getAll()
+	public static function getAll($max)
 		{
 			$threads = array();
-
+			$limits = $max;
 			$db = DB::conn();
-			$rows = $db->rows('SELECT * FROM thread');
+			$rows = $db->rows("SELECT * FROM thread $limits");
 			foreach($rows as $row){
 				$threads[] = new Thread($row);
 			}
@@ -75,6 +75,18 @@ class Thread extends AppModel
 			'INSERT INTO comment 
 			SET thread_ID = ?, username = ?, body = ?, created = NOW();',
 			array($this->id, $comment->username, $comment->body));
+	}
+
+	/**
+	* Function to count table rows
+	**/
+
+	public static function getNumRows()
+	{
+		$db = DB::conn();
+		$row = "SELECT COUNT(*) FROM thread";
+		$count = $db->value($row);
+        return $count;  
 	}
 }
 

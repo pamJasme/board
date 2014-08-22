@@ -1,4 +1,6 @@
-
+<!--
+	User Registration Page
+-->
 <form class="well" action="<?php eh(url(''));?>" method="POST">
 	<table border='0'>
 		<tr><td><label>Username</label></td><td><input type="text" name='username' style="height:25px"></td></tr>

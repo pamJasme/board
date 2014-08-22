@@ -7,8 +7,8 @@
   <?php foreach ($threads as $v): ?>
   <li><a href="<?php eh(url('thread/view', array('thread_id' => $v->id))) ?>"><?php eh($v->title) ?></a></li>
   <?php endforeach ?>
+ 
 </ul><br>
 <a class="btn btn-medium btn-primary" href="<?php eh(url('thread/create')) ?>">Create</a>
 </div>
 </fieldset>
-

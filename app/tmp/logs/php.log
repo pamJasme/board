@@ -4885,3 +4885,569 @@ Stack trace:
 [21-Aug-2014 03:40:26 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
 [21-Aug-2014 03:41:29 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
 [21-Aug-2014 03:42:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:07:12 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 15
+[21-Aug-2014 04:07:12 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:07:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:07:53 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:08:07 UTC] PHP Parse error:  syntax error, unexpected T_IF in /home/pamela/board/app/views/thread/view.php on line 47
+[21-Aug-2014 04:08:14 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:08:29 UTC] PHP Fatal error:  Function name must be a string in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:08:29 UTC] PHP Fatal error:  Function name must be a string in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:08:57 UTC] PHP Fatal error:  Function name must be a string in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:08:57 UTC] PHP Fatal error:  Function name must be a string in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:08:57 UTC] PHP Fatal error:  Function name must be a string in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:09:09 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:09:10 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:09:10 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:09:47 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:12:54 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:12:54 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:12:54 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:13:05 UTC] PHP Fatal error:  Function name must be a string in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:13:05 UTC] PHP Fatal error:  Function name must be a string in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:13:05 UTC] PHP Fatal error:  Function name must be a string in /home/pamela/board/app/views/thread/view.php on line 46
+[21-Aug-2014 04:14:54 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:15:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:15:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:21:47 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:21:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:21:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:21:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:21:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:22:00 UTC] PHP Notice:  Undefined variable: num_rows in /home/pamela/board/app/views/thread/index.php on line 8
+[21-Aug-2014 04:22:00 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:23:43 UTC] PHP Notice:  Undefined variable: pagination in /home/pamela/board/app/views/thread/index.php on line 18
+[21-Aug-2014 04:23:43 UTC] PHP Notice:  Undefined variable: pagination in /home/pamela/board/app/views/thread/index.php on line 22
+[21-Aug-2014 04:23:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 04:24:48 UTC] PHP Fatal error:  Call to undefined method Thread::getNumRows() in /home/pamela/board/app/controllers/thread_controller.php on line 8
+[21-Aug-2014 04:24:48 UTC] PHP Fatal error:  Call to undefined method Thread::getNumRows() in /home/pamela/board/app/controllers/thread_controller.php on line 8
+[21-Aug-2014 04:28:01 UTC] PHP Strict Standards:  Non-static method Thread::getNumRows() should not be called statically, assuming $this from incompatible context in /home/pamela/board/app/controllers/thread_controller.php on line 8
+[21-Aug-2014 04:28:01 UTC] PHP Notice:  Undefined variable: rows in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 04:28:01 UTC] PHP Fatal error:  Method name must be a string in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:34:15 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 2
+[21-Aug-2014 05:34:15 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 9
+[21-Aug-2014 05:34:16 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 2
+[21-Aug-2014 05:34:16 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 9
+[21-Aug-2014 05:34:16 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 2
+[21-Aug-2014 05:34:16 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 9
+[21-Aug-2014 05:34:17 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 2
+[21-Aug-2014 05:34:17 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 9
+[21-Aug-2014 05:34:28 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 2
+[21-Aug-2014 05:34:28 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/view.php on line 9
+[21-Aug-2014 05:35:02 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[21-Aug-2014 05:35:08 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 15
+[21-Aug-2014 05:35:08 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:35:15 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:42:13 UTC] PHP Strict Standards:  Non-static method Thread::getNumRows() should not be called statically, assuming $this from incompatible context in /home/pamela/board/app/controllers/thread_controller.php on line 8
+[21-Aug-2014 05:42:13 UTC] PHP Catchable fatal error:  Object of class Thread could not be converted to string in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:43:13 UTC] PHP Strict Standards:  Non-static method Thread::getNumRows() should not be called statically, assuming $this from incompatible context in /home/pamela/board/app/controllers/thread_controller.php on line 8
+[21-Aug-2014 05:43:13 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:46:24 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:46:57 UTC] PHP Notice:  Undefined offset: 1 in /home/pamela/board/app/models/thread.php on line 84
+[21-Aug-2014 05:46:57 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:47:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:47:40 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:49:04 UTC] PHP Notice:  Undefined variable: rowcount in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:49:04 UTC] PHP Notice:  Undefined property: Thread::$count in /home/pamela/board/app/controllers/thread_controller.php on line 10
+[21-Aug-2014 05:49:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:49:56 UTC] PHP Warning:  Missing argument 1 for ThreadController::index(), called in /home/pamela/board/dietcake/core/controller.php on line 47 and defined in /home/pamela/board/app/controllers/thread_controller.php on line 5
+[21-Aug-2014 05:49:56 UTC] PHP Notice:  Undefined variable: rowcount in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:49:56 UTC] PHP Notice:  Undefined variable: rowcount in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:49:56 UTC] PHP Notice:  Undefined property: Thread::$count in /home/pamela/board/app/controllers/thread_controller.php on line 10
+[21-Aug-2014 05:49:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:50:31 UTC] PHP Notice:  Undefined variable: rowcount in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:50:31 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:50:31 UTC] PHP Notice:  Undefined property: Thread::$count in /home/pamela/board/app/controllers/thread_controller.php on line 10
+[21-Aug-2014 05:50:31 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:50:48 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:50:48 UTC] PHP Notice:  Undefined property: Thread::$count in /home/pamela/board/app/controllers/thread_controller.php on line 10
+[21-Aug-2014 05:50:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:51:42 UTC] PHP Fatal error:  Call to undefined method Thread::getNumRow() in /home/pamela/board/app/controllers/thread_controller.php on line 8
+[21-Aug-2014 05:51:53 UTC] PHP Strict Standards:  Non-static method Thread::getNumRows() should not be called statically, assuming $this from incompatible context in /home/pamela/board/app/controllers/thread_controller.php on line 8
+[21-Aug-2014 05:51:53 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:51:53 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:51:53 UTC] PHP Notice:  Undefined property: Thread::$count in /home/pamela/board/app/controllers/thread_controller.php on line 10
+[21-Aug-2014 05:51:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:52:11 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:52:11 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:52:11 UTC] PHP Notice:  Undefined property: Thread::$count in /home/pamela/board/app/controllers/thread_controller.php on line 10
+[21-Aug-2014 05:52:11 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:53:50 UTC] PHP Notice:  Undefined variable: rows in /home/pamela/board/app/models/thread.php on line 84
+[21-Aug-2014 05:53:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/pamela/board/app/models/thread.php on line 84
+[21-Aug-2014 05:53:50 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/models/thread.php on line 87
+[21-Aug-2014 05:53:50 UTC] PHP Fatal error:  Call to a member function getNumRows() on a non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:54:03 UTC] PHP Fatal error:  Call to a member function getNumRows() on a non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:54:19 UTC] PHP Notice:  Undefined variable: num_threads in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:54:19 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:54:19 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:54:31 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:54:31 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:54:52 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:54:52 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:54:52 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:55:17 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:55:17 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:55:17 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:55:36 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/models/thread.php on line 83
+[21-Aug-2014 05:55:36 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:55:36 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:55:36 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:57:18 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:57:18 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:57:18 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 05:58:08 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:58:08 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 05:58:08 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:06:38 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/pamela/board/app/models/thread.php on line 89
+[21-Aug-2014 06:06:44 UTC] PHP Warning:  PDO::prepare() expects parameter 1 to be string, array given in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 297
+[21-Aug-2014 06:06:44 UTC] PHP Fatal error:  Call to a member function execute() on a non-object in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 298
+[21-Aug-2014 06:07:58 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 06:07:58 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 06:07:58 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:08:10 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 06:08:10 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 06:08:10 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:08:22 UTC] PHP Notice:  Trying to get property of non-object in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 06:08:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:08:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:15:44 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:15:53 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/views/thread/index.php on line 3
+[21-Aug-2014 06:15:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:20:08 UTC] PHP Fatal error:  Call to undefined function pagination() in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 06:21:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:21:17 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/views/thread/index.php on line 3
+[21-Aug-2014 06:21:17 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:21:48 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/views/thread/index.php on line 3
+[21-Aug-2014 06:21:48 UTC] PHP Notice:  Undefined variable: thread in /home/pamela/board/app/views/thread/index.php on line 7
+[21-Aug-2014 06:21:48 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/pamela/board/app/views/thread/index.php on line 7
+[21-Aug-2014 06:21:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:21:57 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/views/thread/index.php on line 3
+[21-Aug-2014 06:21:57 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:23:02 UTC] PHP Notice:  Undefined index: $thread_count in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 06:23:02 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/views/thread/index.php on line 3
+[21-Aug-2014 06:23:02 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:23:21 UTC] PHP Notice:  Undefined variable: count in /home/pamela/board/app/views/thread/index.php on line 3
+[21-Aug-2014 06:23:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:23:46 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:27:14 UTC] PHP Fatal error:  Using $this when not in object context in /home/pamela/board/app/helpers/pagination_helper.php on line 4
+[21-Aug-2014 06:27:24 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:30:33 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_STRING in /home/pamela/board/app/controllers/thread_controller.php on line 5
+[21-Aug-2014 06:31:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:36:19 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:36:31 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:37:21 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_STRING in /home/pamela/board/app/controllers/thread_controller.php on line 5
+[21-Aug-2014 06:37:47 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_STRING in /home/pamela/board/app/controllers/thread_controller.php on line 5
+[21-Aug-2014 06:38:17 UTC] PHP Warning:  Missing argument 2 for pagination(), called in /home/pamela/board/app/controllers/thread_controller.php on line 11 and defined in /home/pamela/board/app/helpers/pagination_helper.php on line 2
+[21-Aug-2014 06:38:17 UTC] PHP Notice:  Undefined variable: rows_per_page in /home/pamela/board/app/helpers/pagination_helper.php on line 8
+[21-Aug-2014 06:38:17 UTC] PHP Notice:  Undefined variable: rows_per_page in /home/pamela/board/app/helpers/pagination_helper.php on line 10
+[21-Aug-2014 06:38:17 UTC] PHP Warning:  Division by zero in /home/pamela/board/app/helpers/pagination_helper.php on line 10
+[21-Aug-2014 06:38:17 UTC] PHP Notice:  Undefined variable: rows_per_page in /home/pamela/board/app/helpers/pagination_helper.php on line 18
+[21-Aug-2014 06:38:17 UTC] PHP Notice:  Undefined variable: rows_per_page in /home/pamela/board/app/helpers/pagination_helper.php on line 18
+[21-Aug-2014 06:38:17 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:38:53 UTC] PHP Warning:  Missing argument 2 for pagination(), called in /home/pamela/board/app/controllers/thread_controller.php on line 11 and defined in /home/pamela/board/app/helpers/pagination_helper.php on line 2
+[21-Aug-2014 06:38:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:39:00 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:50:46 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:50:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:50:59 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:51:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:51:07 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:51:19 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:51:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:51:25 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:51:34 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:51:38 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:57:43 UTC] PHP Notice:  Undefined variable: max in /home/pamela/board/app/controllers/thread_controller.php on line 9
+[21-Aug-2014 06:57:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:59:13 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:59:45 UTC] PHP Warning:  Missing argument 2 for pagination(), called in /home/pamela/board/app/controllers/thread_controller.php on line 8 and defined in /home/pamela/board/app/helpers/pagination_helper.php on line 2
+[21-Aug-2014 06:59:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 06:59:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:00:55 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:00:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:00:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:00:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:00:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:01:31 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:01:32 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:01:32 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:01:32 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:01:32 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:01:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:02:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1327 Undeclared variable: $limits' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php:15
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php(15): PDOStatement->execute(Array)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(298): SimpleDBIStatement->execute(Array)
+#2 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(328): SimpleDBI->query('SELECT * FROM t...', Array)
+#3 /home/pamela/board/app/models/thread.php(40): SimpleDBI->rows('SELECT * FROM t...')
+#4 /home/pamela/board/app/controllers/thread_controller.php(10): Thread::getAll(NULL)
+#5 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->index()
+#6 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#7 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#8 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php on line 15
+[21-Aug-2014 07:03:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1327 Undeclared variable: $limits' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php:15
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php(15): PDOStatement->execute(Array)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(298): SimpleDBIStatement->execute(Array)
+#2 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(328): SimpleDBI->query('SELECT * FROM t...', Array)
+#3 /home/pamela/board/app/models/thread.php(41): SimpleDBI->rows('SELECT * FROM t...')
+#4 /home/pamela/board/app/controllers/thread_controller.php(10): Thread::getAll(NULL)
+#5 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->index()
+#6 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#7 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#8 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php on line 15
+[21-Aug-2014 07:03:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1327 Undeclared variable: $limits' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php:15
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php(15): PDOStatement->execute(Array)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(298): SimpleDBIStatement->execute(Array)
+#2 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(328): SimpleDBI->query('SELECT * FROM t...', Array)
+#3 /home/pamela/board/app/models/thread.php(41): SimpleDBI->rows('SELECT * FROM t...')
+#4 /home/pamela/board/app/controllers/thread_controller.php(10): Thread::getAll(NULL)
+#5 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->index()
+#6 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#7 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#8 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php on line 15
+[21-Aug-2014 07:03:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1327 Undeclared variable: $limits' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php:15
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php(15): PDOStatement->execute(Array)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(298): SimpleDBIStatement->execute(Array)
+#2 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(328): SimpleDBI->query('SELECT * FROM t...', Array)
+#3 /home/pamela/board/app/models/thread.php(41): SimpleDBI->rows('SELECT * FROM t...')
+#4 /home/pamela/board/app/controllers/thread_controller.php(10): Thread::getAll(NULL)
+#5 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->index()
+#6 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#7 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#8 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php on line 15
+[21-Aug-2014 07:03:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1327 Undeclared variable: $limits' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php:15
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php(15): PDOStatement->execute(Array)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(298): SimpleDBIStatement->execute(Array)
+#2 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(328): SimpleDBI->query('SELECT * FROM t...', Array)
+#3 /home/pamela/board/app/models/thread.php(41): SimpleDBI->rows('SELECT * FROM t...')
+#4 /home/pamela/board/app/controllers/thread_controller.php(10): Thread::getAll(NULL)
+#5 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->index()
+#6 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#7 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#8 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php on line 15
+[21-Aug-2014 07:03:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1327 Undeclared variable: $limits' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php:15
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php(15): PDOStatement->execute(Array)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(298): SimpleDBIStatement->execute(Array)
+#2 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(328): SimpleDBI->query('SELECT * FROM t...', Array)
+#3 /home/pamela/board/app/models/thread.php(41): SimpleDBI->rows('SELECT * FROM t...')
+#4 /home/pamela/board/app/controllers/thread_controller.php(10): Thread::getAll(NULL)
+#5 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->index()
+#6 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#7 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#8 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php on line 15
+[21-Aug-2014 07:04:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1327 Undeclared variable: $limits' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php:15
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php(15): PDOStatement->execute(Array)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(298): SimpleDBIStatement->execute(Array)
+#2 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(328): SimpleDBI->query('SELECT * FROM t...', Array)
+#3 /home/pamela/board/app/models/thread.php(41): SimpleDBI->rows('SELECT * FROM t...')
+#4 /home/pamela/board/app/controllers/thread_controller.php(10): Thread::getAll(NULL)
+#5 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->index()
+#6 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#7 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#8 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php on line 15
+[21-Aug-2014 07:05:08 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:05:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:05:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:06:52 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:07:41 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:07:50 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:07:59 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:08:02 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:10:44 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:10:47 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:10:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:10:59 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:10:59 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:08 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:11 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:12 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:34 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:11:57 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:12:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:12:06 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:13:02 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:13:05 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:13:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:13:24 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:13:25 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:13:37 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:13:40 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:13:42 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:14:06 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[21-Aug-2014 07:23:31 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 15
+[21-Aug-2014 07:23:31 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:23:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:23:46 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:23:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:23:50 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:23:57 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:23:59 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:24:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:24:09 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:24:12 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:24:13 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:24:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:24:24 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:25:14 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:25:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:25:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:26:07 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:28:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:28:11 UTC] PHP Notice:  Undefined variable: pagenum in /home/pamela/board/app/views/thread/index.php on line 10
+[21-Aug-2014 07:28:11 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 10
+[21-Aug-2014 07:28:11 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:29:28 UTC] PHP Notice:  Undefined variable: pagenum in /home/pamela/board/app/views/thread/index.php on line 10
+[21-Aug-2014 07:29:28 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 10
+[21-Aug-2014 07:29:28 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:31:01 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 10
+[21-Aug-2014 07:31:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:31:53 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/pamela/board/app/views/thread/index.php on line 11
+[21-Aug-2014 07:31:58 UTC] PHP Notice:  Undefined variable: pagenum in /home/pamela/board/app/views/thread/index.php on line 10
+[21-Aug-2014 07:31:58 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:32:16 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:36:32 UTC] PHP Notice:  Undefined index: row_disp in /home/pamela/board/app/views/thread/index.php on line 10
+[21-Aug-2014 07:36:32 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:36:47 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:38:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:39:11 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:39:11 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:39:36 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:39:46 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:39:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:39:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:39:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:40:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:41:26 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 24
+[21-Aug-2014 07:41:26 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 38
+[21-Aug-2014 07:41:26 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:41:50 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 25
+[21-Aug-2014 07:41:50 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 39
+[21-Aug-2014 07:41:50 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:42:07 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 25
+[21-Aug-2014 07:42:07 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:42:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:44:09 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:44:20 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/pamela/board/app/views/thread/index.php on line 39
+[21-Aug-2014 07:45:09 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/pamela/board/app/views/thread/index.php on line 30
+[21-Aug-2014 07:45:17 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:46:08 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 35
+[21-Aug-2014 07:46:08 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 49
+[21-Aug-2014 07:46:08 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:47:15 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 21
+[21-Aug-2014 07:47:15 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 27
+[21-Aug-2014 07:47:15 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 44
+[21-Aug-2014 07:47:15 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 58
+[21-Aug-2014 07:47:15 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:47:34 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 21
+[21-Aug-2014 07:47:34 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 44
+[21-Aug-2014 07:47:34 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 58
+[21-Aug-2014 07:47:34 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:47:42 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 44
+[21-Aug-2014 07:47:42 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 58
+[21-Aug-2014 07:47:42 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:47:53 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 44
+[21-Aug-2014 07:47:53 UTC] PHP Notice:  Undefined variable: last in /home/pamela/board/app/views/thread/index.php on line 58
+[21-Aug-2014 07:47:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:48:06 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:48:10 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[21-Aug-2014 07:48:18 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:49:09 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:49:41 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:49:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:52:06 UTC] PHP Warning:  Missing argument 2 for pagination(), called in /home/pamela/board/app/controllers/thread_controller.php on line 8 and defined in /home/pamela/board/app/helpers/pagination_helper.php on line 2
+[21-Aug-2014 07:52:06 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 07:52:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:01:56 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:02:35 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:02:36 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:03:54 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:05:25 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[21-Aug-2014 08:05:27 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:12:15 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 15
+[21-Aug-2014 08:12:15 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/pamela/board/app/views/thread/index.php on line 13
+[21-Aug-2014 08:12:55 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/pamela/board/app/views/thread/index.php on line 13
+[21-Aug-2014 08:13:33 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/pamela/board/app/views/thread/index.php on line 13
+[21-Aug-2014 08:14:40 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/pamela/board/app/views/thread/index.php on line 13
+[21-Aug-2014 08:14:40 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/pamela/board/app/views/thread/index.php on line 13
+[21-Aug-2014 08:14:40 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/pamela/board/app/views/thread/index.php on line 13
+[21-Aug-2014 08:14:41 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/pamela/board/app/views/thread/index.php on line 13
+[21-Aug-2014 08:15:06 UTC] PHP Parse error:  syntax error, unexpected T_STRING, expecting ',' or ';' in /home/pamela/board/app/views/thread/index.php on line 13
+[21-Aug-2014 08:16:41 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:17:19 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:17:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:17:20 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:17:21 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:17:59 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:00 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:00 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:00 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:00 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:01 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:30 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:30 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:18:30 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:19:02 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:19:02 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:19:02 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:19:02 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:21:26 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:35:55 UTC] PHP Warning:  http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given in /home/pamela/board/app/config/router.php on line 11
+[21-Aug-2014 08:35:55 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /home/pamela/board/app/config/router.php on line 26
+[21-Aug-2014 08:35:55 UTC] PHP Warning:  http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given in /home/pamela/board/app/config/router.php on line 26
+[21-Aug-2014 08:35:55 UTC] PHP Notice:  Undefined variable: controls in /home/pamela/board/app/helpers/pagination_helper.php on line 19
+[21-Aug-2014 08:35:55 UTC] PHP Warning:  http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given in /home/pamela/board/app/config/router.php on line 11
+[21-Aug-2014 08:35:55 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /home/pamela/board/app/config/router.php on line 26
+[21-Aug-2014 08:35:55 UTC] PHP Warning:  http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given in /home/pamela/board/app/config/router.php on line 26
+[21-Aug-2014 08:35:55 UTC] PHP Notice:  Undefined variable: controls in /home/pamela/board/app/helpers/pagination_helper.php on line 19
+[21-Aug-2014 08:35:55 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:36:35 UTC] PHP Warning:  http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given in /home/pamela/board/app/config/router.php on line 11
+[21-Aug-2014 08:36:35 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /home/pamela/board/app/config/router.php on line 26
+[21-Aug-2014 08:36:35 UTC] PHP Warning:  http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given in /home/pamela/board/app/config/router.php on line 26
+[21-Aug-2014 08:36:35 UTC] PHP Notice:  Undefined variable: controls in /home/pamela/board/app/helpers/pagination_helper.php on line 19
+[21-Aug-2014 08:36:35 UTC] PHP Warning:  http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given in /home/pamela/board/app/config/router.php on line 11
+[21-Aug-2014 08:36:35 UTC] PHP Warning:  array_merge(): Argument #2 is not an array in /home/pamela/board/app/config/router.php on line 26
+[21-Aug-2014 08:36:35 UTC] PHP Warning:  http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given in /home/pamela/board/app/config/router.php on line 26
+[21-Aug-2014 08:36:35 UTC] PHP Notice:  Undefined variable: controls in /home/pamela/board/app/helpers/pagination_helper.php on line 19
+[21-Aug-2014 08:36:35 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:36:38 UTC] PHP Notice:  Undefined variable: controls in /home/pamela/board/app/helpers/pagination_helper.php on line 19
+[21-Aug-2014 08:36:38 UTC] PHP Notice:  Undefined variable: controls in /home/pamela/board/app/helpers/pagination_helper.php on line 19
+[21-Aug-2014 08:36:38 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:36:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:40:47 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:42:22 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:44:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:44:43 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:44:44 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:45:15 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[21-Aug-2014 08:45:50 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[21-Aug-2014 08:45:53 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/pamela/board/app/views/thread/index.php on line 24
+[21-Aug-2014 08:45:55 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/pamela/board/app/views/thread/index.php on line 24
+[21-Aug-2014 08:45:55 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/pamela/board/app/views/thread/index.php on line 24
+[21-Aug-2014 08:46:06 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:08 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message 'invalid url format' in /home/pamela/board/dietcake/core/dispatcher.php:29
+Stack trace:
+#0 /home/pamela/board/dietcake/core/dispatcher.php(6): Dispatcher::parseAction(NULL)
+#1 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#2 {main}
+  thrown in /home/pamela/board/dietcake/core/dispatcher.php on line 29
+[21-Aug-2014 08:46:13 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:35 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:36 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:36 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:37 UTC] PHP Warning:  require(/home/pamela/board/app/controllers/thread_thread_controller.php): failed to open stream: No such file or directory in /home/pamela/board/app/config/bootstrap.php on line 25
+[21-Aug-2014 08:46:37 UTC] PHP Fatal error:  require(): Failed opening required '/home/pamela/board/app/controllers/thread_thread_controller.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/pamela/board/app/config/bootstrap.php on line 25
+[21-Aug-2014 08:46:42 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:49 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:51 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:52 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:52 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:52 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:53 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:54 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:54 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:46:55 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 08:47:11 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 09:05:30 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 09:26:04 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 42
+[21-Aug-2014 09:26:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 09:26:04 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 42
+[21-Aug-2014 09:26:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 09:26:04 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 42
+[21-Aug-2014 09:26:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[21-Aug-2014 09:26:04 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 42
+[21-Aug-2014 09:26:04 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 01:37:24 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 15
+[22-Aug-2014 01:37:24 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 42
+[22-Aug-2014 01:37:24 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 01:38:25 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 42
+[22-Aug-2014 01:38:25 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 01:38:26 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 42
+[22-Aug-2014 01:38:26 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 01:38:26 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 42
+[22-Aug-2014 01:38:26 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 01:38:35 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[22-Aug-2014 01:41:48 UTC] PHP Parse error:  syntax error, unexpected T_CATCH in /home/pamela/board/app/controllers/user_controller.php on line 25
+[22-Aug-2014 01:44:11 UTC] PHP Parse error:  syntax error, unexpected T_ELSE, expecting T_CATCH in /home/pamela/board/app/controllers/user_controller.php on line 26
+[22-Aug-2014 01:44:41 UTC] PHP Parse error:  syntax error, unexpected T_CATCH in /home/pamela/board/app/controllers/user_controller.php on line 28
+[22-Aug-2014 01:49:31 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in /home/pamela/board/app/controllers/user_controller.php on line 34
+[22-Aug-2014 01:49:43 UTC] PHP Notice:  Undefined variable: e in /home/pamela/board/app/controllers/user_controller.php on line 17
+[22-Aug-2014 01:49:43 UTC] PHP Fatal error:  Call to a member function getMessage() on a non-object in /home/pamela/board/app/controllers/user_controller.php on line 17
+[22-Aug-2014 02:19:16 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 30
+[22-Aug-2014 02:19:16 UTC] PHP Fatal error:  Undefined class constant 'THREAD_TABLE' in /home/pamela/board/app/models/thread.php on line 87
+[22-Aug-2014 02:19:33 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 47
+[22-Aug-2014 02:19:33 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 02:19:45 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 47
+[22-Aug-2014 02:19:45 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 02:19:48 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 47
+[22-Aug-2014 02:19:48 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5
+[22-Aug-2014 02:19:50 UTC] PHP Notice:  Undefined variable: rows_disp in /home/pamela/board/app/helpers/pagination_helper.php on line 47
+[22-Aug-2014 02:19:50 UTC] PHP Notice:  Undefined variable: title in /home/pamela/board/app/views/layouts/default.php on line 5

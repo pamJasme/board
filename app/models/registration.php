@@ -1,6 +1,18 @@
 <?php
+
+/**
+* class Registration
+**/
+
 class Registration extends AppModel
 {
+	/**
+	* Function to validate user registration
+	* @throws IncompleteFieldsException
+	* @throws ValidationException
+	* @throws ExistingUserException
+	* @param $infos(array)
+	*/
 	public function userRegistration(array $infos)
 	{
 		

@@ -27,6 +27,7 @@
 
 <?php endforeach ?>
 
+
 <hr>
 <form class="well" method="post" action="<?php eh(url('thread/write')) ?>">
 	<label>Your name</label>
@@ -42,6 +43,7 @@
 <div>
   <?php 
     error_reporting(E_ALL ^ E_NOTICE);//still looking for alternatives.
+    
     if(is_null($v->body))
     {
         //code

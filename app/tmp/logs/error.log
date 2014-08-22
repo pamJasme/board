@@ -23,3 +23,11 @@
 [Wed Aug 20 08:44:50 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board/app/webroot/favicon.ico
 [Thu Aug 21 08:36:46 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board/app/webroot/favicon.ico
 [Thu Aug 21 08:36:46 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board/app/webroot/favicon.ico
+[Thu Aug 21 14:29:15 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_CONST in /home/pamela/board/app/helpers/pagination_helper.php on line 4, referer: http://board.example.com/thread/view?thread_id=3
+[Thu Aug 21 14:30:23 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_CONST in /home/pamela/board/app/helpers/pagination_helper.php on line 4, referer: http://board.example.com/thread/view?thread_id=3
+[Thu Aug 21 14:30:24 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_CONST in /home/pamela/board/app/helpers/pagination_helper.php on line 4, referer: http://board.example.com/thread/view?thread_id=3
+[Thu Aug 21 14:30:24 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_CONST in /home/pamela/board/app/helpers/pagination_helper.php on line 4, referer: http://board.example.com/thread/view?thread_id=3
+[Thu Aug 21 15:06:37 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/pamela/board/app/helpers/pagination_helper.php on line 19, referer: http://board.example.com/thread/view?thread_id=3
+[Thu Aug 21 15:07:37 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '}' in /home/pamela/board/app/helpers/pagination_helper.php on line 22, referer: http://board.example.com/thread/view?thread_id=3
+[Thu Aug 21 15:29:19 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_RETURN in /home/pamela/board/app/helpers/pagination_helper.php on line 20, referer: http://board.example.com/thread/view?thread_id=19
+[Fri Aug 22 09:36:36 2014] [error] [client 127.0.0.1] File does not exist: /home/pamela/board/app/webroot/favicon.ico

@@ -1,3 +1,7 @@
+<!--
+	User Login Page
+-->
+
 <?php $title="Login" ?>
 
 <div class='register' style='margin-top:100px'>
