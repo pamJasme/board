@@ -6035,3 +6035,179 @@ Stack trace:
 [26-Aug-2014 01:11:23 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
 [26-Aug-2014 02:18:11 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
 [26-Aug-2014 02:22:24 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[26-Aug-2014 03:17:09 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[26-Aug-2014 03:29:39 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[26-Aug-2014 03:29:47 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[26-Aug-2014 03:29:51 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[26-Aug-2014 03:30:26 UTC] PHP Notice:  Undefined variable: user_pword in /home/pamela/board/app/models/registration.php on line 27
+[26-Aug-2014 03:30:26 UTC] PHP Notice:  Undefined variable: user_pword in /home/pamela/board/app/models/registration.php on line 34
+[26-Aug-2014 03:31:07 UTC] PHP Notice:  Undefined variable: user_pword in /home/pamela/board/app/models/registration.php on line 27
+[26-Aug-2014 03:55:45 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[26-Aug-2014 04:01:24 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[26-Aug-2014 04:01:50 UTC] PHP Notice:  Use of undefined constant MIN_VALUE_USERNAME - assumed 'MIN_VALUE_USERNAME' in /home/pamela/board/app/models/registration.php on line 39
+[26-Aug-2014 04:01:50 UTC] PHP Notice:  Use of undefined constant MAX_VALUE_USERNAME - assumed 'MAX_VALUE_USERNAME' in /home/pamela/board/app/models/registration.php on line 39
+[26-Aug-2014 04:01:50 UTC] PHP Notice:  Use of undefined constant MIN_VALUE_PASSwORD - assumed 'MIN_VALUE_PASSwORD' in /home/pamela/board/app/models/registration.php on line 40
+[26-Aug-2014 04:01:50 UTC] PHP Warning:  Missing argument 3 for validate_between(), called in /home/pamela/board/app/models/registration.php on line 40 and defined in /home/pamela/board/app/helpers/validation_helper.php on line 6
+[26-Aug-2014 04:01:50 UTC] PHP Notice:  Undefined variable: max in /home/pamela/board/app/helpers/validation_helper.php on line 9
+[26-Aug-2014 04:02:45 UTC] PHP Notice:  Use of undefined constant MIN_VALUE_USERNAME - assumed 'MIN_VALUE_USERNAME' in /home/pamela/board/app/models/registration.php on line 39
+[26-Aug-2014 04:02:45 UTC] PHP Notice:  Use of undefined constant MAX_VALUE_USERNAME - assumed 'MAX_VALUE_USERNAME' in /home/pamela/board/app/models/registration.php on line 39
+[26-Aug-2014 04:02:45 UTC] PHP Notice:  Use of undefined constant MIN_VALUE_PASSWORD - assumed 'MIN_VALUE_PASSWORD' in /home/pamela/board/app/models/registration.php on line 40
+[26-Aug-2014 04:02:45 UTC] PHP Warning:  Missing argument 3 for validate_between(), called in /home/pamela/board/app/models/registration.php on line 40 and defined in /home/pamela/board/app/helpers/validation_helper.php on line 6
+[26-Aug-2014 04:02:45 UTC] PHP Notice:  Undefined variable: max in /home/pamela/board/app/helpers/validation_helper.php on line 9
+[26-Aug-2014 04:04:05 UTC] PHP Notice:  Use of undefined constant MIN_VALUE - assumed 'MIN_VALUE' in /home/pamela/board/app/models/registration.php on line 38
+[26-Aug-2014 04:04:05 UTC] PHP Notice:  Use of undefined constant MAX_VALUE - assumed 'MAX_VALUE' in /home/pamela/board/app/models/registration.php on line 38
+[26-Aug-2014 04:04:05 UTC] PHP Notice:  Use of undefined constant MIN_VALUE - assumed 'MIN_VALUE' in /home/pamela/board/app/models/registration.php on line 39
+[26-Aug-2014 04:04:05 UTC] PHP Warning:  Missing argument 3 for validate_between(), called in /home/pamela/board/app/models/registration.php on line 39 and defined in /home/pamela/board/app/helpers/validation_helper.php on line 6
+[26-Aug-2014 04:04:05 UTC] PHP Notice:  Undefined variable: max in /home/pamela/board/app/helpers/validation_helper.php on line 9
+[26-Aug-2014 04:07:18 UTC] PHP Notice:  Use of undefined constant MAX_VALUE - assumed 'MAX_VALUE' in /home/pamela/board/app/models/registration.php on line 37
+[26-Aug-2014 04:07:18 UTC] PHP Notice:  Use of undefined constant MIN_VALUE - assumed 'MIN_VALUE' in /home/pamela/board/app/models/registration.php on line 38
+[26-Aug-2014 04:07:18 UTC] PHP Warning:  Missing argument 3 for validate_between(), called in /home/pamela/board/app/models/registration.php on line 38 and defined in /home/pamela/board/app/helpers/validation_helper.php on line 6
+[26-Aug-2014 04:07:18 UTC] PHP Notice:  Undefined variable: max in /home/pamela/board/app/helpers/validation_helper.php on line 9
+[26-Aug-2014 04:07:31 UTC] PHP Warning:  Missing argument 3 for validate_between(), called in /home/pamela/board/app/models/registration.php on line 38 and defined in /home/pamela/board/app/helpers/validation_helper.php on line 6
+[26-Aug-2014 04:07:31 UTC] PHP Notice:  Undefined variable: max in /home/pamela/board/app/helpers/validation_helper.php on line 9
+[26-Aug-2014 04:11:23 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/index.php on line 3
+[26-Aug-2014 04:19:46 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[26-Aug-2014 04:19:46 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/pamela/board/app/models/thread.php on line 95
+[26-Aug-2014 04:20:06 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/pamela/board/app/models/thread.php on line 95
+[26-Aug-2014 04:23:56 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pamela/board/app/models/thread.php on line 32
+[26-Aug-2014 04:23:57 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pamela/board/app/models/thread.php on line 32
+[26-Aug-2014 04:24:16 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/pamela/board/app/models/thread.php on line 97
+[26-Aug-2014 04:24:46 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/pamela/board/app/models/thread.php on line 99
+[26-Aug-2014 04:25:15 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/pamela/board/app/models/thread.php on line 98
+[26-Aug-2014 04:25:51 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/pamela/board/app/models/thread.php on line 99
+[26-Aug-2014 04:25:58 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/pamela/board/app/models/thread.php on line 92
+[26-Aug-2014 04:28:00 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/pamela/board/app/models/thread.php on line 92
+[26-Aug-2014 04:28:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php:329
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(329): PDOStatement->fetchAll(2)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(314): SimpleDBI->rows('INSERT INTO com...', Array)
+#2 /home/pamela/board/app/models/thread.php(99): SimpleDBI->row('INSERT INTO com...', Array)
+#3 /home/pamela/board/app/controllers/thread_controller.php(48): Thread->write(Object(Comment))
+#4 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->write()
+#5 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#6 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#7 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 329
+[26-Aug-2014 04:28:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php:329
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(329): PDOStatement->fetchAll(2)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(314): SimpleDBI->rows('INSERT INTO com...', Array)
+#2 /home/pamela/board/app/models/thread.php(98): SimpleDBI->row('INSERT INTO com...', Array)
+#3 /home/pamela/board/app/controllers/thread_controller.php(48): Thread->write(Object(Comment))
+#4 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->write()
+#5 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#6 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#7 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 329
+[26-Aug-2014 04:29:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php:329
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(329): PDOStatement->fetchAll(2)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(314): SimpleDBI->rows('INSERT INTO com...', Array)
+#2 /home/pamela/board/app/models/thread.php(96): SimpleDBI->row('INSERT INTO com...', Array)
+#3 /home/pamela/board/app/controllers/thread_controller.php(48): Thread->write(Object(Comment))
+#4 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->write()
+#5 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#6 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#7 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 329
+[26-Aug-2014 04:29:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php:329
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(329): PDOStatement->fetchAll(2)
+#1 /home/pamela/board/app/models/thread.php(96): SimpleDBI->rows('INSERT INTO com...', Array)
+#2 /home/pamela/board/app/controllers/thread_controller.php(48): Thread->write(Object(Comment))
+#3 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->write()
+#4 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#5 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#6 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 329
+[26-Aug-2014 04:55:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php:329
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(329): PDOStatement->fetchAll(2)
+#1 /home/pamela/board/app/models/thread.php(95): SimpleDBI->rows('INSERT INTO com...', Array)
+#2 /home/pamela/board/app/controllers/thread_controller.php(48): Thread->write(Object(Comment))
+#3 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->write()
+#4 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#5 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#6 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 329
+[26-Aug-2014 04:57:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php:329
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(329): PDOStatement->fetchAll(2)
+#1 /home/pamela/board/app/models/thread.php(96): SimpleDBI->rows('INSERT INTO com...', Array)
+#2 /home/pamela/board/app/controllers/thread_controller.php(48): Thread->write(Object(Comment))
+#3 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->write()
+#4 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#5 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#6 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 329
+[26-Aug-2014 04:57:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php:329
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(329): PDOStatement->fetchAll(2)
+#1 /home/pamela/board/app/models/thread.php(96): SimpleDBI->rows('INSERT INTO com...', Array)
+#2 /home/pamela/board/app/controllers/thread_controller.php(48): Thread->write(Object(Comment))
+#3 /home/pamela/board/dietcake/core/controller.php(47): ThreadController->write()
+#4 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#5 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#6 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php on line 329
+[26-Aug-2014 05:39:26 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[26-Aug-2014 05:45:18 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/pamela/board/app/models/thread.php on line 22
+[26-Aug-2014 05:57:21 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[26-Aug-2014 06:03:17 UTC] PHP Notice:  Undefined variable: check_pass in /home/pamela/board/app/models/registration.php on line 43
+[26-Aug-2014 06:08:36 UTC] PHP Parse error:  syntax error, unexpected T_CONST in /home/pamela/board/app/controllers/user_controller.php on line 47
+[26-Aug-2014 06:09:29 UTC] PHP Notice:  Undefined variable: username in /home/pamela/board/app/controllers/user_controller.php on line 66
+[26-Aug-2014 06:35:12 UTC] PHP Fatal error:  Call to undefined function alphanum() in /home/pamela/board/app/helpers/validation_helper.php on line 40
+[26-Aug-2014 06:35:28 UTC] PHP Fatal error:  Call to undefined function ctype_alphanum() in /home/pamela/board/app/helpers/validation_helper.php on line 40
+[26-Aug-2014 06:35:46 UTC] PHP Warning:  Exception::getMessage() expects exactly 0 parameters, 1 given in /home/pamela/board/app/controllers/user_controller.php on line 66
+[26-Aug-2014 06:42:27 UTC] PHP Fatal error:  Call to undefined function validateUsername() in /home/pamela/board/app/controllers/user_controller.php on line 66
+[26-Aug-2014 06:54:07 UTC] PHP Warning:  preg_replace(): Compilation failed: nothing to repeat at offset 0 in /home/pamela/board/app/helpers/validation_helper.php on line 9
+[26-Aug-2014 07:22:32 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting T_CATCH in /home/pamela/board/app/controllers/user_controller.php on line 84
+[26-Aug-2014 07:38:27 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/controllers/thread_controller.php on line 45
+[26-Aug-2014 07:38:27 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/write.php on line 2
+[26-Aug-2014 07:38:27 UTC] PHP Notice:  Undefined index: username in /home/pamela/board/app/views/thread/write.php on line 39
+[26-Aug-2014 07:38:51 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[26-Aug-2014 07:38:58 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 31
+[26-Aug-2014 07:40:52 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 31
+[26-Aug-2014 08:05:02 UTC] PHP Notice:  Use of undefined constant pn - assumed 'pn' in /home/pamela/board/app/helpers/pagination_helper.php on line 18
+[26-Aug-2014 08:11:06 UTC] PHP Notice:  Undefined index: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 18
+[26-Aug-2014 08:11:18 UTC] PHP Notice:  Undefined index: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 18

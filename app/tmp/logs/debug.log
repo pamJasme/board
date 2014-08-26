@@ -4113,3 +4113,421 @@ pamela four gagayahin ang f4)
             ORDER BY created ASC; (38)
 2014-08-26T10:23:11.636360+08:00		sql	0.000126	1:(localhost) SELECT COUNT(*) FROM thread; ()
 2014-08-26T10:23:11.636983+08:00		sql	0.000086	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:17:09.963855+08:00		sql	0.000151	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_pword = ?; (ppaamm, 09twelve)
+2014-08-26T11:17:09.971911+08:00		sql	0.000071	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:09.972216+08:00		sql	0.000042	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:17:12.385130+08:00		sql	0.000109	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:12.385725+08:00		sql	0.000093	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T11:17:13.815433+08:00		sql	0.000052	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:13.815726+08:00		sql	0.000029	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T11:17:18.380607+08:00		sql	0.000125	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:18.380917+08:00		sql	0.000043	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T11:17:20.063721+08:00		sql	0.000110	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:20.064537+08:00		sql	0.000113	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:17:21.180855+08:00		sql	0.000102	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:21.181135+08:00		sql	0.000038	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T11:17:22.093131+08:00		sql	0.000122	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:22.093957+08:00		sql	0.000115	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T11:17:25.652778+08:00		sql	0.000051	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:25.653075+08:00		sql	0.000036	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T11:17:26.612792+08:00		sql	0.000056	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:17:26.613120+08:00		sql	0.000078	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:18:27.540216+08:00		sql	0.000144	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:18:27.545775+08:00		sql	0.000153	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:18:27.769613+08:00		sql	0.000114	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:18:27.770168+08:00		sql	0.000086	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:18:27.952921+08:00		sql	0.000095	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:18:27.953221+08:00		sql	0.000046	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:18:28.152709+08:00		sql	0.000127	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:18:28.153289+08:00		sql	0.000091	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:18:29.720229+08:00		sql	0.000116	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:18:29.720810+08:00		sql	0.000092	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T11:18:30.450468+08:00		sql	0.000074	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:18:30.450739+08:00		sql	0.000044	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T11:29:47.234780+08:00		sql	0.000282	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (ppaamm, 09twelve)
+2014-08-26T11:29:47.239944+08:00		sql	0.000056	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:29:47.240209+08:00		sql	0.000039	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:29:49.519168+08:00		sql	0.000056	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:29:49.519496+08:00		sql	0.000040	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T11:29:50.336025+08:00		sql	0.000140	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:29:50.336830+08:00		sql	0.000136	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T11:29:56.263841+08:00		sql	0.000266	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (ppaamm, dfsjkldsjkg)
+2014-08-26T11:31:07.085765+08:00		sql	0.000255	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dietCake, dietcake@qwerty.com)
+2014-08-26T11:31:07.120008+08:00		sql	0.034013	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (dietCake, , Diet, Cake, dietcake@qwerty.com, 2014-08-26 11:31:07)
+2014-08-26T11:31:20.012631+08:00		sql	0.000313	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dietCake, dietcake@qwerty.com)
+2014-08-26T11:32:23.685065+08:00		sql	0.000251	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pampam, pam@pam.pam)
+2014-08-26T11:32:23.761291+08:00		sql	0.076018	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (pampam, pampam, Pamela, Jasme, pam@pam.pam, 2014-08-26 11:32:23)
+2014-08-26T11:55:45.319065+08:00		sql	0.000277	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (ppaamm, 09twelve)
+2014-08-26T11:55:45.332644+08:00		sql	0.000057	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:55:45.332977+08:00		sql	0.000091	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T11:55:47.766529+08:00		sql	0.000062	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:55:47.767050+08:00		sql	0.000116	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T11:55:48.573119+08:00		sql	0.000062	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T11:55:48.573421+08:00		sql	0.000042	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T12:01:22.696686+08:00		sql	0.000107	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T12:01:22.697274+08:00		sql	0.000096	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T12:01:23.186760+08:00		sql	0.000107	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T12:01:23.187419+08:00		sql	0.000096	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T12:01:23.400153+08:00		sql	0.000124	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T12:01:23.400489+08:00		sql	0.000039	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T12:08:22.738157+08:00		sql	0.000253	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamel, haha@haha.com)
+2014-08-26T12:08:22.764534+08:00		sql	0.026143	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (pamel, pamela, pamela, Packard, haha@haha.com, 2014-08-26 12:08:22)
+2014-08-26T12:09:00.092919+08:00		sql	0.000291	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamii, lol@haha.com)
+2014-08-26T12:09:00.124032+08:00		sql	0.030837	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (pamii, pamii, pamela, aquino, lol@haha.com, 2014-08-26 12:09:00)
+2014-08-26T12:09:35.847246+08:00		sql	0.000345	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamiipamiipa, haha@lol.com)
+2014-08-26T12:09:35.877063+08:00		sql	0.029559	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (pamiipamiipa, pamiipamiipa, pamela, huehue, haha@lol.com, 2014-08-26 12:09:35)
+2014-08-26T12:11:23.843550+08:00		sql	0.000106	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T12:11:23.844185+08:00		sql	0.000087	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T12:19:46.522836+08:00		sql	0.000287	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (ppaamm, 09twelve)
+2014-08-26T12:20:31.324064+08:00		sql	0.000107	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T12:20:31.324685+08:00		sql	0.000089	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T12:20:33.500787+08:00		sql	0.000175	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T12:20:33.501135+08:00		sql	0.000045	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T12:20:34.231063+08:00		sql	0.000104	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T12:20:34.231664+08:00		sql	0.000101	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T12:24:09.539217+08:00		sql	0.000105	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T12:24:09.539840+08:00		sql	0.000104	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T12:24:11.868852+08:00		sql	0.000129	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:24:11.869119+08:00		sql	0.000054	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (38)
+2014-08-26T12:24:16.735197+08:00		sql	0.000057	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:24:46.147974+08:00		sql	0.000091	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:24:48.501142+08:00		sql	0.000058	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:24:48.501365+08:00		sql	0.000046	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (38)
+2014-08-26T12:24:50.146716+08:00		sql	0.000112	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:24:50.147209+08:00		sql	0.000103	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (38)
+2014-08-26T12:24:50.519503+08:00		sql	0.000118	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:24:50.519964+08:00		sql	0.000092	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (38)
+2014-08-26T12:24:50.734895+08:00		sql	0.000118	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:24:50.735417+08:00		sql	0.000119	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (38)
+2014-08-26T12:24:50.918477+08:00		sql	0.000096	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:24:50.918826+08:00		sql	0.000071	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (38)
+2014-08-26T12:25:12.827842+08:00		sql	0.000135	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:25:12.828533+08:00		sql	0.000115	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (38)
+2014-08-26T12:25:15.997008+08:00		sql	0.000058	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:25:58.354167+08:00		sql	0.000060	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:28:00.511936+08:00		sql	0.000083	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:28:10.315585+08:00		sql	0.000073	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:28:10.340585+08:00		sql	0.024499	2:(localhost) INSERT INTO comment 
+                SET thread_ID = ?, username = ?, body = ?, created = NOW(); (38, ppaamm, dfsd)
+2014-08-26T12:28:52.098192+08:00		sql	0.000066	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:28:52.129508+08:00		sql	0.030873	2:(localhost) INSERT INTO comment 
+                SET thread_ID = ?, username = ?, body = ?, created = NOW(); (38, ppaamm, dfsd)
+2014-08-26T12:29:26.316828+08:00		sql	0.000063	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:29:26.342453+08:00		sql	0.025226	2:(localhost) INSERT INTO comment 
+                SET thread_ID = ?, username = ?, body = ?, created = NOW(); (38, ppaamm, dfsd)
+2014-08-26T12:29:48.136988+08:00		sql	0.000085	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:29:48.168797+08:00		sql	0.031459	2:(localhost) INSERT INTO comment 
+                SET thread_ID = ?, username = ?, body = ?, created = NOW(); (38, ppaamm, dfsd)
+2014-08-26T12:55:51.449223+08:00		sql	0.000076	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:55:51.473840+08:00		sql	0.024134	2:(localhost) INSERT INTO comment SET thread_ID = ?, username = ?, body = ?, created = NOW(); (38, ppaamm, dfsd)
+2014-08-26T12:57:31.488647+08:00		sql	0.000075	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:57:31.557918+08:00		sql	0.068770	2:(localhost) INSERT INTO comment 
+                SET thread_ID = ?, username = ?, body = ?, created = NOW();; (38, ppaamm, dfsd)
+2014-08-26T12:57:52.718147+08:00		sql	0.000132	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:57:52.752126+08:00		sql	0.033258	2:(localhost) INSERT INTO comment 
+                SET thread_ID = ?, username = ?, body = ?, created = NOW();,; (38, ppaamm, dfsd)
+2014-08-26T12:59:37.298227+08:00		sql	0.000069	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T12:59:37.346530+08:00		sql	0.047782	2:(localhost) INSERT INTO comment SET thread_ID = ?, username = ?, body = ?, created = NOW();; (38, ppaamm, dfsd)
+2014-08-26T13:39:26.666877+08:00		sql	0.000104	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (ppaamm, 09twelve)
+2014-08-26T13:39:26.683137+08:00		sql	0.000082	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T13:39:26.683413+08:00		sql	0.000039	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T13:39:28.660855+08:00		sql	0.000122	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T13:39:28.661826+08:00		sql	0.000532	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (23)
+2014-08-26T13:39:32.123395+08:00		sql	0.000103	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T13:39:32.146107+08:00		sql	0.022040	2:(localhost) INSERT INTO comment SET thread_ID = ?, username = ?, body = ?, created = NOW();; (23, ppaamm, sjaklflsdf)
+2014-08-26T13:39:33.871393+08:00		sql	0.000182	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T13:39:33.872405+08:00		sql	0.000476	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (23)
+2014-08-26T13:40:10.803865+08:00		sql	0.000122	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T13:40:10.804394+08:00		sql	0.000102	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+            ORDER BY created ASC; (23)
+2014-08-26T13:44:10.782322+08:00		sql	0.000057	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T13:44:10.782945+08:00		sql	0.000362	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (23)
+2014-08-26T13:45:09.707661+08:00		sql	0.000121	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T13:45:09.708134+08:00		sql	0.000094	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (23)
+2014-08-26T13:45:09.923629+08:00		sql	0.000122	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T13:45:09.924145+08:00		sql	0.000125	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (23)
+2014-08-26T13:45:12.297261+08:00		sql	0.000073	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T13:45:12.297630+08:00		sql	0.000053	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T13:45:32.155662+08:00		sql	0.000000	1:(localhost) BEGIN; ()
+2014-08-26T13:45:32.156212+08:00		sql	0.000267	2:(localhost) INSERT INTO thread SET title = ?, created = NOW();; (haha)
+2014-08-26T13:45:32.156542+08:00		sql	0.000119	3:(localhost) INSERT INTO comment 
+        SET thread_ID = ?, username = ?, body = ?, created = NOW();; (41, ppaamm, haha)
+2014-08-26T13:45:32.201341+08:00		sql	0.000119	4:(localhost) COMMIT; ()
+2014-08-26T13:45:34.172314+08:00		sql	0.000355	1:(localhost) SELECT * FROM thread WHERE id = ?; (41)
+2014-08-26T13:45:34.173083+08:00		sql	0.000355	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (41)
+2014-08-26T13:45:37.310674+08:00		sql	0.000275	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T13:45:37.311041+08:00		sql	0.000111	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T13:47:08.604115+08:00		sql	0.000108	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T13:47:08.604633+08:00		sql	0.000072	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T13:47:14.645227+08:00		sql	0.000353	1:(localhost) SELECT * FROM thread WHERE id = ?; (24)
+2014-08-26T13:47:14.645980+08:00		sql	0.000355	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (24)
+2014-08-26T13:47:16.985805+08:00		sql	0.000066	1:(localhost) SELECT * FROM thread WHERE id = ?; (24)
+2014-08-26T13:47:17.019953+08:00		sql	0.033741	2:(localhost) INSERT INTO comment 
+        SET thread_ID = ?, username = ?, body = ?, created = NOW();; (24, ppaamm, sdsadsd)
+2014-08-26T13:47:18.434486+08:00		sql	0.000135	1:(localhost) SELECT * FROM thread WHERE id = ?; (24)
+2014-08-26T13:47:18.434948+08:00		sql	0.000261	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (24)
+2014-08-26T13:57:19.585300+08:00		sql	0.000132	1:(localhost) SELECT * FROM thread WHERE id = ?; (24)
+2014-08-26T13:57:19.585854+08:00		sql	0.000102	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (24)
+2014-08-26T13:57:49.689874+08:00		sql	0.000277	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (iggyazalea, iggy@azalea.com)
+2014-08-26T13:57:49.811356+08:00		sql	0.121157	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (iggyazalea, iggyiggs, Iggy, Azalea, iggy@azalea.com, 2014-08-26 13:57:49)
+2014-08-26T14:03:43.799833+08:00		sql	0.000300	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (iggyiggsazalea, iggyiggsazalea)
+2014-08-26T14:03:43.831262+08:00		sql	0.031136	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (iggyiggsazalea, iggyiggsazalea, iggyiggsazalea, iggyiggsazalea, iggyiggsazalea, 2014-08-26 14:03:43)
+2014-08-26T14:09:29.410618+08:00		sql	0.000301	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (iggyiggsazalea, iggyiggsazalea)
+2014-08-26T14:09:49.338352+08:00		sql	0.000062	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (iggyiggsazalea, iggyiggsazalea)
+2014-08-26T14:10:51.599078+08:00		sql	0.000051	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (iggyiggsazalea, iggyiggsazalea)
+2014-08-26T14:11:25.416596+08:00		sql	0.000125	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (iggyiggsazalea, iggyiggsazalea)
+2014-08-26T14:35:46.667870+08:00		sql	0.000057	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (iggyiggsazalea, iggyiggsazalea)
+2014-08-26T14:36:17.172508+08:00		sql	0.000059	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (iggyiggsazalea, iggyiggsazalea)
+2014-08-26T14:36:50.904611+08:00		sql	0.000503	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:36:50.995016+08:00		sql	0.089869	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (pamelapamela00, pamelapamela00, pamelapamela00, pamelapamela00, dslfsd@df.voj, 2014-08-26 14:36:50)
+2014-08-26T14:38:14.688572+08:00		sql	0.000266	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:38:50.287785+08:00		sql	0.000079	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:39:12.028282+08:00		sql	0.000061	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:39:39.717697+08:00		sql	0.000057	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:39:49.337943+08:00		sql	0.000122	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:39:55.925145+08:00		sql	0.000056	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:43:25.140693+08:00		sql	0.000058	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:45:43.315141+08:00		sql	0.000060	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamela00, dslfsd@df.voj)
+2014-08-26T14:46:05.187415+08:00		sql	0.000298	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:46:05.254913+08:00		sql	0.067138	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (dsfdfgfdgdfhfhdf, dsfdfgfdgdfhfhdf, dsfdfgfdgdfhfhdf, dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd, 2014-08-26 14:46:05)
+2014-08-26T14:47:05.777135+08:00		sql	0.000270	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:48:36.894379+08:00		sql	0.000051	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:48:59.672305+08:00		sql	0.000065	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:49:59.985731+08:00		sql	0.000061	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:50:15.883851+08:00		sql	0.000090	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:50:31.718783+08:00		sql	0.000064	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:54:07.532295+08:00		sql	0.000058	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:54:28.169660+08:00		sql	0.000065	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:54:47.846642+08:00		sql	0.000096	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T14:55:32.410494+08:00		sql	0.000069	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T15:01:33.550222+08:00		sql	0.000085	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T15:02:34.908562+08:00		sql	0.000068	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T15:02:52.305732+08:00		sql	0.000083	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfdfgfdgdfhfhdf, dsfdsf@fg.vkfd)
+2014-08-26T15:03:15.937971+08:00		sql	0.000411	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamelapp, fjdlsfk@dlfk.cp)
+2014-08-26T15:03:16.026780+08:00		sql	0.088516	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (pamelapamelapp, pamelapamelapp, pamelapamelapp, pamelapamelapp, fjdlsfk@dlfk.cp, 2014-08-26 15:03:15)
+2014-08-26T15:03:44.217577+08:00		sql	0.000254	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (pamelapamelapp, fjdlsfk@dlfk.cp)
+2014-08-26T15:04:11.316336+08:00		sql	0.000243	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (!@#$%^, dslfkds@dfkdl.cpm)
+2014-08-26T15:04:11.399782+08:00		sql	0.083201	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (!@#$%^, !@#$%^, !@#$%^, !@#$%^, dslfkds@dfkdl.cpm, 2014-08-26 15:04:11)
+2014-08-26T15:06:11.951805+08:00		sql	0.000305	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (!@#$%^, dslfkds@dfkdl.cpm)
+2014-08-26T15:06:22.571560+08:00		sql	0.000069	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (!@#$%^, dslfkds@dfkdl.cpm)
+2014-08-26T15:18:12.669747+08:00		sql	0.000080	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (!@#$%^, dslfkds@dfkdl.cpm)
+2014-08-26T15:24:14.745908+08:00		sql	0.000060	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (!@#$%^, dslfkds@dfkdl.cpm)
+2014-08-26T15:25:34.884603+08:00		sql	0.000054	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (!@#$%^, dslfkds@dfkdl.cpm)
+2014-08-26T15:25:54.121897+08:00		sql	0.000090	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (!@#$%^, dslfkds@dfkdl.cpm)
+2014-08-26T15:25:56.420526+08:00		sql	0.000290	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T15:25:56.453809+08:00		sql	0.033045	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (, , , , , 2014-08-26 15:25:56)
+2014-08-26T15:26:45.865465+08:00		sql	0.000259	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T15:26:56.026446+08:00		sql	0.000294	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (!@#$%^, dslfkds@dfkdl.cpm)
+2014-08-26T15:29:33.560921+08:00		sql	0.000250	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dsfsdf, )
+2014-08-26T15:29:49.273232+08:00		sql	0.000278	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dgfsdgsdgsdgsdg, sdfsdg@dsf.com)
+2014-08-26T15:29:49.365126+08:00		sql	0.091546	2:(localhost) INSERT INTO user_info (username, user_password, fname, lname, email, created) VALUES (?, ?, ?, ?, ?, ?); (dgfsdgsdgsdgsdg, asfafdsgfsdgg, sdgsdgsdfgf, dsgsdfgsdfg, sdfsdg@dsf.com, 2014-08-26 15:29:49)
+2014-08-26T15:30:12.563760+08:00		sql	0.000268	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (dgfsdgsdgsdgsdg, sdfsdg@dsf.com)
+2014-08-26T15:38:27.551322+08:00		sql	0.000226	1:(localhost) SELECT * FROM thread WHERE id = ?; (38)
+2014-08-26T15:38:58.956174+08:00		sql	0.000440	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (ppaamm, 09twelve)
+2014-08-26T15:38:59.028632+08:00		sql	0.000101	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:38:59.029202+08:00		sql	0.000089	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:39:01.318804+08:00		sql	0.000249	1:(localhost) SELECT * FROM thread WHERE id = ?; (16)
+2014-08-26T15:39:01.319481+08:00		sql	0.000287	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (16)
+2014-08-26T15:40:52.446991+08:00		sql	0.000064	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (ppaamm, 09twelve)
+2014-08-26T15:40:52.506944+08:00		sql	0.000047	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:40:52.507232+08:00		sql	0.000041	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:40:53.916209+08:00		sql	0.000053	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:40:53.916460+08:00		sql	0.000037	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:40:55.432031+08:00		sql	0.000111	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:40:55.432595+08:00		sql	0.000095	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:40:56.014146+08:00		sql	0.000112	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:40:56.014742+08:00		sql	0.000115	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:40:56.187898+08:00		sql	0.000057	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:40:56.188196+08:00		sql	0.000038	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:40:56.384796+08:00		sql	0.000094	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:40:56.385354+08:00		sql	0.000099	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:40:56.602983+08:00		sql	0.000159	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:40:56.603561+08:00		sql	0.000107	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:40:56.940092+08:00		sql	0.000108	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:40:56.940707+08:00		sql	0.000089	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T15:41:06.906519+08:00		sql	0.000064	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:41:06.907033+08:00		sql	0.000226	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T15:41:09.090318+08:00		sql	0.000058	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:41:09.090799+08:00		sql	0.000207	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T15:41:10.210265+08:00		sql	0.000108	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:41:10.210991+08:00		sql	0.000113	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T15:41:10.905991+08:00		sql	0.000066	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T15:41:10.906343+08:00		sql	0.000063	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:00:59.443250+08:00		sql	0.000112	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:00:59.443957+08:00		sql	0.000215	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:03:14.411388+08:00		sql	0.000114	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:14.411975+08:00		sql	0.000086	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:03:16.681080+08:00		sql	0.000145	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:16.681753+08:00		sql	0.000101	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:03:17.906295+08:00		sql	0.000112	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:17.906934+08:00		sql	0.000121	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T16:03:54.435090+08:00		sql	0.000060	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:54.435410+08:00		sql	0.000039	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T16:03:54.773758+08:00		sql	0.000099	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:54.774321+08:00		sql	0.000085	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T16:03:55.386663+08:00		sql	0.000045	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:55.386953+08:00		sql	0.000029	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:03:56.148457+08:00		sql	0.000105	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:56.149082+08:00		sql	0.000096	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:03:56.943476+08:00		sql	0.000098	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:56.944107+08:00		sql	0.000092	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:03:57.704292+08:00		sql	0.000134	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:03:57.704660+08:00		sql	0.000040	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T16:04:00.372347+08:00		sql	0.000109	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:00.373035+08:00		sql	0.000124	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:04:01.359760+08:00		sql	0.000077	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:01.360169+08:00		sql	0.000074	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:41.202653+08:00		sql	0.000126	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:41.203266+08:00		sql	0.000100	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:41.620015+08:00		sql	0.000106	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:41.620582+08:00		sql	0.000088	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:41.854269+08:00		sql	0.000097	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:41.854748+08:00		sql	0.000039	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:43.014382+08:00		sql	0.000116	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:43.015028+08:00		sql	0.000119	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:43.774083+08:00		sql	0.000108	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:43.774783+08:00		sql	0.000116	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:44.061773+08:00		sql	0.000052	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:44.062082+08:00		sql	0.000063	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:44.372313+08:00		sql	0.000051	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:44.372659+08:00		sql	0.000062	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:48.987110+08:00		sql	0.000088	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:48.987409+08:00		sql	0.000041	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:04:49.219441+08:00		sql	0.000082	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:49.219730+08:00		sql	0.000039	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:04:49.482352+08:00		sql	0.000103	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:49.482657+08:00		sql	0.000040	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:04:50.476295+08:00		sql	0.000113	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:50.476943+08:00		sql	0.000097	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:04:51.337497+08:00		sql	0.000121	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:04:51.338271+08:00		sql	0.000112	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:05:02.675839+08:00		sql	0.000105	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:05:02.676478+08:00		sql	0.000091	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:05:08.459163+08:00		sql	0.000107	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:05:08.459772+08:00		sql	0.000094	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:09:37.851617+08:00		sql	0.000143	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:09:37.852254+08:00		sql	0.000095	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:09:38.467142+08:00		sql	0.000113	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:09:38.467752+08:00		sql	0.000107	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:09:39.315428+08:00		sql	0.000087	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:09:39.315737+08:00		sql	0.000035	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T16:09:40.818667+08:00		sql	0.000054	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:09:40.818938+08:00		sql	0.000038	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:09:41.889655+08:00		sql	0.000057	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:09:41.889934+08:00		sql	0.000036	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:09:43.147752+08:00		sql	0.000109	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:09:43.148132+08:00		sql	0.000047	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:09:56.322194+08:00		sql	0.000109	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:09:56.323069+08:00		sql	0.000124	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:10:57.324956+08:00		sql	0.000106	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:10:57.325604+08:00		sql	0.000139	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T16:11:02.934933+08:00		sql	0.000000	1:(localhost) BEGIN; ()
+2014-08-26T16:11:02.935601+08:00		sql	0.000364	2:(localhost) INSERT INTO thread SET title = ?, created = NOW();; (gfdg)
+2014-08-26T16:11:02.935985+08:00		sql	0.000146	3:(localhost) INSERT INTO comment 
+        SET thread_ID = ?, username = ?, body = ?, created = NOW();; (42, ppaamm, dlgkldf;g)
+2014-08-26T16:11:03.078661+08:00		sql	0.000146	4:(localhost) COMMIT; ()
+2014-08-26T16:11:04.279377+08:00		sql	0.000222	1:(localhost) SELECT * FROM thread WHERE id = ?; (42)
+2014-08-26T16:11:04.279780+08:00		sql	0.000189	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (42)
+2014-08-26T16:11:06.127256+08:00		sql	0.000199	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:11:06.127640+08:00		sql	0.000104	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:11:08.431498+08:00		sql	0.000122	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:11:08.432276+08:00		sql	0.000282	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:11:09.554343+08:00		sql	0.000102	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:11:09.554877+08:00		sql	0.000109	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:11:10.999830+08:00		sql	0.000053	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:11:11.000090+08:00		sql	0.000031	2:(localhost) SELECT * FROM thread limit 10,10; ()
+2014-08-26T16:11:11.752756+08:00		sql	0.000091	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:11:11.753557+08:00		sql	0.000341	2:(localhost) SELECT * FROM thread limit 20,10; ()
+2014-08-26T16:11:15.393605+08:00		sql	0.000000	1:(localhost) BEGIN; ()
+2014-08-26T16:11:15.394012+08:00		sql	0.000206	2:(localhost) INSERT INTO thread SET title = ?, created = NOW();; (fgdfg)
+2014-08-26T16:11:15.394252+08:00		sql	0.000096	3:(localhost) INSERT INTO comment 
+        SET thread_ID = ?, username = ?, body = ?, created = NOW();; (43, ppaamm, dfhdfh)
+2014-08-26T16:11:15.485163+08:00		sql	0.000096	4:(localhost) COMMIT; ()
+2014-08-26T16:11:16.677318+08:00		sql	0.000376	1:(localhost) SELECT * FROM thread WHERE id = ?; (43)
+2014-08-26T16:11:16.678186+08:00		sql	0.000407	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (43)
+2014-08-26T16:11:18.309659+08:00		sql	0.000318	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:11:18.310593+08:00		sql	0.000279	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:12:03.921922+08:00		sql	0.000110	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:12:03.922566+08:00		sql	0.000099	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T16:16:07.788741+08:00		sql	0.000402	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T16:16:07.789604+08:00		sql	0.000441	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (23)
+2014-08-26T16:16:09.674116+08:00		sql	0.000108	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T16:16:09.713686+08:00		sql	0.038943	2:(localhost) INSERT INTO comment 
+        SET thread_ID = ?, username = ?, body = ?, created = NOW();; (23, ppaamm, dfsdf)
+2014-08-26T16:16:10.871412+08:00		sql	0.000118	1:(localhost) SELECT * FROM thread WHERE id = ?; (23)
+2014-08-26T16:16:10.872251+08:00		sql	0.000456	2:(localhost) SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC; (23)
+2014-08-26T16:16:12.364730+08:00		sql	0.000093	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T16:16:12.365274+08:00		sql	0.000090	2:(localhost) SELECT * FROM thread limit 0,10; ()

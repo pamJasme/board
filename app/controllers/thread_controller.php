@@ -42,7 +42,7 @@ class ThreadController extends AppController
             break;
 
             case 'write_end':
-                $comment->username =$_SESSION['username'];
+                $comment->username = $_SESSION['username'];
                 $comment->body = Param::get('body');
                 try{
                     $thread->write($comment);

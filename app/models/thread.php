@@ -28,7 +28,9 @@ class Thread extends AppModel
         $db = DB::conn();
         $db->begin();
 
-        $db->query('INSERT INTO thread SET title = ?, created = NOW()', array($this->title));
+        $query = "INSERT INTO thread SET title = ?, created = NOW();"; 
+        $param = array($this->title);
+        $row = $db->query($query, $param);
         $this->id = $db->lastInsertId();
 
         //write first comment at the same time
@@ -68,12 +70,11 @@ class Thread extends AppModel
     public function getComments()
     {
         $comments = array();
-
         $db = DB::conn();
-        $rows = $db->rows(
-            'SELECT * FROM comment WHERE thread_id = ? 
-            ORDER BY created ASC', array($this->id));
-
+        $query = "SELECT * FROM comment WHERE thread_id = ? 
+           ORDER BY created ASC";
+        $params = array($this->id);
+        $rows = $db->rows($query, $params);
         foreach($rows as $row){
             $comments[] = new Comment($row);
         }
@@ -89,11 +90,11 @@ class Thread extends AppModel
         if(!$comment->validate()){
             throw new ValidationException('invalid comment');
         }
-            $db = DB::conn();
-            $db->query(
-                'INSERT INTO comment 
-                SET thread_ID = ?, username = ?, body = ?, created = NOW();',
-                array($this->id, $comment->username, $comment->body));
+        $db=DB::conn();
+        $query = "INSERT INTO comment 
+        SET thread_ID = ?, username = ?, body = ?, created = NOW();";
+        $params = array($this->id, $comment->username, $comment->body);
+        $row = $db->query($query, $params);
     }
 
     /**

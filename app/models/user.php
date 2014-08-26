@@ -11,7 +11,7 @@ class User extends AppModel
     public function userValidate($username, $password)
     {
         $db=DB::conn();
-        $query = "SELECT * FROM user_info WHERE username = ? AND user_pword = ?";
+        $query = "SELECT * FROM user_info WHERE username = ? AND user_password = ?";
         $params = array($username, $password);
         $row = $db->row($query, $params);
         if(!$row) {
