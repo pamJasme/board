@@ -30,10 +30,9 @@ function redirect($controller, $view, array $url_query = null)
 **/
 function check_if_logged_out()
 {
-	if(!isset($_SESSION['username']))
-	{
-		redirect('user', 'index');
-	}
+    if (!isset($_SESSION['username'])) {
+        redirect('user', 'index');
+    }
 }
 
 /**
@@ -44,15 +43,12 @@ function validate_username($username)
     $username_length = strlen($username);
     $username_chars = ctype_alnum($username);
 
-    if(!isset($username))
-    {
+    if (!isset($username)) {
         throw new ValidationException('');
     }
-    if(!(MIN_VALUE <= $username_length && $username_length <= MAX_VALUE) OR !$username_chars)
-    {
+    if (!(MIN_VALUE <= $username_length && $username_length <= MAX_VALUE) OR !$username_chars) {
         throw new ValidationException('Username must contain 5 - 12 Alphanumeric Characters');
     }
-
     return;
 }
 
@@ -63,8 +59,7 @@ function validate_password($password)
 {
     $password_length = strlen($password);
 
-    if(!(MIN_VALUE <= $password_length && $password_length <= MAX_VALUE) OR !$password_chars)
-    {
+    if (!(MIN_VALUE <= $password_length && $password_length <= MAX_VALUE) OR !$password_chars) {
         throw new ValidationException('Password must contain 5 - 12 Characters');
     }
     return;
@@ -75,7 +70,7 @@ function validate_password($password)
 **/
 function validate_email($email)
 {
-    if(!preg_match("/^[A-z](.*)@(.*)\.(.*)/", $email)){
+    if (!preg_match("/^[A-z](.*)@(.*)\.(.*)/", $email)) {
         throw new ValidationException("Invalid Email Address");
     }
     return;
@@ -85,9 +80,9 @@ function validate_email($email)
 /**
 * To check user's name format
 **/
-function validate_name($name)
+function letters_only($name)
 {
-    if(!preg_match("/[A-Za-z]/", $name)){
+    if (!preg_match("/[A-Za-z]/", $name)) {
         throw new ValidationException("Your first/last name contains invalid characters.");
     }
 }

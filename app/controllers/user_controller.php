@@ -16,10 +16,10 @@ class UserController extends AppController
         $registered_user = new User;
 
         try {
-                if (empty($username) OR empty($password)){
+            if (empty($username) OR empty($password)){
                 throw new IncompleteFieldsException("Fill up all fields");
-                }   
-            }catch (IncompleteFieldsException $e) {
+            }
+        }catch (IncompleteFieldsException $e) {
                 $status = notice($e->getMessage(), "error");
                 echo $status;
                 return;
@@ -65,8 +65,8 @@ class UserController extends AppController
         try {
             validate_username($new_username);
             validate_password($new_password);
-            validate_name($new_fname);
-            validate_name($new_lname);
+            letters_only($new_fname);
+            letters_only($new_lname);
             validate_email($new_email);
         }catch (ValidationException $e) {
                $status = notice($e->getMessage(), "error");
