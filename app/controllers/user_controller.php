@@ -61,15 +61,15 @@ class UserController extends AppController
         foreach ($user_info as $field => $value) {
             $user_info['$field'] = $value;
         }
-        try{
+        try {
             $info = $reg->userRegistration($user_info);
-        }catch(IncompleteFieldsException $e) {
+        }catch (IncompleteFieldsException $e) {
             $status = notice($e->getMessage(), "error");
             echo $status;
-        }catch(ExistingUserException $e) {
+        }catch (ExistingUserException $e) {
             $status = notice($e->getMessage(), "error");
             echo $status;
-        }catch(ValidationException $e) {
+        }catch (ValidationException $e) {
             $status = notice($e->getMessage(), "error");
             echo $status;
         }
