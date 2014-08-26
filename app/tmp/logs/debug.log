@@ -4747,3 +4747,47 @@ pamela four gagayahin ang f4)
 2014-08-26T16:53:36.622129+08:00		sql	0.000195	2:(localhost) SELECT * FROM thread limit 20,10; ()
 2014-08-26T16:53:37.364086+08:00		sql	0.000081	1:(localhost) SELECT COUNT(*) FROM thread; ()
 2014-08-26T16:53:37.364956+08:00		sql	0.000311	2:(localhost) SELECT * FROM thread limit 30,10; ()
+2014-08-26T17:31:49.516188+08:00		sql	0.000111	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T17:31:49.516819+08:00		sql	0.000125	2:(localhost) SELECT * FROM thread limit 30,10; ()
+2014-08-26T17:32:32.612182+08:00		sql	0.000444	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:34:16.253891+08:00		sql	0.000449	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (fdgf, fgtdfg)
+2014-08-26T17:39:32.219356+08:00		sql	0.000412	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:39:37.500748+08:00		sql	0.000147	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:41:23.562249+08:00		sql	0.000060	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:42:18.875285+08:00		sql	0.000307	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:42:27.250411+08:00		sql	0.000064	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:43:36.156614+08:00		sql	0.000101	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:43:51.637794+08:00		sql	0.000109	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:44:03.248801+08:00		sql	0.000059	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:44:18.614604+08:00		sql	0.000080	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:44:39.584231+08:00		sql	0.000057	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:45:26.867676+08:00		sql	0.000059	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:45:27.699993+08:00		sql	0.000123	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:45:28.762526+08:00		sql	0.000127	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:45:29.117769+08:00		sql	0.000091	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:45:29.234795+08:00		sql	0.000193	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:45:29.436855+08:00		sql	0.000121	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:46:55.619416+08:00		sql	0.000124	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:48:48.515893+08:00		sql	0.000124	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (ppaamm, 09twelve)
+2014-08-26T17:48:48.522524+08:00		sql	0.000052	1:(localhost) SELECT COUNT(*) FROM thread; ()
+2014-08-26T17:48:48.522800+08:00		sql	0.000036	2:(localhost) SELECT * FROM thread limit 0,10; ()
+2014-08-26T17:48:49.755911+08:00		sql	0.000062	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:49:32.490753+08:00		sql	0.000508	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (f, )
+2014-08-26T17:51:29.619573+08:00		sql	0.000068	1:(localhost) SELECT username, email FROM user_info
+                    WHERE username = ? OR email = ?; (, )
+2014-08-26T17:51:35.779634+08:00		sql	0.000058	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:51:36.357137+08:00		sql	0.000141	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:51:36.619488+08:00		sql	0.000123	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:51:36.835283+08:00		sql	0.000124	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )
+2014-08-26T17:51:37.050162+08:00		sql	0.000124	1:(localhost) SELECT * FROM user_info WHERE username = ? AND user_password = ?; (, )

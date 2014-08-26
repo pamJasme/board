@@ -1,4 +1,8 @@
 <?php
+
+/**
+* class Thread 
+*/
 class Thread extends AppModel
 {
     

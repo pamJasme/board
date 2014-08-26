@@ -1,10 +1,12 @@
 <?php
 
+/**
+* class ThreadController
+**/
 class ThreadController extends AppController
 {
     /**
     *   To view all threads with limits through Pagination.
-    *   sessionchec
     **/
     public function index()
     {
@@ -44,9 +46,9 @@ class ThreadController extends AppController
             case 'write_end':
                 $comment->username = $_SESSION['username'];
                 $comment->body = Param::get('body');
-                try{
+                try {
                     $thread->write($comment);
-                }catch(ValidationException $e){
+                } catch (ValidationException $e) {
                     $page='write';
                 }
                 break;
@@ -77,9 +79,9 @@ class ThreadController extends AppController
                 $thread->title = Param::get('title');
                 $comment->username = $username;
                 $comment->body = Param::Get('body');
-                try{
+                try {
                     $thread->create($comment);
-                } catch (ValidationException $e){
+                } catch (ValidationException $e) {
                     $page = 'create';
                 }
                 break;

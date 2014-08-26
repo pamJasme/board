@@ -15,16 +15,10 @@ function readable_text($s)
 function notice($text, $notice_type = NULL)
 {
     $msg = "<center>";
-    switch ($notice_type) {
-    case 'error':
-        $msg .= "<font color=red size=2>";
-        break;
-    
-    default:
-        $msg .= "<font color=green size=2>";
-        break;
+    if ($notice_type == 'error') {
+        return $msg .= "<font color=red size=2>" . $text . "</font></center>";
     }
-    $msg .= $text. "</font></center>";
-    return $msg;
+
+    return $msg .= "<font color=green size=2>" . $text . "</font></center>";
 }
 

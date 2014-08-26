@@ -41,7 +41,7 @@ function pagination($num_rows, $pagenum, array $set_url = NULL)
             $control .= "<a href='" . url('', $set_url) . "'> 
                 Previous </a> &nbsp; &nbsp;";
             
-            for ($i = $pagenum - ; $i < $pagenum; $i++) { 
+            for ($i = $pagenum - 4; $i < $pagenum; $i++) { 
                 if($i > 0){
                     $control .= "<a href'". url('', $set_url). "'>$i</a> &nbsp; ";
                 }
@@ -62,9 +62,13 @@ function pagination($num_rows, $pagenum, array $set_url = NULL)
             $control .= " &nbsp; &nbsp; <a href='".url('', $set_url)."'>Next</a>";
         }
     }
-    $pagination['max'] = $max;
-    $pagination['last_page'] = $last_page;
-    $pagination['pagenum'] = $pagenum;
-    $pagination['control'] = $control;
+    
+    $pagination = array(
+    'max' => $max,
+    'last_page' => $last_page,
+    'pagenum' => $pagenum,
+    'control' => $control,
+    );
+
     return $pagination;
 }

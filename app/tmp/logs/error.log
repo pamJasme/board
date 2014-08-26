@@ -70,3 +70,6 @@
 [Tue Aug 26 14:48:47 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected T_RETURN in /home/pamela/board/app/helpers/validation_helper.php on line 11, referer: http://board.example.com/user/registration
 [Tue Aug 26 14:54:00 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';' in /home/pamela/board/app/helpers/validation_helper.php on line 9, referer: http://board.example.com/user/registration
 [Tue Aug 26 16:03:08 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '{' in /home/pamela/board/app/helpers/pagination_helper.php on line 19, referer: http://board.example.com/thread/index?pn=2
+[Tue Aug 26 17:29:52 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ';' in /home/pamela/board/app/helpers/pagination_helper.php on line 44, referer: http://board.example.com/thread/index?pn=3
+[Tue Aug 26 17:30:15 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/pamela/board/app/helpers/pagination_helper.php on line 68, referer: http://board.example.com/thread/index?pn=3
+[Tue Aug 26 17:30:37 2014] [error] [client 127.0.0.1] PHP Parse error:  syntax error, unexpected ')' in /home/pamela/board/app/helpers/validation_helper.php on line 92, referer: http://board.example.com/thread/index?pn=3

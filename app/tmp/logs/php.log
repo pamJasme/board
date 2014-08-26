@@ -6211,3 +6211,43 @@ Stack trace:
 [26-Aug-2014 08:05:02 UTC] PHP Notice:  Use of undefined constant pn - assumed 'pn' in /home/pamela/board/app/helpers/pagination_helper.php on line 18
 [26-Aug-2014 08:11:06 UTC] PHP Notice:  Undefined index: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 18
 [26-Aug-2014 08:11:18 UTC] PHP Notice:  Undefined index: pn in /home/pamela/board/app/helpers/pagination_helper.php on line 18
+[26-Aug-2014 09:31:51 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34
+[26-Aug-2014 09:32:20 UTC] PHP Parse error:  syntax error, unexpected '}', expecting T_CATCH in /home/pamela/board/app/controllers/user_controller.php on line 21
+[26-Aug-2014 09:42:18 UTC] PHP Warning:  extract() expects parameter 1 to be array, null given in /home/pamela/board/app/models/registration.php on line 18
+[26-Aug-2014 09:42:18 UTC] PHP Notice:  Undefined variable: username in /home/pamela/board/app/models/registration.php on line 20
+[26-Aug-2014 09:42:18 UTC] PHP Notice:  Undefined variable: user_password in /home/pamela/board/app/models/registration.php on line 21
+[26-Aug-2014 09:42:18 UTC] PHP Notice:  Undefined variable: fname in /home/pamela/board/app/models/registration.php on line 22
+[26-Aug-2014 09:42:18 UTC] PHP Notice:  Undefined variable: lname in /home/pamela/board/app/models/registration.php on line 23
+[26-Aug-2014 09:42:18 UTC] PHP Notice:  Undefined variable: email in /home/pamela/board/app/models/registration.php on line 24
+[26-Aug-2014 09:42:18 UTC] PHP Notice:  Undefined variable: username in /home/pamela/board/app/models/registration.php on line 31
+[26-Aug-2014 09:42:18 UTC] PHP Notice:  Undefined variable: email in /home/pamela/board/app/models/registration.php on line 31
+[26-Aug-2014 09:42:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'username' cannot be null' in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php:14
+Stack trace:
+#0 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php(14): PDOStatement->execute(Array)
+#1 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(298): SimpleDBIStatement->execute(Array)
+#2 /home/pamela/board/vendor/SimpleDBI/src/SimpleDBI.php(374): SimpleDBI->query('INSERT INTO use...', Array)
+#3 /home/pamela/board/app/models/registration.php(38): SimpleDBI->insert('user_info', Array)
+#4 /home/pamela/board/app/controllers/user_controller.php(84): Registration->userRegistration(Array)
+#5 /home/pamela/board/dietcake/core/controller.php(47): UserController->registration()
+#6 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#7 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#8 {main}
+  thrown in /home/pamela/board/vendor/SimpleDBI/src/SimpleDBIStatement.php on line 14
+[26-Aug-2014 09:48:48 UTC] PHP Notice:  Undefined property: User::$password in /home/pamela/board/app/controllers/user_controller.php on line 28
+[26-Aug-2014 09:48:49 UTC] PHP Fatal error:  Uncaught exception 'DCException' with message '/home/pamela/board/app/views/thread/logout.php is not found' in /home/pamela/board/app/app_layout_view.php:34
+Stack trace:
+#0 /home/pamela/board/app/app_layout_view.php(23): AppLayoutView::extractAndMerge('/home/pamela/bo...', Array)
+#1 /home/pamela/board/dietcake/core/controller.php(84): AppLayoutView->render(NULL)
+#2 /home/pamela/board/dietcake/core/controller.php(49): Controller->render()
+#3 /home/pamela/board/dietcake/core/dispatcher.php(12): Controller->dispatchAction()
+#4 /home/pamela/board/app/webroot/index.php(7): Dispatcher::invoke()
+#5 {main}
+  thrown in /home/pamela/board/app/app_layout_view.php on line 34

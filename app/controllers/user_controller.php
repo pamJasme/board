@@ -16,24 +16,21 @@ class UserController extends AppController
         $registered_user = new User;
 
         try {
-            if (empty($username) OR empty($password)){
-                throw new IncompleteFieldsException("Fill up all fields");
-            }
-        }catch (IncompleteFieldsException $e) {
+                is_complete($username, $password);
+        } catch (IncompleteFieldsException $e) {
                 $status = notice($e->getMessage(), "error");
                 echo $status;
-                return;
             }
 
         try {
-                $obj = $registered_user->userValidate($username, $password);   
-                $_SESSION['username'] = $obj->username;
-                $_SESSION['password'] = $obj->password;
+                $login_info = $registered_user->userValidate($username, $password);   
+                $_SESSION['username'] = $login_info->username;
+                $_SESSION['password'] = $login_info->password;
                 redirect('thread','index');
-            }catch (ValidationException $e) {
+            } catch (ValidationException $e) {
                 $status = notice($e->getMessage(),"error");
                 echo $status;
-            }catch (RecordNotFoundException $e) {
+            } catch (RecordNotFoundException $e) {
                 $status = notice($e->getMessage(),"error");
                 echo $status;
             }
@@ -68,7 +65,7 @@ class UserController extends AppController
             letters_only($new_fname);
             letters_only($new_lname);
             validate_email($new_email);
-        }catch (ValidationException $e) {
+        } catch (ValidationException $e) {
                $status = notice($e->getMessage(), "error");
                echo $status;
             }
@@ -84,13 +81,13 @@ class UserController extends AppController
                 }
             }
             $info = $reg->userRegistration($user_info);
-        }catch (IncompleteFieldsException $e) {
+        } catch (IncompleteFieldsException $e) {
             $status = notice($e->getMessage(), "error");
             echo $status;
-        }catch (ExistingUserException $e) {
+        } catch (ExistingUserException $e) {
             $status = notice($e->getMessage(), "error");
             echo $status;
-        }catch (ValidationException $e) {
+        } catch (ValidationException $e) {
             $status = notice($e->getMessage(), "error");
             echo $status;
         }

@@ -44,7 +44,7 @@ function validate_username($username)
     $username_chars = ctype_alnum($username);
 
     if (!isset($username)) {
-        throw new ValidationException('');
+        return true;
     }
     if (!(MIN_VALUE <= $username_length && $username_length <= MAX_VALUE) OR !$username_chars) {
         throw new ValidationException('Username must contain 5 - 12 Alphanumeric Characters');
@@ -59,6 +59,9 @@ function validate_password($password)
 {
     $password_length = strlen($password);
 
+    if (!isset($password)) {
+        return true;
+    }
     if (!(MIN_VALUE <= $password_length && $password_length <= MAX_VALUE) OR !$password_chars) {
         throw new ValidationException('Password must contain 5 - 12 Characters');
     }
@@ -70,6 +73,9 @@ function validate_password($password)
 **/
 function validate_email($email)
 {
+    if (!isset($email)) {
+        return true;
+    }
     if (!preg_match("/^[A-z](.*)@(.*)\.(.*)/", $email)) {
         throw new ValidationException("Invalid Email Address");
     }
@@ -82,7 +88,22 @@ function validate_email($email)
 **/
 function letters_only($name)
 {
+    if (!isset($name)) {
+        return true;
+    }
+
     if (!preg_match("/[A-Za-z]/", $name)) {
         throw new ValidationException("Your first/last name contains invalid characters.");
+    }
+}
+
+function is_complete($username, $password)
+{
+    if(!isset($username) OR !isset($password))
+    {
+        return true;
+    }
+    if (empty($username) OR empty($password)){
+        throw new IncompleteFieldsException("Fill up all fields");
     }
 }

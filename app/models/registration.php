@@ -28,7 +28,7 @@ class Registration extends AppModel
         $query = "SELECT username, email FROM user_info
                     WHERE username = ? OR email = ?";
         $params = array($username, $email);
-        $search = $db->rows($query, $params);
+        $search = $db->row($query, $params);
         if($search){
             throw new ExistingUserException("Username/Email already used");
         }
