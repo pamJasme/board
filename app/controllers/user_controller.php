@@ -14,11 +14,11 @@ class UserController extends AppController
         $username = Param::get('login_name');
         $password = Param::get('login_pword');
         $registered_user = new User;
-        
+
         try {
             $valid_username = validate_between($username, self::MIN_INPUT, self::MAX_INPUT);
             $valid_password = validate_between($password, self::MIN_INPUT, self::MAX_INPUT);
-            if (!$valid_username || !$password) {
+            if (!$valid_username || !$valid_password) {
                 throw new ValidationException("Fill up all fields");
             }
             $login_info = $registered_user->authenticate($username, $password);   
