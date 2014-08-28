@@ -29,7 +29,7 @@ class User extends AppModel
     * @param $username
     * @param $password
     **/
-    public function userValidate($username, $password)
+    public function authenticate($username, $password)
     {
         $this->username = $username;
         $this->password = $password;
@@ -40,7 +40,7 @@ class User extends AppModel
         $db=DB::conn();
         $row = $db->row("SELECT * FROM user_info 
             WHERE username = ? AND user_password = ?", array($username, $password));
-        if(!$row) {
+        if (!$row) {
             throw new RecordNotFoundException("Record not found");
         }  
         return new self($row);

@@ -1,6 +1,4 @@
 <?php
-const MIN_VALUE = 5;
-const MAX_VALUE = 12;
 
 /**
 * To set variable ranges
@@ -56,22 +54,16 @@ function validate_email($email)
 **/
 function letters_only($name)
 {
-    if (!isset($name)) {
-        return true;
-    }
-
-    if (!preg_match("/[A-Za-z]/", $name)) {
-        throw new ValidationException("Your first/last name contains invalid characters.");
-    }
+    return ctype_alpha($name);
 }
 
 function is_complete($username, $password)
 {
-    if(!isset($username) OR !isset($password))
+    if (!isset($username) || !isset($password))
     {
         return true;
     }
-    if (empty($username) OR empty($password)){
+    if (empty($username) || empty($password)){
         throw new IncompleteFieldsException("Fill up all fields");
     }
 }

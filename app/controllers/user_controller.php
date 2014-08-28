@@ -12,13 +12,13 @@ class UserController extends AppController
         $password = Param::get('login_pword');
         $registered_user = new User;
         
-        if (!isset($username) OR !isset($password)) {
+        if (!isset($username) || !isset($password)) {
             $status = " ";
-        } elseif (empty($username) OR empty($password)) {
+        } elseif (!($username || $password)) {
             $status = notice("All fields are required", "error");
         } else {            
             try {
-                $login_info = $registered_user->userValidate($username, $password);   
+                $login_info = $registered_user->authenticate($username, $password);   
                 $_SESSION['username'] = $login_info->username;
                 $_SESSION['password'] = $login_info->password;
                 redirect('thread','index');
@@ -62,7 +62,7 @@ class UserController extends AppController
             }
         }
 
-        if ($empty_field === 0){
+        if ($empty_field === 0) {
             try {
                 $info = $reg->userRegistration($user_info);
                 $status = notice("Registration Complete", "error");

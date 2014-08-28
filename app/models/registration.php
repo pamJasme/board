@@ -16,7 +16,6 @@ class Registration extends AppModel
                 'validate_username', "Invalid Username"
             )
         ),
-
         "password" => array(
             "length" => array(
                 "validate_between", MIN_VALUE, MAX_VALUE,
@@ -50,14 +49,13 @@ class Registration extends AppModel
         $this->email = $email;
         if (!$this->validate()) {
             throw new ValidationException("Invalid Username/Password");
-            return;
         }
         $db = DB::conn();
         $query = "SELECT username, email FROM user_info
                     WHERE username = ? OR email = ?";
         $params = array($username, $email);
         $search = $db->row($query, $params);
-        if($search){
+        if ($search) {
             throw new ExistingUserException(notice("Username/Email already used","error"));
         }
         $row = $db->insert('user_info', $defaults);

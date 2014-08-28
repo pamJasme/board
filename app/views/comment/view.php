@@ -6,7 +6,7 @@
   <a class="btn btn-medium btn-primary" name="logout" href="<?php eh(url('thread/logout'));?>">Logout</a>
 </div>
 
-<h1><?php eh($thread->title); $user_name=$_SESSION['username'];?></h1>
+<h1><?php eh($thread->title);?></h1>
 <fieldset class='well' name="comment_area">
   <?php foreach ($comments as $k => $v): ?>
   

@@ -7,10 +7,8 @@ class Thread extends AppModel
 {
     
     public $validation =array(
-
         'title' => array(
             'length' => array(
-
                 'validate_between', 1, 30,
                 ),
             ),
@@ -25,7 +23,7 @@ class Thread extends AppModel
     {
         $this->validate();
         $comment->validate();
-        if($this->hasError() || $comment -> hasError()){
+        if ($this->hasError() || $comment -> hasError()) {
             throw new ValidationException('invalid thread or comment');
         }
 
@@ -51,7 +49,7 @@ class Thread extends AppModel
         $limits = $max;
         $db = DB::conn();
         $rows = $db->rows("SELECT * FROM thread $limits");
-        foreach($rows as $row){
+        foreach ($rows as $row) {
             $threads[] = new Thread($row);
         }
         return $threads;
@@ -65,6 +63,10 @@ class Thread extends AppModel
     {
         $db = DB::conn();
         $row = $db->row('SELECT * FROM thread WHERE id = ?', array($id));
+        if (!$row)
+        {
+            redirect("thread", "index");
+        }
         return new self($row);
     }
 
@@ -76,7 +78,7 @@ class Thread extends AppModel
         $comments = array();
         $db = DB::conn();
         $rows = $db->search('comment', 'thread_id = ?', array($this->id), 'created ASC');
-        foreach($rows as $row){
+        foreach ($rows as $row) {
             $comments[] = new Comment($row);
         }
         return $comments;
@@ -88,7 +90,7 @@ class Thread extends AppModel
     **/
     public function write(Comment $comment)
     {
-        if(!$comment->validate()){
+        if (!$comment->validate()) {
             throw new ValidationException('invalid comment');
         }
         $db=DB::conn();
@@ -104,8 +106,7 @@ class Thread extends AppModel
     public static function getNumRows()
     {
         $db = DB::conn();
-        $row = "SELECT COUNT(*) FROM thread";
-        $count = $db->value($row);
+        $count = $db->value("SELECT COUNT(*) FROM thread");
         return $count;  
     }
 }
