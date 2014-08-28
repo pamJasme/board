@@ -5,7 +5,6 @@
 */
 class Thread extends AppModel
 {
-    
     public $validation =array(
         'title' => array(
             'length' => array(

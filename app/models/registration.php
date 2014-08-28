@@ -28,6 +28,7 @@ class Registration extends AppModel
                 )
             ),
         );
+    
     /**
     * To validate user registration
     * @throws IncompleteFieldsException, ValidationException, ExistingUserException

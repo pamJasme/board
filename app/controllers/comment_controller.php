@@ -2,8 +2,8 @@
  
  class CommentController extends AppController{
 
-  /**
-    *   To view all comments on a particular thread.
+    /**
+    * To view all comments on a particular thread.
     **/
     public function view()
     {
