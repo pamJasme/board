@@ -12,15 +12,9 @@ function validate_between($check, $min, $max)
 /**
 * To redirect to some other pages
 **/
-function redirect($controller, $view, array $url_query = null)
+function redirect($url) 
 {
-    $url = "/$controller/$view";
-    if ($url_query) {
-        foreach ($url_query as $key => $value) {
-            $url .= "?$key=$value";
-        }
-    }
-    header("location: {$url}");
+   header("Location: ".$url);
 }
 
 /**
@@ -29,7 +23,7 @@ function redirect($controller, $view, array $url_query = null)
 function check_if_logged_out()
 {
     if (!isset($_SESSION['username'])) {
-        redirect('user', 'index');
+        redirect(url('user/index'));
     }
 }
 
@@ -59,11 +53,11 @@ function letters_only($name)
 
 function is_complete($username, $password)
 {
-    if (!isset($username) || !isset($password))
-    {
+    if (!isset($username) || !isset($password)) {
         return true;
     }
-    if (empty($username) || empty($password)){
+
+    if (empty($username) || empty($password)) {
         throw new IncompleteFieldsException("Fill up all fields");
     }
 }

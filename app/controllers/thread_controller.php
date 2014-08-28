@@ -89,6 +89,6 @@ class ThreadController extends AppController
     function logout()
     {
         session_destroy();
-        redirect('user', 'index');
+        redirect(url('user/index'));
     }
 }

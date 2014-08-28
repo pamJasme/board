@@ -18,20 +18,16 @@ class Thread extends AppModel
     * @param $comment
     * @throws ValidationException
     **/
-    public function create (Comment $comment)
+    public function create(Comment $comment)
     {
         $this->validate();
         $comment->validate();
         if ($this->hasError() || $comment -> hasError()) {
             throw new ValidationException('invalid thread or comment');
         }
-
         $db = DB::conn();
         $db->begin();
-
-        $query = "INSERT INTO thread SET title = ?, created = NOW();"; 
-        $param = array($this->title);
-        $row = $db->query($query, $param);
+        $db->insert('thread', array('title' => $this->title));
         $this->id = $db->lastInsertId();
 
         //write first comment at the same time
@@ -62,8 +58,7 @@ class Thread extends AppModel
     {
         $db = DB::conn();
         $row = $db->row('SELECT * FROM thread WHERE id = ?', array($id));
-        if (!$row)
-        {
+        if (!$row) {
             redirect("thread", "index");
         }
         return new self($row);
@@ -92,11 +87,13 @@ class Thread extends AppModel
         if (!$comment->validate()) {
             throw new ValidationException('invalid comment');
         }
-        $db=DB::conn();
-        $query = "INSERT INTO comment 
-        SET thread_ID = ?, username = ?, body = ?, created = NOW();";
-        $params = array($this->id, $comment->username, $comment->body);
-        $row = $db->query($query, $params);
+        $db = DB::conn();
+        $params = array(
+            'thread_id' => $this->id,
+            'username' => $comment->username,
+            'body' => $comment->body,
+            );
+        $db->insert('comment', $params);
     }
 
     /**
