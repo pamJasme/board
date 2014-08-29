@@ -2,14 +2,10 @@
 
 class User extends AppModel
 {
-    const MIN_VALUE = 5;
-    const MAX_VALUE = 12;
-
     public $validation =array(
-
         'username' => array(
             'length' => array(
-                'validate_between', self::MIN_VALUE, self::MAX_VALUE,
+                'validate_between', MIN_VALUE, MAX_VALUE,
                 ),
             'format' => array(
                 'validate_username'
@@ -18,7 +14,7 @@ class User extends AppModel
 
         'password' => array(
             'length' => array(
-                'validate_between', self::MIN_VALUE, self::MAX_VALUE,
+                'validate_between', MIN_VALUE, MAX_VALUE,
                 ),
             ),
     );
@@ -37,7 +33,7 @@ class User extends AppModel
             throw new ValidationException("Invalid Username/Password");
         }
 
-        $db=DB::conn();
+        $db = DB::conn();
         $row = $db->row("SELECT * FROM user_info 
             WHERE username = ? AND user_password = ?", array($username, $password));
         if (!$row) {

@@ -4,19 +4,19 @@
     </div><br>
 
     <div style='float:right; font-size:15px; font-weight:900'>
-        <a class="btn btn-medium btn-primary" name="logout" href="<?php eh(url('thread/logout'));?>">
+        <a class="btn btn-medium btn-primary" name="logout" href="<?php encode_quotes(url('thread/logout'));?>">
             Logout
         </a>
     </div>
 
         <h1>All Threads</h1>
         <?php foreach ($threads as $v): ?>
-            <li><a href="<?php eh(url('comment/view', array('thread_id' => $v->id))) ?>">
-                <?php eh($v->title) ?></a></li>
+            <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
+                <?php encode_quotes($v->title) ?></a></li>
         <?php endforeach ?>
         </ul><br>
 
-        <a class="btn btn-medium btn-primary" href="<?php eh(url('thread/create')) ?>">Create</a><br><br>
+        <a class="btn btn-medium btn-primary" href="<?php encode_quotes(url('thread/create')) ?>">Create</a><br><br>
         <?php echo $pagination['control']; ?>
     </div>
 </fieldset>
