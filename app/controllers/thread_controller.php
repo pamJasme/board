@@ -11,12 +11,14 @@ class ThreadController extends AppController
     **/
     public function index()
     {
-        check_if_logged_out();
-        $thread_count = Thread::getNumRows();
-        $pagination = pagination($thread_count, '');
-
-        $threads = Thread::getAll($pagination['max']);
-        $this->set(get_defined_vars());
+        if (is_logged_in()) {
+            $thread_count = Thread::getNumRows();
+            $pagination = pagination($thread_count, '');
+            $threads = Thread::getAll($pagination['max']);
+            $this->set(get_defined_vars());
+        } else {
+            redirect(url('user/index'));
+        }   
     }
 
     /**

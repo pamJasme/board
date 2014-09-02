@@ -20,11 +20,13 @@ function redirect($url)
 /**
 * To check if there is a running session
 **/
-function check_if_logged_out()
+function is_logged_in()
 {
-    if (!isset($_SESSION['username'])) {
-        redirect(url('user/index'));
+    if (isset($_SESSION['username'])) {
+        return true;
     }
+    
+    return false;
 }
 
 /**
