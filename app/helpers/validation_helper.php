@@ -63,3 +63,15 @@ function is_complete($value)
         return true;
     }
 }
+
+/**
+* To check if password match
+**/
+function password_match($password_a, $password_b)
+{
+    if ($password_a === $password_b) {
+        return true;
+    } else {
+        throw new ValidationException("Password did not match");
+    }
+}

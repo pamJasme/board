@@ -45,6 +45,7 @@ class UserController extends AppController
     {
         $new_username = Param::get('username');
         $new_password = Param::get('pword');
+        $new_password_match = Param::get('pword_match');
         $new_fname = Param::get('fname');
         $new_lname = Param::get('lname');
         $new_email = Param::get('email');
@@ -63,6 +64,7 @@ class UserController extends AppController
             $status = "";
         } else {
             try {
+                password_match($new_password, $new_password_match);
                 foreach ($user_info as $key => $value) {
                     is_complete($value);
                 }
