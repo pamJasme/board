@@ -21,10 +21,7 @@ class UserController extends AppController
         } else {
             try {
                 foreach ($user as $key => $value) {
-                    $check_if_complete = validate_between($value, NULL, NULL);
-                    if ($check_if_complete) {
-                        throw new ValidationException("Please fill up all fields");
-                    }
+                    is_complete($value);
                 }
                 $login_info = $registered_user->authenticate($username, $password);
                 $_SESSION['username'] = $login_info->username;
@@ -67,10 +64,7 @@ class UserController extends AppController
         } else {
             try {
                 foreach ($user_info as $key => $value) {
-                    $check_if_complete = validate_between($value, NULL, NULL);
-                    if ($check_if_complete) {
-                        throw new ValidationException("Please fill up all fields");
-                    }
+                    is_complete($value);
                 }
                 $info = $reg->userRegistration($user_info);
                 $status = notice("Registration Complete");

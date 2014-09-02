@@ -2,7 +2,6 @@
     User Login Page
 -->
 <?php $title="Login" ?>
-<?php echo $status;?>
 <div class='register' style='margin-top:100px'>
 <center>
 <form class="well" action='<?php encode_quotes(url(''));?>' method='POST'>
@@ -17,3 +16,4 @@
 </form>
 </center>
 </div>
+<?php echo $status;?>

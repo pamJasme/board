@@ -2,6 +2,7 @@
 
 /**
 * class ThreadController
+*
 **/
 class ThreadController extends AppController
 {
@@ -19,6 +20,7 @@ class ThreadController extends AppController
     }
 
     /**
+    *  To write new comment
     *  @property username
     *       set as the $_SESSION['username']
     **/

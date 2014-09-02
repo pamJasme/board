@@ -51,13 +51,15 @@ function letters_only($name)
     return ctype_alpha($name);
 }
 
-function is_complete($username, $password)
+/**
+* To check if fields are complete
+**/
+function is_complete($value)
 {
-    if (!isset($username) || !isset($password)) {
+    $check_if_complete = validate_between($value, NULL, NULL);
+    if ($check_if_complete) {
+        throw new ValidationException("Please fill up all fields");
+    } else {
         return true;
-    }
-
-    if (empty($username) || empty($password)) {
-        throw new IncompleteFieldsException("Fill up all fields");
     }
 }
