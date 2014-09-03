@@ -64,9 +64,11 @@ class UserController extends AppController
             $status = "";
         } else {
             try {
-                password_match($new_password, $new_password_match);
+                is_password_match($new_password, $new_password_match);
+                throw new ValidationException("Password did not match");
                 foreach ($user_info as $key => $value) {
                     is_complete($value);
+                    throw new ValidationException("Please fill up all fields");
                 }
                 $info = $reg->userRegistration($user_info);
                 $status = notice("Registration Complete");

@@ -46,14 +46,6 @@ function validate_email($email)
 }
 
 /**
-* To check user's name format
-**/
-function letters_only($name)
-{
-    return ctype_alpha($name);
-}
-
-/**
 * To check if fields are complete
 **/
 function is_complete($value)
@@ -69,11 +61,11 @@ function is_complete($value)
 /**
 * To check if password match
 **/
-function password_match($password_a, $password_b)
+function is_password_match($password_a, $password_b)
 {
     if ($password_a === $password_b) {
         return true;
     } else {
-        throw new ValidationException("Password did not match");
+        return false;
     }
 }

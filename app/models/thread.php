@@ -5,10 +5,13 @@
 */
 class Thread extends AppModel
 {
+    const MIN_VALUE = 1;    
+    const MAX_TITLE_LENGTH = 30;
+
     public $validation =array(
         'title' => array(
             'length' => array(
-                'validate_between', 1, 30,
+                'validate_between', self::MIN_VALUE, self::MAX_TITLE_LENGTH,
                 ),
             ),
         );
@@ -41,9 +44,8 @@ class Thread extends AppModel
     public static function getAll($max)
     {
         $threads = array();
-        $limits = $max;
         $db = DB::conn();
-        $rows = $db->rows("SELECT * FROM thread $limits");
+        $rows = $db->rows("SELECT * FROM thread $max");
         foreach ($rows as $row) {
             $threads[] = new Thread($row);
         }
