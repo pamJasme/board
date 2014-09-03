@@ -29,13 +29,18 @@ class Thread extends AppModel
             throw new ValidationException('invalid thread or comment');
         }
         $db = DB::conn();
-        $db->begin();
-        $db->insert('thread', array('title' => $this->title));
-        $this->id = $db->lastInsertId();
+        try {
+            $db->begin();
+            $db->insert('thread', array('title' => $this->title));
+            $this->id = $db->lastInsertId();
 
-        //write first comment at the same time
-        $this->write($comment);
-        $db->commit();
+            //write first comment at the same time
+            $this->write($comment);
+            $db->commit();
+        } catch(ValidationException $e) {
+            $db->rollback();
+            throw $e;
+        }
     }
 
     /**
