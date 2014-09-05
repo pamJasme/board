@@ -17,3 +17,4 @@ define('DB_DSN', 'mysql:host=localhost;dbname=board');
 define('DB_USERNAME', 'board_root');
 define('DB_PASSWORD', 'board_root');
 define('DB_ATTR_TIMEOUT', 3);
+

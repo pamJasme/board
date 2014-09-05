@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>DietCake <?php eh($title) ?></title>
+    <title>DietCake</title>
 
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">    
     <style>
       body {
         padding-top: 60px;
@@ -17,19 +17,21 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">DietCake Hello</a>
+          <a class="brand" href="index">DietCake Home</a>
         </div>
       </div>
     </div>
+        <div>
+          <?php if (is_logged_in()) { ?>
+          <span class="label label-info">Welcome <?php echo $_SESSION['username']; }?></span>
+        </div>
 
     <div class="container">
-
       <?php echo $_content_ ?>
-
     </div>
-
+    
     <script>
-    console.log(<?php eh(round(microtime(true) - TIME_START, 3)) ?> + 'sec');
+    console.log(<?php encode_quotes(round(microtime(true) - TIME_START, 3)) ?> + 'sec');
     </script>
 
   </body>
