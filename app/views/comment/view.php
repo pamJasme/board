@@ -1,6 +1,3 @@
-<div style='float:right; font-size:15px; font-weight:900'>
-  Welcome <?php echo $_SESSION['username']; $count=0; ?>
-</div><br>
 
 <div style='float:right; font-size:15px; font-weight:900'>
   <a class="btn btn-medium btn-primary" name="logout" href="<?php encode_quotes(url('thread/logout'));?>">Logout</a>
@@ -14,7 +11,7 @@
     
     <div class="meta">
       <table  width='70%' border=0>
-        <tr><td width='4%'><?php encode_quotes($k+1); $count++; ?></td><td width='25%'>From: <?php encode_quotes($v->username) ?>
+        <tr><td width='4%'><?php encode_quotes($k+1); ?></td><td width='25%'>From: <?php encode_quotes($v->username) ?>
         <br>Date: <?php encode_quotes($v->created) ?></td>
     </div>
 
@@ -31,7 +28,7 @@
 <hr>
 <form class="well" method="post" action="<?php encode_quotes(url('thread/write')) ?>">
   <label>Your name</label>
-  <input type="text" class="span2" name="username" value="<?php echo $user_name; ?>" disabled>
+  <input type="text" class="span2" name="username" value="<?php echo $_SESSION['username'] ?>" disabled>
   <label>Comment</label>
   <textarea name="body"><?php encode_quotes(Param::get('body'))?></textarea>
   <br/>

@@ -6,19 +6,26 @@
 **/
 class ThreadController extends AppController
 {
+    
+    public function __contruct()
+    {
+        $username = $_SESSION['username'];
+        $this->set(get_defined_vars());
+    }
+
     /**
     *   To view all threads with limits through Pagination.
     **/
     public function index()
     {
-        if (is_logged_in()) {
-            $thread_count = Thread::getNumRows();
-            $pagination = pagination($thread_count, '');
-            $threads = Thread::getAll($pagination['max']);
-            $this->set(get_defined_vars());
-        } else {
+        if (!is_logged_in()) {
             redirect(url('user/index'));
-        }   
+        }
+
+        $thread_count = Thread::getNumRows();
+        $pagination = pagination($thread_count);
+        $threads = Thread::getAll($pagination['max']);
+        $this->set(get_defined_vars());
     }
 
     /**
@@ -70,7 +77,7 @@ class ThreadController extends AppController
             case 'create_end';
                 $thread->title = Param::get('title');
                 $comment->username = $username;
-                $comment->body = Param::Get('body');
+                $comment->body = Param::get('body');
                 try {
                     $thread->create($comment);
                 } catch (ValidationException $e) {

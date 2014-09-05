@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>DietCake</title>
 
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">    
     <style>
       body {
         padding-top: 60px;
@@ -22,13 +21,15 @@
         </div>
       </div>
     </div>
+        <div>
+          <?php if (is_logged_in()) { ?>
+          <span class="label label-info">Welcome <?php echo $_SESSION['username']; }?></span>
+        </div>
 
     <div class="container">
-
       <?php echo $_content_ ?>
-
     </div>
-
+    
     <script>
     console.log(<?php encode_quotes(round(microtime(true) - TIME_START, 3)) ?> + 'sec');
     </script>

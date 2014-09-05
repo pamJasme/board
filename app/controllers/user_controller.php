@@ -10,21 +10,24 @@ class UserController extends AppController
     {
         $username = Param::get('login_name');
         $password = Param::get('login_pword');
-        $registered_user = new User;
-        $user = array(
+        $user = new User;
+        $login_info = array(
             'username' => $username,
             'password' => $password,
-            );
-
-        if (!array_filter($user)) {
+        );
+        
+        if (!array_filter($login_info)) {
             $status = "";
         } else {
             try {
-                foreach ($user as $key => $value) {
-                    is_complete($value);
+                foreach ($login_info as $key => $value) {
+                    if (!is_complete($value)) {
+                        throw new ValidationException("Please fill up all fields");
+                    }
                 }
-                $login_info = $registered_user->authenticate($username, $password);
-                $_SESSION['username'] = $login_info->username;
+
+                $user_login = $user->authenticate($username, $password);
+                $_SESSION['username'] = $user_login->username;
 
                 redirect(url('thread/index'));
                 } catch (ValidationException $e) {
@@ -32,7 +35,6 @@ class UserController extends AppController
                 } catch (RecordNotFoundException $e) {
                     $status = notice($e->getMessage(),"error");
                 }
-
             }
         $this->set(get_defined_vars());        
     }
@@ -43,34 +45,38 @@ class UserController extends AppController
     **/
     public function registration()
     {
-        $new_username = Param::get('username');
-        $new_password = Param::get('pword');
-        $new_password_match = Param::get('pword_match');
-        $new_fname = Param::get('fname');
-        $new_lname = Param::get('lname');
-        $new_email = Param::get('email');
-        $reg = new Registration;
+        $username = Param::get('username');
+        $password = Param::get('pword');
+        $password_match = Param::get('pword_match');
+        $fname = Param::get('fname');
+        $lname = Param::get('lname');
+        $email = Param::get('email');
+        $registration = new Registration;
         
-        $user_info = array(
-            'username' => $new_username,
-            'user_password' => $new_password,
-            'fname' => $new_fname,
-            'lname' => $new_lname,
-            'email' => $new_email,
-            );
+        $login_info = array(
+            'username' => $username,
+            'user_password' => $password,
+            'fname' => $fname,
+            'lname' => $lname,
+            'email' => $email,
+        );
         
         //To check if all keys are null
-        if (!array_filter($user_info)) {
+        if (!array_filter($login_info)) {
             $status = "";
         } else {
             try {
-                is_password_match($new_password, $new_password_match);
-                throw new ValidationException("Password did not match");
-                foreach ($user_info as $key => $value) {
-                    is_complete($value);
-                    throw new ValidationException("Please fill up all fields");
+                foreach ($login_info as $key => $value) {
+                    if (!is_complete($value)) {
+                        throw new ValidationException("Please fill up all fields");
+                    }
                 }
-                $info = $reg->userRegistration($user_info);
+
+                if(!is_password_match($password, $password_match)) {
+                    throw new ValidationException("Password did not match");
+                }
+
+                $info = $registration->userRegistration($login_info);
                 $status = notice("Registration Complete");
                 } catch (ExistingUserException $e) {
                     $status = notice($e->getMessage(), "error");

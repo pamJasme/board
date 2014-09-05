@@ -2,11 +2,11 @@
 
 class User extends AppModel
 {
-    public $validation =array(
+    public $validation = array(
         'username' => array(
             'length' => array(
                 'validate_between', MIN_VALUE, MAX_VALUE,
-                ),
+            ),
             'format' => array(
                 'validate_username'
             ),
@@ -15,8 +15,8 @@ class User extends AppModel
         'password' => array(
             'length' => array(
                 'validate_between', MIN_VALUE, MAX_VALUE,
-                ),
             ),
+        ),
     );
 
     /**

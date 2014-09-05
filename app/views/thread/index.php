@@ -1,9 +1,5 @@
 <fieldset class='well'>
     <div style='float:right; font-size:15px; font-weight:900'>
-        Welcome <?php echo $_SESSION['username']; ?>
-    </div><br>
-
-    <div style='float:right; font-size:15px; font-weight:900'>
         <a class="btn btn-medium btn-primary" name="logout" href="<?php encode_quotes(url('thread/logout'));?>">
             Logout
         </a>
@@ -20,5 +16,3 @@
         <?php echo $pagination['control']; ?>
     </div>
 </fieldset>
-
-

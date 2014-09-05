@@ -79,6 +79,7 @@ class Thread extends AppModel
         $comments = array();
         $db = DB::conn();
         $rows = $db->search('comment', 'thread_id = ?', array($this->id), 'created ASC');
+        new self($rows);
         foreach ($rows as $row) {
             $comments[] = new Comment($row);
         }

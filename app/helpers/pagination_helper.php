@@ -6,9 +6,9 @@ const MAX_ROWS = 10;
 * Function for pagination
 * @param $num_rows
 * @param $pagenum
-* @param $set_url
+* @param $current_page
 **/
-function pagination($num_rows, $pagenum, array $set_url = NULL)
+function pagination($num_rows, array $current_page = array())
 {
     $pagination = array();
 
@@ -33,17 +33,17 @@ function pagination($num_rows, $pagenum, array $set_url = NULL)
     }
     
     $max = 'limit ' .($pagenum - 1) * MAX_ROWS.',' .MAX_ROWS;
-    $page_link =& $set_url['pn'];
+    $page_link =& $current_page['pn'];
     $control = "";
     if ($last_page != 1) {
         if ($pagenum > 1) {
             $page_link = $pagenum - 1;
-            $control .= "<a href='" . url('', $set_url) . "'> 
+            $control .= "<a href='" . url('', $current_page) . "'> 
                 Previous </a> &nbsp; &nbsp;";
             
             for ($i = $pagenum - 4; $i < $pagenum; $i++) { 
                 if ($i > 0) {
-                    $control .= "<a href'". url('', $set_url). "'>$i</a> &nbsp; ";
+                    $control .= "<a href='".url('', $current_page)."'>$i</a> &nbsp; ";
                 }
             }
         }
@@ -51,7 +51,7 @@ function pagination($num_rows, $pagenum, array $set_url = NULL)
         $control .= ''.$pagenum.' &nbsp; ';
         for ($i = $pagenum + 1; $i <= $last_page; $i++) {
             $page_link = $i;
-            $control .= "<a href='".url('', $set_url)."'>$i</a> &nbsp; ";
+            $control .= "<a href='".url('', $current_page)."'>$i</a> &nbsp; ";
             if ($i >= $pagenum + 4) {
                 break;
             }
@@ -59,7 +59,7 @@ function pagination($num_rows, $pagenum, array $set_url = NULL)
 
         if ($pagenum != $last_page) {
             $page_link = $pagenum + 1;
-            $control .= " &nbsp; &nbsp; <a href='".url('', $set_url)."'>Next</a>";
+            $control .= " &nbsp; &nbsp; <a href='".url('', $current_page)."'>Next</a>";
         }
     }
     $pagination = array(

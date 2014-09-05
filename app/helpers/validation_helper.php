@@ -52,7 +52,7 @@ function is_complete($value)
 {
     $check_if_complete = validate_between($value, NULL, NULL);
     if ($check_if_complete) {
-        throw new ValidationException("Please fill up all fields");
+        return false;
     } else {
         return true;
     }
