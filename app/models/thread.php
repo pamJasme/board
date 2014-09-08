@@ -46,8 +46,10 @@ class Thread extends AppModel
     /**
     * To view all threads with limit
     **/
-    public static function getAll($max)
+    public static function getAll()
     {
+        $max = 'LIMIT ' . (Pagination::$current_page - 1) * Pagination::ROWS_PER_PAGE . 
+            ',' . Pagination::ROWS_PER_PAGE;
         $threads = array();
         $db = DB::conn();
         $rows = $db->rows("SELECT * FROM thread $max");
@@ -114,4 +116,3 @@ class Thread extends AppModel
         return $count;  
     }
 }
-

@@ -8,11 +8,15 @@
         <h1>All Threads</h1>
         <?php foreach ($threads as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
-                <?php encode_quotes($v->title) ?></a></li>
+                <?php encode_quotes($v->title); ?></a></li>
         <?php endforeach ?>
         </ul><br>
 
         <a class="btn btn-medium btn-primary" href="<?php encode_quotes(url('thread/create')) ?>">Create</a><br><br>
-        <?php echo $pagination['control']; ?>
-    </div>
+        
+        <div class = "pagination">
+        <ul>
+            <li><?php echo $links; ?></li>
+        </ul>
+        </div>
 </fieldset>
