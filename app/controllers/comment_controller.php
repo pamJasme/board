@@ -12,4 +12,6 @@
         $user_name = $_SESSION['username'];
         $this->set(get_defined_vars());
     }
+
 }
+

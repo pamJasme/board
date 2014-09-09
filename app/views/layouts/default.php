@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>DietCake</title>
 
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/custom.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px;
@@ -13,17 +14,21 @@
   </head>
 
   <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="index">DietCake Home</a>
-        </div>
-      </div>
-    </div>
         <div>
           <?php if (is_logged_in()) { ?>
-          <span class="label label-info">Welcome <?php echo $_SESSION['username']; }?></span>
+            <div class="navbar navbar-inverse" style="margin-left: 100px; margin-right: 100px;">
+              <div class="navbar-inner">
+                <a class="brand" href="#">DietCake</a>
+                  <ul class="nav">
+                    <li><a href="<?php encode_quotes(url('thread/home'));?>">Home</a></li>
+                    <li><a href="<?php encode_quotes(url('thread/index'));?>">Threads</a></li>
+                    <li><a href="#">My Posts</a></li>
+                    <li><a href="<?php encode_quotes(url('thread/logout'));?>">Logout</a></li>
+                  </ul>
+                  <span class="label label-info" style="float:right; margin-top: 10px; font-size:15px">Welcome <?php echo $_SESSION['username'];?></span>
+                </div>
+              </div>
+          <?php } ?>
         </div>
 
     <div class="container">
@@ -36,3 +41,4 @@
 
   </body>
 </html>
+

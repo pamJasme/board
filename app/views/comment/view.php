@@ -1,8 +1,3 @@
-
-<div style='float:right; font-size:15px; font-weight:900'>
-  <a class="btn btn-medium btn-primary" name="logout" href="<?php encode_quotes(url('thread/logout'));?>">Logout</a>
-</div>
-
 <h1><?php encode_quotes($thread->title);?></h1>
 <fieldset class='well' name="comment_area">
   <?php foreach ($comments as $k => $v): ?>
@@ -38,3 +33,5 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <div>
+
+

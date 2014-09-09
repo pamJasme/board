@@ -1,5 +1,3 @@
-<div style='float:right; font-size:15px; font-weight:900'><a class="btn btn-medium btn-primary" name="logout" href="<?php encode_quotes(url('thread/logout'));?>">Logout</a></div>
-
 <h1>Create a thread</h1>
                 
 <?php if ($thread->hasError() || $comment->hasError()): ?>
@@ -37,8 +35,17 @@
   <input type="text" class="span2" name="username" value="<?php echo $username; ?>" disabled>
   <label>Comment</label>
   <textarea name="body"><?php encode_quotes(Param::get('body')) ?></textarea>
+  <label>Category</label>
+    <select class="span2" name="select">
+      <option selected="selected" value="none"></option>
+      <option value="1">Job</option>
+      <option value="2">Love</option>
+      <option value="3">Others</option>
+    </select> 
   <br />
   <input type="hidden" name="page_next" value="create_end">
    <div style="float:right; font-size:20px">&larr;Back to All <a href="index">Threads</a><br></div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form> 
+
+
