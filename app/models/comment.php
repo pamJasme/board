@@ -4,6 +4,7 @@ class Comment extends AppModel
     const MIN_VALUE = 1;
     const USERNAME_MAX_VALUE = 16;
     const BODY_MAX_VALUE = 200;
+    const TREND_COUNT = 10;
 
     public $validation = array(
         'username' => array(
@@ -17,4 +18,18 @@ class Comment extends AppModel
             ),
         ),
     );
+
+     /**
+    * To view threads according to comment count
+    **/
+    public static function getTrends()
+    {
+        $trends = array();
+        $max = self::TREND_COUNT;
+        $db = DB::conn();
+        $row = $db->rows("SELECT thread_id, COUNT(*) AS 'count' FROM comment 
+            GROUP BY thread_id ORDER BY COUNT(*) DESC LIMIT $max");
+        return ($row);
+    }
 }
+

@@ -2,7 +2,6 @@
 
 /**
 * class ThreadController
-*
 **/
 class ThreadController extends AppController
 {
@@ -14,15 +13,43 @@ class ThreadController extends AppController
     }
 
     /**
-    *   To view all threads with limits through Pagination.
+    *   In progress
+    **/
+    public function home()
+    {
+        if (!is_logged_in()) {
+            redirect(url('user/index'));
+        }
+        $threads = Thread::getThreads();
+        $members = User::getNewMembers();
+
+        //to get posts with highest number of threads
+        $trends = Comment::getTrends();
+        $trend_title = Thread::getTrendTitle($trends);
+        $this->set(get_defined_vars());
+    }
+
+    /**
+    *   To view all threads with limits and categories
     **/
     public function index()
     {
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
-        $links = Pagination::createPages(Param::get('page'), Thread::getNumRows());
-        $threads = Thread::getAll();
+        $page = Pagination::setPage(Param::get('page'));
+        //to get posts with highest number of threads
+        $trends = Comment::getTrends();
+        $trend_title = Thread::getTrendTitle($trends);
+
+        //to get posts according to their category
+        $category = Param::get('filter');
+        $date = Param::get('date');
+        $trend = Param::get('trend');
+        $row_count = Thread::getNumRowsCat($category, $date);
+        $threads = Thread::filter($category, $date, $page);
+        
+        $links = Pagination::createPages($page, $row_count);
         $this->set(get_defined_vars());
     }
 
@@ -65,6 +92,8 @@ class ThreadController extends AppController
     public function create()
     {
         $thread = new Thread;
+        $thread->category = Param::get('select');
+        $thread->user_id = $_SESSION['user_id'];
         $comment = new Comment;
         $page = Param::get('page_next', 'create');
         $username = $_SESSION['username'];

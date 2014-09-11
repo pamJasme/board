@@ -16,6 +16,8 @@ require_once CONFIG_DIR.'log.php';
 require_once CONFIG_DIR.'database.php';
 require_once CONFIG_DIR.'router.php';
 
+require_once LIB_DIR.'pagination.php';
+
 //vendor
 require_once VENDOR_DIR.'SimpleDBI/src/SimpleDBI.php';
 

@@ -1,0 +1,22 @@
+.container-threads{
+	background-color: lightpink;
+	width: 450px;
+	height: 550px;
+	top: 30px;
+	float: left;
+}
+.container-members{
+	background-color: lightpink;
+	width: 450px;
+	height: 250px;
+	top: 30px;
+	float: right;
+}
+.container-hotthreads{
+	margin-top:  50px;
+	background-color: lightpink;
+	width: 450px;
+	height: 250px;
+	top: 30px;
+	float: right;
+}

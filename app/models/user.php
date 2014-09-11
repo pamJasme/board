@@ -41,4 +41,15 @@ class User extends AppModel
         }  
         return new self($row);
     }
+
+     public static function getNewMembers()
+    {
+        $members = array();
+        $db = DB::conn();
+        $row = $db->rows("SELECT username FROM user_info ORDER BY created DESC LIMIT 3");
+        foreach ($row as $rows) {
+            $members[] = new User($rows);
+        }
+        return $members;
+    }
 }
