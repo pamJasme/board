@@ -1,9 +1,17 @@
 <?php
 class Pagination
 {
-	const ROWS_PER_PAGE = 10;
-	const LINK_LIMIT = 3;
+	const ROWS_PER_PAGE = 5;
+	const LINK_LIMIT = 2;
 	public static $current_page = 1;
+
+	public static function setPage($page)
+	{
+		if ($page > 1) {
+			return self::$current_page = preg_replace('#[^0-9]#', '', $page);
+		}
+		return self::$current_page;
+	}
 
 	/*
 	* To set Pagination's last page
@@ -19,8 +27,7 @@ class Pagination
 
 	/*
 	* To create pages with links
-	* @params $page
-	* @params $rowCount
+	* @params $page, $rowCount
 	*/
 	public static function createPages($page, $rowCount)
 	{
@@ -71,8 +78,11 @@ class Pagination
 	*/
 	public static function createPrevLink($current_page, $prev_page)
 	{
-		if ($current_page > 1)
-			return '<a href="?page=' . $prev_page . '"><span>&laquo;</span></a> &nbsp; &nbsp; ';
+		if ($current_page > 1) {
+			return '<a href="?page=' . $prev_page . '&filter='. Param::get('filter') .
+				'&date='.Param::get('date').'">
+			<span>&laquo;</span></a> &nbsp; &nbsp; ';
+		}
 	}
 
 	/*
@@ -81,8 +91,10 @@ class Pagination
 	*/
 	public static function createLeftLinks($i)
 	{
-		if ($i > 0)
-			return '<a href="?page=' . $i . '">' . $i . '</a> &nbsp; ' ;
+		if ($i > 0) {
+			return '<a href="?page=' . $i . '&filter='. Param::get('filter') .
+				'&date='. Param::get('date') .'">' . $i . '</a> &nbsp; ' ;
+		}
 	}
 
 	/*
@@ -92,8 +104,10 @@ class Pagination
 	*/
 	public static function createRightLinks($i, $next)
 	{
-		if ($i <= $next)
-			return '<a href="?page=' . $i . '">' . $i . '</a> &nbsp; ';
+		if ($i <= $next) {
+			return '<a href="?page=' . $i . '&filter='. Param::get('filter') .
+				'&date='. Param::get('date').'">' . $i . '</a> &nbsp; ' ;
+		}
 	}
 
 	/*
@@ -102,9 +116,11 @@ class Pagination
 	*/
 	public static function createNextLink($current_page, $next_page, $last_page)
 	{
-		 if ($current_page != $last_page)
-		 	return ' &nbsp; &nbsp; <a href="?page=' . $next_page . '"><span>&raquo;</span></a> ';
+		 if ($current_page != $last_page) {
+		 	return '<a href="?page=' . $next_page . '&filter='. Param::get('filter') .
+				'&date='. Param::get('date') .'">
+			<span>&laquo;</span></a> &nbsp; &nbsp; ';
+		}
 	}
 
 }
-

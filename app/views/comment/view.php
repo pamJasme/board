@@ -29,7 +29,7 @@
   <br/>
   <input type="hidden" name="thread_id" value="<?php encode_quotes($thread->id) ?>">
   <input type="hidden" name="page_next" value="write_end">
-   <div style="float:right; font-size:20px">&larr;Back to All <a href="<?php encode_quotes(url('thread/index')); ?>">Threads</a><br></div>
+   <div style="float:right; font-size:20px">&larr;<?php echo "<a href=\"javascript:history.go(-1)\">Back</a>"; ?></div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <div>

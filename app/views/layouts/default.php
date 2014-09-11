@@ -5,7 +5,7 @@
     <title>DietCake</title>
 
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/bootstrap/css/custom.css" rel="stylesheet">
+    <link href="/bootstrap/css/layout.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px;
@@ -25,7 +25,8 @@
                     <li><a href="#">My Posts</a></li>
                     <li><a href="<?php encode_quotes(url('thread/logout'));?>">Logout</a></li>
                   </ul>
-                  <span class="label label-info" style="float:right; margin-top: 10px; font-size:15px">Welcome <?php echo $_SESSION['username'];?></span>
+                  <span class="label label-info" style="float:right; margin-top: 10px; font-size:15px">
+                Welcome <?php echo $_SESSION['username'];?></span>
                 </div>
               </div>
           <?php } ?>

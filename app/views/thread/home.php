@@ -21,7 +21,8 @@
 <ul class="nav nav-list">
     <li class="nav-header">Trending posts</li>
         <?php foreach ($trend_title as $v): ?>
-            <li><?php encode_quotes($v['title']);?></li>
+            <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v['id']))) ?>">
+                <?php encode_quotes($v['title']);?></a></li>
         <?php endforeach ?>
 </ul>
 </div>

@@ -50,21 +50,66 @@ class Thread extends AppModel
         }
     }
 
+    /*
+    * To filter threads by category
+    * @params $cat_id, $date, $page
+    */
+    public static function filter($cat_id, $date, $page)
+    {
+        $filter_threads = array();
+        $db = DB::conn();
+        $end = date('Y-m-d');
+        $start = date('Y-m-d', strtotime("-{$date} days"));
+
+        if ($date == 0 && $cat_id == 0) {
+            $rows = $db->rows("SELECT * FROM thread");
+            foreach ($rows as $row) {
+                $filter_threads[] = new Thread($row);
+            }
+        }
+
+        if ($date == 0) {
+            $rows = $db->rows("SELECT * FROM thread 
+            WHERE category = ?", array($cat_id));
+            foreach ($rows as $row) {
+                $filter_threads[] = new Thread($row);
+            }
+        } else if ($cat_id == 0) {
+            $rows = $db->rows("SELECT * FROM thread 
+            WHERE created BETWEEN ? AND ?", array($start, $end));
+            foreach ($rows as $row) {
+                $filter_threads[] = new Thread($row);
+            }
+        } else {
+            $rows = $db->rows("SELECT * FROM thread 
+            WHERE category = ? AND created BETWEEN ? AND ?", array($cat_id, $start, $end));
+            foreach ($rows as $row) {
+                $filter_threads[] = new Thread($row);
+            }
+        }
+
+        $limit = Pagination::ROWS_PER_PAGE;
+        $offset = ($page - 1) * $limit;
+        return array_slice($filter_threads, $offset, $limit);
+    }
+
     /**
     * To view all threads with page limit
     **/
-    public static function getAll()
+    public static function getAll($page)
     {
-        $max = 'LIMIT ' . (Pagination::$current_page - 1) * Pagination::ROWS_PER_PAGE . 
-            ',' . Pagination::ROWS_PER_PAGE;
         $threads = array();
         $db = DB::conn();
-        $rows = $db->rows("SELECT * FROM thread $max");
+        $rows = $db->rows("SELECT * FROM thread");
         foreach ($rows as $row) {
             $threads[] = new Thread($row);
         }
-        return $threads;
+        
+        $limit = Pagination::ROWS_PER_PAGE;
+        $offset = ($page - 1) * $limit;
+        return array_slice($threads, $offset, $limit);
     }
+
 
     /**
     * To view threads for Home page
@@ -88,10 +133,10 @@ class Thread extends AppModel
     {
         $trend_title = array();
         $db = DB::conn();
-        $ha = 0;
         foreach ($trend_id as $value) {
             $id = $value['thread_id'];
             $row = $db->row("SELECT * FROM thread where id = ?", array($id));
+            $row['count'] = $value['count'];
             $trend_title[] = $row;
         }
             return $trend_title;
@@ -145,12 +190,33 @@ class Thread extends AppModel
     }
 
     /**
-    * Function to count table rows
-    **/
+    * To count number of rows (All)
+    */
     public static function getNumRows()
     {
         $db = DB::conn();
-        $count = $db->value("SELECT COUNT(*) FROM thread");
+        $count = $db->value("SELECT COUNT(*) from thread");
+        return $count;
+    }
+
+    /**
+    * To count table rows with category
+    **/
+    public static function getNumRowsCat($cat_id, $date)
+    {
+        $end = date('Y-m-d');
+        $start = date('Y-m-d', strtotime("-{$date} days"));
+        $db = DB::conn();
+        if ($cat_id == 0) {
+            $count = $db->value("SELECT COUNT(*) FROM thread 
+            WHERE created BETWEEN ? AND ?", array($start, $end));
+        } else if ($date == 0) {
+            $count = $db->value("SELECT COUNT(*) FROM thread 
+               WHERE category = ?", array($cat_id));
+        } else {
+             $count = $db->value("SELECT COUNT(*) FROM thread 
+            WHERE category = ? AND created BETWEEN ? AND ?", array($cat_id, $start, $end));
+        }
         return $count;  
     }
 }

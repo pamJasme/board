@@ -44,7 +44,7 @@
     </select> 
   <br />
   <input type="hidden" name="page_next" value="create_end">
-   <div style="float:right; font-size:20px">&larr;Back to All <a href="index">Threads</a><br></div>
+  <div style="float:right; font-size:20px">&larr;<?php echo "<a href=\"javascript:history.go(-1)\">Back</a>"; ?></div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form> 
 

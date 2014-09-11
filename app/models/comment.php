@@ -27,7 +27,7 @@ class Comment extends AppModel
         $trends = array();
         $max = self::TREND_COUNT;
         $db = DB::conn();
-        $row = $db->rows("SELECT thread_id FROM comment 
+        $row = $db->rows("SELECT thread_id, COUNT(*) AS 'count' FROM comment 
             GROUP BY thread_id ORDER BY COUNT(*) DESC LIMIT $max");
         return ($row);
     }
