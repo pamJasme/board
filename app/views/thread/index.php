@@ -6,7 +6,7 @@
 			<li style="margin-top: 10px">Category&nbsp;</li>
 			<li>
 				<select name="filter" style="height:25px; width:100px; margin-top:6px">
-					<option value="ALL">All</option>
+					<option value="0">All</option>
 					<option value="1">Job</option>
 					<option value="2">Love</option>
 					<option value="3">Others</option>
@@ -15,7 +15,7 @@
 			<li style="margin-top: 10px">&nbsp;Date&nbsp;</li>
 			<li>
 				<select name="date" style="height:25px; width:100px; margin-top:6px">
-					<option selected="selected" value="ALL">All</option>
+					<option selected="0" value="ALL">All</option>
 					<option value="1">1 day from NOW</option>
 					<option value="5">5 days from NOW</option>
 					<option value="10">10 days from NOW</option>
@@ -23,7 +23,11 @@
 				</select>
 			</li>
 			<li>&nbsp;&nbsp;</li>
-			<li style="margin-top:7px"><input type="submit" value="Filter"></li>
+			<li style="margin-top:5px;">
+				<input text="text" name="search" placeholder="Search threads 'keyword'"></input>
+			</li>
+			<li>&nbsp;&nbsp;</li>
+			<li style="margin-top:5px"><input type="submit" value="Filter/Search"></li>
 			</form>
 		</ul>
 	</div>
@@ -34,10 +38,10 @@
     <li class="nav-header">Thread List (<?php echo $row_count; ?>)</li>
         <?php foreach ($threads as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
-
             	<?php encode_quotes($v->title);?><br>
             	<div style="font-size: 10px; font-style: italic;">
-            		&nbsp;&nbsp;<?php encode_quotes($v->created);?>
+            		&nbsp;&nbsp;By <?php encode_quotes($v->user);?>
+            		<?php encode_quotes($v->created);?>
             	</div>
             	</a>
             </li>

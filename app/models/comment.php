@@ -19,7 +19,7 @@ class Comment extends AppModel
         ),
     );
 
-     /**
+    /**
     * To view threads according to comment count
     **/
     public static function getTrends()
@@ -30,6 +30,27 @@ class Comment extends AppModel
         $row = $db->rows("SELECT thread_id, COUNT(*) AS 'count' FROM comment 
             GROUP BY thread_id ORDER BY COUNT(*) DESC LIMIT $max");
         return ($row);
+    }
+
+    /**
+    * To get logged-in user's thread comments
+    * In-progress (Working)
+    */
+    public static function mycomments()
+    {
+        $own_comments = array();
+        $db = DB::conn();
+        $id = $_SESSION['user_id'];
+        $rows = $db->rows("SELECT * FROM comment WHERE user_id = ?", array($id));
+        $count = $db->value("SELECT COUNT(*) FROM comment WHERE user_id = ?", array($id));
+        $i = 0;
+        foreach ($rows as $key) {
+            $own_comments = $rows;
+            $key['count'] = $count;
+            $rows["$i"] = $key;
+            $i++;
+        }
+        return $rows;
     }
 }
 

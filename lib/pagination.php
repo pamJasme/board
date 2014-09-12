@@ -80,7 +80,7 @@ class Pagination
 	{
 		if ($current_page > 1) {
 			return '<a href="?page=' . $prev_page . '&filter='. Param::get('filter') .
-				'&date='.Param::get('date').'">
+				'&date='.Param::get('date').'&search=' .Param::get('search').'">
 			<span>&laquo;</span></a> &nbsp; &nbsp; ';
 		}
 	}
@@ -93,7 +93,8 @@ class Pagination
 	{
 		if ($i > 0) {
 			return '<a href="?page=' . $i . '&filter='. Param::get('filter') .
-				'&date='. Param::get('date') .'">' . $i . '</a> &nbsp; ' ;
+				'&date='. Param::get('date'). '&search=' .Param::get('search').'">' . $i . 
+				'</a> &nbsp; ' ;
 		}
 	}
 
@@ -106,7 +107,8 @@ class Pagination
 	{
 		if ($i <= $next) {
 			return '<a href="?page=' . $i . '&filter='. Param::get('filter') .
-				'&date='. Param::get('date').'">' . $i . '</a> &nbsp; ' ;
+				'&date='. Param::get('date') . '&search=' .Param::get('search').'">'
+				 . $i . '</a> &nbsp; ' ;
 		}
 	}
 
@@ -118,8 +120,8 @@ class Pagination
 	{
 		 if ($current_page != $last_page) {
 		 	return '<a href="?page=' . $next_page . '&filter='. Param::get('filter') .
-				'&date='. Param::get('date') .'">
-			<span>&laquo;</span></a> &nbsp; &nbsp; ';
+				'&date='. Param::get('date') . '&search=' .Param::get('search').'">
+			<span>&raquo;</span></a> &nbsp; &nbsp; ';
 		}
 	}
 

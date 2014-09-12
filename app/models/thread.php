@@ -29,7 +29,7 @@ class Thread extends AppModel
         if ($this->hasError() || $comment -> hasError()) {
             throw new ValidationException('invalid thread or comment');
         }
-
+        $date = date('Y-m-d h:i:s');
         $db = DB::conn();
         try {
             $db->begin();
@@ -37,6 +37,7 @@ class Thread extends AppModel
                 'title' => $this->title,
                 'category' => $this->category,
                 'user_id' => $this->user_id,
+                'created' => $date,
                 );
             $db->insert('thread', $params);
             $this->id = $db->lastInsertId();
@@ -49,43 +50,99 @@ class Thread extends AppModel
             throw $e;
         }
     }
+    
+    /**
+    * To change thread title
+    **/
+    public static function changeTitle($id, $title)
+    {
+        if (!$is_logged_in) {
+            redirect(url('user/index'));
+        }
+
+        $db = DB::conn();
+        $db->update('thread', array('title' => $title), array('id' =>  $id));
+        $status = "Successfully change";
+        return $status;
+    }
+
+    /**
+    * To delete thread
+    **/
+    public static function deleteThread($id) 
+    {
+        if (!$is_logged_in) {
+            redirect(url('user/index'));
+        }
+
+        $db = DB::conn();
+        $db->query("DELETE FROM thread WHERE id = ?", array($id));
+        $status = "Successfully deleted";
+        return $status;
+    }
+
+    /**
+    * To get logged-in users's threads
+    * Used for checking
+    * Function is subject for modification
+    **/
+    public static function myposts()
+    {
+        $own_posts = array();
+        $db = DB::conn();
+        $id = $_SESSION['user_id'];
+        $rows = $db->rows("SELECT * from thread WHERE user_id = ?", array($id));
+        foreach ($rows as $row) {
+            $own_posts[] = new Thread($row);
+        }
+        return $own_posts;
+    }
 
     /*
     * To filter threads by category
-    * @params $cat_id, $date, $page
+    * To search threads
+    * @params $cat_id, $date, $page, $search
     */
-    public static function filter($cat_id, $date, $page)
+    public static function filter($cat_id, $date, $page, $search)
     {
+        echo $search;
         $filter_threads = array();
         $db = DB::conn();
         $end = date('Y-m-d');
         $start = date('Y-m-d', strtotime("-{$date} days"));
+        $like_clause = "title LIKE ?";
+        $keyword = "%$search%";
 
         if ($date == 0 && $cat_id == 0) {
-            $rows = $db->rows("SELECT * FROM thread");
+            $rows = $db->rows("SELECT * FROM thread WHERE {$like_clause}", array($keyword));
             foreach ($rows as $row) {
                 $filter_threads[] = new Thread($row);
             }
-        }
+        } 
 
         if ($date == 0) {
             $rows = $db->rows("SELECT * FROM thread 
-            WHERE category = ?", array($cat_id));
+            WHERE category = ? AND {$like_clause}", array($cat_id, $keyword));
             foreach ($rows as $row) {
                 $filter_threads[] = new Thread($row);
             }
         } else if ($cat_id == 0) {
             $rows = $db->rows("SELECT * FROM thread 
-            WHERE created BETWEEN ? AND ?", array($start, $end));
+            WHERE created BETWEEN ? AND ? AND {$like_clause}", array($start, $end, $keyword));
             foreach ($rows as $row) {
                 $filter_threads[] = new Thread($row);
             }
         } else {
             $rows = $db->rows("SELECT * FROM thread 
-            WHERE category = ? AND created BETWEEN ? AND ?", array($cat_id, $start, $end));
+            WHERE category = ? AND created BETWEEN ? AND ? AND {$like_clause}", array($cat_id, $start, $end, $keyword));
             foreach ($rows as $row) {
                 $filter_threads[] = new Thread($row);
             }
+        }
+
+        foreach ($filter_threads as $key) {
+            $user = User::getUsername($key->user_id);
+            $key->user = $user;
         }
 
         $limit = Pagination::ROWS_PER_PAGE;
@@ -98,8 +155,7 @@ class Thread extends AppModel
     **/
     public static function getAll($page)
     {
-        $max = 'LIMIT ' . (Pagination::$current_page - 1) * Pagination::ROWS_PER_PAGE . 
-            ',' . Pagination::ROWS_PER_PAGE;
+
         $threads = array();
         $db = DB::conn();
         $rows = $db->rows("SELECT * FROM thread");
@@ -111,7 +167,6 @@ class Thread extends AppModel
         $offset = ($page - 1) * $limit;
         return array_slice($threads, $offset, $limit);
     }
-
 
     /**
     * To view threads for Home page
@@ -126,6 +181,21 @@ class Thread extends AppModel
             $all_threads[] = new Thread($row);
         }
         return $all_threads;
+    }
+
+    /**
+    * To get logged-in users's threads together with it's comments
+    * Used for checking
+    * Function is subject for modification (WORKING)
+    **/
+    public static function commentsThreads($comments, $threads)
+    {
+        $id = $_SESSION['user_id'];
+        $db = DB::conn();
+        $row = $db->rows("SELECT t.title, c.body from comment c 
+            INNER JOIN thread t ON c.thread_id=t.id 
+            WHERE t.user_id = ?", array($id));
+        return $row;
     }
 
     /**
@@ -187,6 +257,7 @@ class Thread extends AppModel
             'thread_id' => $this->id,
             'username' => $comment->username,
             'body' => $comment->body,
+            'user_id' => $_SESSION['user_id'],
             );
         $db->insert('comment', $params);
     }
@@ -204,20 +275,22 @@ class Thread extends AppModel
     /**
     * To count table rows with category
     **/
-    public static function getNumRowsCat($cat_id, $date)
+    public static function getNumRowsCat($cat_id, $date, $search)
     {
         $end = date('Y-m-d');
         $start = date('Y-m-d', strtotime("-{$date} days"));
         $db = DB::conn();
+        $like_clause = "title LIKE ?";
+        $keyword = "%$search%";
         if ($cat_id == 0) {
             $count = $db->value("SELECT COUNT(*) FROM thread 
-            WHERE created BETWEEN ? AND ?", array($start, $end));
+            WHERE created BETWEEN ? AND ? AND {$like_clause}", array($start, $end, $keyword));
         } else if ($date == 0) {
             $count = $db->value("SELECT COUNT(*) FROM thread 
-               WHERE category = ?", array($cat_id));
+               WHERE category = ? AND {$like_clause}", array($cat_id, $keyword));
         } else {
              $count = $db->value("SELECT COUNT(*) FROM thread 
-            WHERE category = ? AND created BETWEEN ? AND ?", array($cat_id, $start, $end));
+            WHERE category = ? AND created BETWEEN ? AND ? AND {$like_clause}", array($cat_id, $start, $end, $keyword));
         }
         return $count;  
     }

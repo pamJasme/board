@@ -5,15 +5,8 @@
 **/
 class ThreadController extends AppController
 {
-    
-    public function __contruct()
-    {
-        $username = $_SESSION['username'];
-        $this->set(get_defined_vars());
-    }
-
     /**
-    *   In progress
+    *   In progress (WORKING)
     **/
     public function home()
     {
@@ -30,6 +23,39 @@ class ThreadController extends AppController
     }
 
     /**
+    * To edit logged-in user's posts/comments
+    * IN PROGRESS (WORKING)
+    **/
+    public function update()
+    {
+        $id = Param::get('othreads');
+        $new_title = Param::get('new_title');
+        if (Param::get('delete') != '0') {    
+            $title = Thread::changeTitle($id,$new_title);
+            echo $title;
+        } else {
+            $deleted = Thread::deleteThread($id);
+            echo $deleted;
+        }
+    }
+
+    /**
+    * To get logged-in users's threads
+    * Used for checking
+    * Function is subject for modification (WORKING)
+    **/
+    public function myposts()
+    {
+        $post = array();
+        $own_threads = Thread::myposts();
+        $own_comments = Comment::mycomments();
+        $title = Thread::getTrendTitle($own_comments);
+        $merge = Thread::commentsThreads($own_comments, $title);
+        //echo "<pre>",print_r($merge), "</pre>";
+        $this->set(get_defined_vars());
+    }
+
+    /**
     *   To view all threads with limits and categories
     **/
     public function index()
@@ -37,18 +63,23 @@ class ThreadController extends AppController
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
+
         $page = Pagination::setPage(Param::get('page'));
+        
         //to get posts with highest number of threads
         $trends = Comment::getTrends();
         $trend_title = Thread::getTrendTitle($trends);
 
         //to get posts according to their category
+        $search = Param::get('search');
         $category = Param::get('filter');
         $date = Param::get('date');
         $trend = Param::get('trend');
-        $row_count = Thread::getNumRowsCat($category, $date);
-        $threads = Thread::filter($category, $date, $page);
-        
+        $row_count = Thread::getNumRowsCat($category, $date, $search);
+
+        if($category == 0 && $date == 0 && $search == '') $row_count = Thread::getNumRows();
+
+        $threads = Thread::filter($category, $date, $page, $search);
         $links = Pagination::createPages($page, $row_count);
         $this->set(get_defined_vars());
     }
@@ -81,7 +112,6 @@ class ThreadController extends AppController
                 throw new NotFoundException("{$page} is not found");
                 break;      
         }
-
         $this->set(get_defined_vars());
         $this->render($page);
     }
@@ -115,7 +145,6 @@ class ThreadController extends AppController
                 throw new NotFoundException("{$page} is not found");
                 break;
         }
-
         $this->set(get_defined_vars());
         $this->render($page);
     }

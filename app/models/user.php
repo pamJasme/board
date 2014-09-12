@@ -42,7 +42,10 @@ class User extends AppModel
         return new self($row);
     }
 
-     public static function getNewMembers()
+    /**
+    * To get newly registered members
+    **/
+    public static function getNewMembers()
     {
         $members = array();
         $db = DB::conn();
@@ -51,5 +54,17 @@ class User extends AppModel
             $members[] = new User($rows);
         }
         return $members;
+    }
+
+    /**
+    * To get username
+    * Function subject for modification (WORKING)
+    **/
+    public static function getUsername($id)
+    {
+        $user = array();
+        $db = DB::conn();
+        $username = $db->value("SELECT username FROM user_info where user_id = ?", array($id));
+        return $username;
     }
 }
