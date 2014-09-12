@@ -28,7 +28,7 @@ class ThreadController extends AppController
     **/
     public function update()
     {
-        $id = Param::get('othreads');
+        $id = Param::get('select_thread');
         $new_title = Param::get('new_title');
         if (Param::get('delete') != '0') {    
             $title = Thread::changeTitle($id,$new_title);

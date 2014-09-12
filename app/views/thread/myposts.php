@@ -1,7 +1,7 @@
 <div class="container-threads">
 <form method="post" action="<?php encode_quotes(url('thread/update'))?>">
     Thread:
-    <select name="othreads">
+    <select name="select_thread">
         <?php foreach ($own_threads as $v => $value): ?>
             <option value="<?php echo $value->id ?>"><?php echo $value->title ?></option>
         <?php endforeach ?>
@@ -11,8 +11,6 @@
     Delete
         <input type="checkbox" name="delete" value="0"><br>
         <input type="submit" value="change">
-        <div class="container-threads">
-    </div>
 </form>
 </div>
 
