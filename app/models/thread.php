@@ -105,7 +105,6 @@ class Thread extends AppModel
     */
     public static function filter($cat_id, $date, $page, $search)
     {
-        echo $search;
         $filter_threads = array();
         $db = DB::conn();
         $end = date('Y-m-d');
@@ -114,31 +113,25 @@ class Thread extends AppModel
         $keyword = "%$search%";
 
         if ($date == 0 && $cat_id == 0) {
-            $rows = $db->rows("SELECT * FROM thread WHERE {$like_clause}", array($keyword));
-            foreach ($rows as $row) {
-                $filter_threads[] = new Thread($row);
-            }
-        } 
-
-        if ($date == 0) {
-            $rows = $db->rows("SELECT * FROM thread 
-            WHERE category = ? AND {$like_clause}", array($cat_id, $keyword));
-            foreach ($rows as $row) {
-                $filter_threads[] = new Thread($row);
-            }
-        } else if ($cat_id == 0) {
-            $rows = $db->rows("SELECT * FROM thread 
-            WHERE created BETWEEN ? AND ? AND {$like_clause}", array($start, $end, $keyword));
-            foreach ($rows as $row) {
-                $filter_threads[] = new Thread($row);
-            }
+            $query = "SELECT * FROM thread WHERE {$like_clause}";
+            $params = array($keyword);
+        } elseif ($date == 0) {
+            $query = "SELECT * FROM thread WHERE category = ? AND {$like_clause}";
+            $params = array($cat_id, $keyword);
+        } elseif ($cat_id == 0) {
+            $query = "SELECT * FROM thread 
+            WHERE created BETWEEN ? AND ? AND {$like_clause}";
+            $params = array($start, $end, $keyword);
         } else {
-            $rows = $db->rows("SELECT * FROM thread 
-            WHERE category = ? AND created BETWEEN ? AND ? AND {$like_clause}", array($cat_id, $start, $end, $keyword));
-            foreach ($rows as $row) {
+            $query = "SELECT * FROM thread 
+            WHERE category = ? AND created BETWEEN ? AND ? AND {$like_clause}";
+            $params = array($cat_id, $start, $end, $keyword);
+        }
+
+        $rows = $db->rows($query, $params);
+        foreach ($rows as $row) {
                 $filter_threads[] = new Thread($row);
             }
-        }
 
         foreach ($filter_threads as $key) {
             $user = User::getUsername($key->user_id);
@@ -283,15 +276,19 @@ class Thread extends AppModel
         $like_clause = "title LIKE ?";
         $keyword = "%$search%";
         if ($cat_id == 0) {
-            $count = $db->value("SELECT COUNT(*) FROM thread 
-            WHERE created BETWEEN ? AND ? AND {$like_clause}", array($start, $end, $keyword));
+            $query = "SELECT COUNT(*) FROM thread 
+            WHERE created BETWEEN ? AND ? AND {$like_clause}";
+            $params = array($start, $end, $keyword);
         } else if ($date == 0) {
-            $count = $db->value("SELECT COUNT(*) FROM thread 
-               WHERE category = ? AND {$like_clause}", array($cat_id, $keyword));
+            $query = "SELECT COUNT(*) FROM thread 
+               WHERE category = ? AND {$like_clause}";
+            $params = array($cat_id, $keyword);
         } else {
-             $count = $db->value("SELECT COUNT(*) FROM thread 
-            WHERE category = ? AND created BETWEEN ? AND ? AND {$like_clause}", array($cat_id, $start, $end, $keyword));
+            $query = "SELECT COUNT(*) FROM thread 
+            WHERE category = ? AND created BETWEEN ? AND ? AND {$like_clause}";
+            $params = array($cat_id, $start, $end, $keyword);
         }
+        $count = $db->value($query, $params);
         return $count;  
     }
 }
