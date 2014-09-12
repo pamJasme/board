@@ -1,4 +1,3 @@
-<div style='float:right; font-size:15px; font-weight:900'><a class="btn btn-medium btn-primary" name="logout" href="<?php encode_quotes(url('thread/logout'));?>">Logout</a></div>
 <h2><?php encode_quotes($thread->title) ?></h2>
 
 <?php if ($comment->hasError()): ?>
@@ -42,3 +41,5 @@
    <div style="float:right; font-size:20px">&larr;Back to All <a href="index">Threads</a><br></div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+

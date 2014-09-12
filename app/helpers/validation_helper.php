@@ -22,7 +22,7 @@ function redirect($url)
 **/
 function is_logged_in()
 {
-    if (isset($_SESSION['username'])) {
+    if (isset($_SESSION['user_id'])) {
         return true;
     }
     

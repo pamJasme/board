@@ -28,7 +28,7 @@ class UserController extends AppController
 
                 $user_login = $user->authenticate($username, $password);
                 $_SESSION['username'] = $user_login->username;
-
+                $_SESSION['user_id'] = $user_login->user_id;
                 redirect(url('thread/index'));
                 } catch (ValidationException $e) {
                     $status = notice($e->getMessage(), "error");
@@ -87,3 +87,4 @@ class UserController extends AppController
        $this->set(get_defined_vars());
     }
 }
+
