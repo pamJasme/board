@@ -9,10 +9,7 @@ class CommentController extends AppController{
     {
         $thread = Thread::get(Param::get('thread_id'));
         $comments = $thread->getComments();
-        
         $user_name = $_SESSION['username'];
-
-        
         $this->set(get_defined_vars());
     }
 
@@ -22,16 +19,15 @@ class CommentController extends AppController{
     **/
     public function update()
     {
-        $id = Param::get('othreads');
-        $new_title = Param::get('new_title');
-
-        if (Param::get('delete') != '0') {    
-            $title = Thread::changeTitle($id,$new_title);
-            echo $title;
+        $id = Param::get('id');
+        $new_body = Param::get('body');
+        $task = Param::get('task');
+        if ($task == 'edit') {
+            $title = Comment::changeComment($id, $new_body);
+        } else if ($task == 'delete') {
+            $title = Comment::deleteComment($id);
         } else {
-            $deleted = Thread::deleteThread($id);
-            echo $deleted;
+            redirect(url('thread/index'));
         }
     }
 }
-

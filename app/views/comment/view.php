@@ -1,4 +1,3 @@
-<form method="get" action="<?php encode_quotes(url('comment/update'));?>">
 <h1><?php encode_quotes($thread->title);?></h1>
 <fieldset class='well' name="comment_area">
   <?php foreach ($comments as $k => $v): ?>
@@ -14,13 +13,24 @@
     </div>
     <div>
           <td width='55%'><?php encode_quotes($v->body) ?></td>
-          
+          <td>
+            <?php if ($v->user_id == $_SESSION['user_id']) :?>
+            <input type="hidden" name="id" value="<?php encode_quotes($v->id) ?>">
+          <a href="<?php encode_quotes(url('comment/update', array('id' => $v->id, 'task' => 'edit')))?>">
+            <input type="button" class="btn btn-primary" value="Edit">
+          </a>
+          <a href="<?php encode_quotes(url('comment/update', array('id' => $v->id, 'task' => 'delete')))?>">
+            <input type="button" class="btn btn-primary" value="Delete">
+          </a>
+
+        <?php endif ?>
+          </td>       
         </tr>
       </table>
     </div>
   </div>
 <?php endforeach ?>
-</form>
+
 <hr>
 <form class="well" method="post" action="<?php encode_quotes(url('thread/write')) ?>">
   <label>Your name</label>

@@ -1,25 +1,18 @@
 <div class="container-threads">
-<form method="post" action="<?php encode_quotes(url('thread/update'))?>">
-    Thread:
-    <select name="select_thread">
+    <table border=1><tr>
         <?php foreach ($own_threads as $v => $value): ?>
-            <option value="<?php echo $value->id ?>"><?php echo $value->title ?></option>
+            <td><?php encode_quotes($value->title)?></td>
+            <td>
+                <a href="<?php encode_quotes(url('thread/update', array('id' => $value->id, 'task' => 'edit')));?>">
+                    <input type="button" class ="btn btn-primary" value="Edit">
+                </a>
+            </td>
+            <td>
+                <a href="<?php encode_quotes(url('thread/update', array('id' => $value->id, 'task' => 'delete')));?>">
+                    <input type="button" class ="btn btn-primary" value="Delete">
+                </a>
+            </td>
+        </tr>
         <?php endforeach ?>
-    </select><br>
-    New title:    
-        <input type="text" name="new_title"><br>
-    Delete
-        <input type="checkbox" name="delete" value="0"><br>
-        <input type="submit" value="change">
-</form>
+    </table>
 </div>
-
-<div class="container-threads">
-<form method="post" action="<?php encode_quotes(url('comment/update'))?>">
-        <?php foreach ($merge as $v => $value): ?>
-            <li><?php echo $value['title'] ?><br>
-                Comment: <?php echo $value['body'] ?></li>
-        <?php endforeach ?>
-</form>
-    </div>
-    

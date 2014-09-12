@@ -12,7 +12,7 @@
 <ul class="nav nav-list">
     <li class="nav-header">Members</li>
         <?php foreach ($members as $v): ?>
-            <li><?php encode_quotes($v->username);?></li>
+            <li><?php echo $v->username;?></li>
         <?php endforeach ?>
 </ul>
 </div>

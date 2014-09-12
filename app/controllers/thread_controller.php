@@ -28,14 +28,15 @@ class ThreadController extends AppController
     **/
     public function update()
     {
-        $id = Param::get('select_thread');
-        $new_title = Param::get('new_title');
-        if (Param::get('delete') != '0') {    
-            $title = Thread::changeTitle($id,$new_title);
-            echo $title;
+        $id = Param::get('id');
+        $new_title = Param::get('title');
+        $task = Param::get('task');
+        if ($task == 'edit') {
+            $title = Thread::changeTitle($id, $new_title);
+        } else if ($task == 'delete') {
+            $title = Thread::deleteThread($id);
         } else {
-            $deleted = Thread::deleteThread($id);
-            echo $deleted;
+            redirect(url('thread/index'));
         }
     }
 
@@ -49,8 +50,8 @@ class ThreadController extends AppController
         $post = array();
         $own_threads = Thread::myposts();
         $own_comments = Comment::mycomments();
-        $title = Thread::getTrendTitle($own_comments);
-        $merge = Thread::commentsThreads($own_comments, $title);
+        $thread = Thread::getTrendTitle($own_comments);
+        $merge = Thread::commentsThreads($own_comments, $thread);
         //echo "<pre>",print_r($merge), "</pre>";
         $this->set(get_defined_vars());
     }

@@ -15,7 +15,7 @@
 
   <body>
         <div>
-          <?php if (is_logged_in()) { ?>
+          <?php if (is_logged_in()) : ?>
             <div class="navbar navbar-inverse" style="margin-left: 100px; margin-right: 100px;">
               <div class="navbar-inner">
                 <a class="brand" href="#">DietCake</a>
@@ -29,7 +29,7 @@
                 Welcome <?php echo $_SESSION['username'];?></span>
                 </div>
               </div>
-          <?php } ?>
+          <?php endif ?>
         </div>
 
     <div class="container">

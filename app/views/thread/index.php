@@ -6,7 +6,7 @@
 			<li style="margin-top: 10px">Category&nbsp;</li>
 			<li>
 				<select name="filter" style="height:25px; width:100px; margin-top:6px">
-					<option value="0">All</option>
+					<option selected="All" value="0">All</option>
 					<option value="1">Job</option>
 					<option value="2">Love</option>
 					<option value="3">Others</option>
@@ -15,7 +15,7 @@
 			<li style="margin-top: 10px">&nbsp;Date&nbsp;</li>
 			<li>
 				<select name="date" style="height:25px; width:100px; margin-top:6px">
-					<option selected="0" value="ALL">All</option>
+					<option selected="All" value="0">All</option>
 					<option value="1">1 day from NOW</option>
 					<option value="5">5 days from NOW</option>
 					<option value="10">10 days from NOW</option>

@@ -8,6 +8,10 @@ class UserController extends AppController
     **/
     public function index()
     {
+        if(is_logged_in()) {
+            redirect(url('thread/index'));
+        }
+        
         $username = Param::get('login_name');
         $password = Param::get('login_pword');
         $user = new User;
