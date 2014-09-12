@@ -62,3 +62,4 @@ class Registration extends AppModel
         $row = $db->insert('user_info', $defaults);
     }
 }
+

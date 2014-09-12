@@ -41,4 +41,30 @@ class User extends AppModel
         }  
         return new self($row);
     }
+
+    /**
+    * To get newly registered members
+    **/
+    public static function getNewMembers()
+    {
+        $members = array();
+        $db = DB::conn();
+        $row = $db->rows("SELECT username FROM user_info ORDER BY created DESC LIMIT 3");
+        foreach ($row as $rows) {
+            $members[] = new User($rows);
+        }
+        return $members;
+    }
+
+    /**
+    * To get username
+    * Function subject for modification (WORKING)
+    **/
+    public static function getUsername($id)
+    {
+        $user = array();
+        $db = DB::conn();
+        $username = $db->value("SELECT username FROM user_info where user_id = ?", array($id));
+        return $username;
+    }
 }
