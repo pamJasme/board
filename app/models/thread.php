@@ -37,7 +37,7 @@ class Thread extends AppModel
                 'category' => $this->category,
                 'user_id' => $this->user_id,
                 'created' => date('Y-m-d h:i:s'),
-                );
+            );
             $db->insert('thread', $params);
             $this->id = $db->lastInsertId();
 
@@ -127,7 +127,7 @@ class Thread extends AppModel
         $rows = $db->rows($query, $params);
         foreach ($rows as $row) {
                 $filter_threads[] = new Thread($row);
-            }
+        }
 
         foreach ($filter_threads as $key) {
             $username = User::getUsername($key->user_id);
