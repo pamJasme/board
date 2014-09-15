@@ -4,6 +4,7 @@
         <?php foreach ($threads as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
                 <?php encode_quotes($v->title);?>
+            </a>
             </li>
         <?php endforeach ?>
 </ul>
@@ -26,3 +27,4 @@
         <?php endforeach ?>
 </ul>
 </div>
+</body>

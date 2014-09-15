@@ -51,8 +51,7 @@ class ThreadController extends AppController
         $own_threads = Thread::myposts();
         $own_comments = Comment::mycomments();
         $thread = Thread::getTrendTitle($own_comments);
-        $merge = Thread::commentsThreads($own_comments, $thread);
-        //echo "<pre>",print_r($merge), "</pre>";
+        //echo "<pre>", print_r($own_threads), "</pre>";
         $this->set(get_defined_vars());
     }
 

@@ -177,21 +177,6 @@ class Thread extends AppModel
     }
 
     /**
-    * To get logged-in users's threads together with it's comments
-    * Used for checking
-    * Function is subject for modification (WORKING)
-    **/
-    public static function commentsThreads($comments, $threads)
-    {
-        $id = $_SESSION['user_id'];
-        $db = DB::conn();
-        $row = $db->rows("SELECT t.title, c.body from comment c 
-            INNER JOIN thread t ON c.thread_id=t.id 
-            WHERE t.user_id = ?", array($id));
-        return $row;
-    }
-
-    /**
     * To view threads for Home page
     **/
     public static function getTrendTitle($trend_id)

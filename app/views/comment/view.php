@@ -3,7 +3,7 @@
   <?php foreach ($comments as $k => $v): ?>
   <div class="comment">
     <div class="meta">
-      <table  width='70%' border=1>
+      <table  width='70%' border=0>
         <tr>
           <td width='4%'><?php encode_quotes($k+1); ?></td>
           
