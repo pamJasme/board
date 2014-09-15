@@ -40,7 +40,7 @@
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
             	<?php encode_quotes($v->title);?><br>
             	<div style="font-size: 10px; font-style: italic;">
-            		&nbsp;&nbsp;By <?php encode_quotes($v->user);?>
+            		&nbsp;&nbsp;By <?php encode_quotes($v->username);?>
             		<?php encode_quotes($v->created);?>
             	</div>
             	</a>

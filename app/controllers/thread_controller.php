@@ -37,13 +37,14 @@ class ThreadController extends AppController
                 $title = Thread::changeTitle($id, $new_title);
                 break;
             case 'delete':
-                $title = Thread::deleteThread($id, $user_id);
+                Thread::deleteThread($id, $user_id);
                 redirect(url('thread/my_posts'));
                 break;
             default:
                 redirect(url('thread/index'));
                 break;
         }
+        $this->set(get_defined_vars());
     }
 
     /**
@@ -127,7 +128,7 @@ class ThreadController extends AppController
     public function create()
     {
         $thread = new Thread;
-        $thread->category = Param::get('select');
+        $thread->category = Param::get('thread_category');
         $thread->user_id = $_SESSION['user_id'];
         $comment = new Comment;
         $page = Param::get('page_next', 'create');

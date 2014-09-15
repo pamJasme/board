@@ -36,11 +36,10 @@
   <label>Comment</label>
   <textarea name="body"><?php encode_quotes(Param::get('body')) ?></textarea>
   <label>Category</label>
-    <select class="span2" name="select">
-      <option selected="selected" value="none"></option>
+    <select class="span2" name="thread_category">
       <option value="1">Job</option>
       <option value="2">Love</option>
-      <option value="3">Others</option>
+      <option value="3" selected="selected">Others</option>
     </select> 
   <br />
   <input type="hidden" name="page_next" value="create_end">

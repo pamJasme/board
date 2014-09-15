@@ -58,7 +58,6 @@ class Thread extends AppModel
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
-
         $db = DB::conn();
         $update = $db->update('thread', array('title' => $title), array('id' =>  $id));
     }
@@ -131,8 +130,8 @@ class Thread extends AppModel
             }
 
         foreach ($filter_threads as $key) {
-            $user = User::getUsername($key->user_id);
-            $key->user = $user;
+            $username = User::getUsername($key->user_id);
+            $key->username = $username;
         }
 
         $limit = Pagination::ROWS_PER_PAGE;
