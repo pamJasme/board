@@ -1,7 +1,7 @@
 <?php
  
-class CommentController extends AppController{
-
+class CommentController extends AppController
+{
     /**
     * To view all comments on a particular thread.
     **/
@@ -22,12 +22,17 @@ class CommentController extends AppController{
         $id = Param::get('id');
         $new_body = Param::get('body');
         $task = Param::get('task');
-        if ($task == 'edit') {
-            $title = Comment::changeComment($id, $new_body);
-        } else if ($task == 'delete') {
-            $title = Comment::deleteComment($id);
-        } else {
-            redirect(url('thread/index'));
+        $user_id = $_SESSION['user_id'];
+        switch ($task) {
+            case 'edit':
+                $title = Comment::changeComment($id, $new_body);
+                break;
+            case 'delete':
+                $title = Comment::deleteComment($id, $user_id);
+                break;
+            default:
+                redirect(url('thread/index'));
+                break;
         }
     }
 }

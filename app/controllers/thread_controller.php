@@ -6,14 +6,15 @@
 class ThreadController extends AppController
 {
     /**
-    *   In progress (WORKING)
+    *   To get usernames and threads. (Home page)
     **/
     public function home()
     {
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
-        $threads = Thread::getThreads();
+        $page = Pagination::setPage(Param::get('page'));
+        $threads = Thread::getAll($page);
         $members = User::getNewMembers();
 
         //to get posts with highest number of threads
@@ -24,34 +25,34 @@ class ThreadController extends AppController
 
     /**
     * To edit logged-in user's posts/comments
-    * IN PROGRESS (WORKING)
     **/
     public function update()
     {
         $id = Param::get('id');
         $new_title = Param::get('title');
         $task = Param::get('task');
-        if ($task == 'edit') {
-            $title = Thread::changeTitle($id, $new_title);
-        } else if ($task == 'delete') {
-            $title = Thread::deleteThread($id);
-        } else {
-            redirect(url('thread/index'));
+        switch ($task) {
+            case 'edit':
+                $title = Thread::changeTitle($id, $new_title);
+                break;
+            case 'delete':
+                $title = Thread::deleteThread($id);
+                break;
+            default:
+                redirect(url('thread/index'));
+                break;
         }
     }
 
     /**
     * To get logged-in users's threads
-    * Used for checking
-    * Function is subject for modification (WORKING)
     **/
-    public function myposts()
+    public function my_posts()
     {
-        $post = array();
+        $id = $_SESSION['user_id'];
         $own_threads = Thread::myposts();
-        $own_comments = Comment::mycomments();
+        $own_comments = Comment::myComments($id);
         $thread = Thread::getTrendTitle($own_comments);
-        //echo "<pre>", print_r($own_threads), "</pre>";
         $this->set(get_defined_vars());
     }
 
@@ -77,7 +78,9 @@ class ThreadController extends AppController
         $trend = Param::get('trend');
         $row_count = Thread::getNumRowsCat($category, $date, $search);
 
-        if($category == 0 && $date == 0 && $search == '') $row_count = Thread::getNumRows();
+        if (!array_filter(array($category, $date, $search))) {
+            $row_count = Thread::getNumRows();
+        }
 
         $threads = Thread::filter($category, $date, $page, $search);
         $links = Pagination::createPages($page, $row_count);

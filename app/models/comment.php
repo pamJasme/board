@@ -36,20 +36,10 @@ class Comment extends AppModel
     * To get logged-in user's thread comments
     * In-progress (Working)
     */
-    public static function mycomments()
+    public static function myComments($id)
     {
-        $own_comments = array();
         $db = DB::conn();
-        $id = $_SESSION['user_id'];
-        $rows = $db->rows("SELECT * FROM comment WHERE user_id = ?", array($id));
-        $count = $db->value("SELECT COUNT(*) FROM comment WHERE user_id = ?", array($id));
-        $i = 0;
-        foreach ($rows as $key) {
-            $own_comments = $rows;
-            $key['count'] = $count;
-            $rows["$i"] = $key;
-            $i++;
-        }
+        $rows = $db->rows("SELECT *, COUNT(*) as 'count' FROM comment WHERE user_id = ?", array($id));
         return $rows;
     }
 
@@ -59,14 +49,16 @@ class Comment extends AppModel
         $db->update('comment', array('body' => $body), array('id' =>  $id));
     }
 
-    public static function deleteComment($id) 
+    public static function deleteComment($id, $user_id) 
     {
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
-
         $db = DB::conn();
-        $db->query("DELETE FROM comment WHERE id = ?", array($id));
+        $query = "DELETE FROM thread, comment USING thread INNER JOIN comment
+            WHERE thread.id = ? AND comment.thread_id = ? AND thread.user_id = ?";
+        $params = array($id, $id, $user_id);
+        $db->query($query, $params);
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 }

@@ -78,7 +78,7 @@ class Thread extends AppModel
         $db = DB::conn();
         $db->query("DELETE FROM thread WHERE id = ?", array($id));
         $status = "Successfully deleted";
-        return $status;
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 
     /**
@@ -159,21 +159,6 @@ class Thread extends AppModel
         $limit = Pagination::ROWS_PER_PAGE;
         $offset = ($page - 1) * $limit;
         return array_slice($threads, $offset, $limit);
-    }
-
-    /**
-    * To view threads for Home page
-    **/
-    public static function getThreads()
-    {
-        $all_threads = array();
-        $max = self::HOME_THREADS;
-        $db = DB::conn();
-        $rows = $db->rows("SELECT * FROM thread LIMIT $max ");
-        foreach ($rows as $row) {
-            $all_threads[] = new Thread($row);
-        }
-        return $all_threads;
     }
 
     /**
