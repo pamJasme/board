@@ -55,11 +55,21 @@ class Thread extends AppModel
     **/
     public static function changeTitle($id, $title)
     {
+        
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
+        if (!isset($title)) {
+            $status = "";
+            return $status;
+        }
+
+        if (!validate_between($title, self::MIN_VALUE, self::MAX_TITLE_LENGTH)) {
+            throw new ValidationException("<span class='label label-important'>Invalid title!</span>");
+        }
         $db = DB::conn();
         $update = $db->update('thread', array('title' => $title), array('id' =>  $id));
+        return "<span class='label label-success'>Successfully changed!</span>";
     }
 
     /**

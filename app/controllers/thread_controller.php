@@ -34,7 +34,11 @@ class ThreadController extends AppController
         $user_id = $_SESSION['user_id'];
         switch ($task) {
             case 'edit':
-                $title = Thread::changeTitle($id, $new_title);
+                try {
+                    $status = Thread::changeTitle($id, $new_title);    
+                } catch (ValidationException $e) {
+                    $status = notice($e->getMessage(), "error");
+                }
                 break;
             case 'delete':
                 Thread::deleteThread($id, $user_id);
@@ -76,7 +80,7 @@ class ThreadController extends AppController
 
         //to get posts according to their category
         $search = Param::get('search');
-        $category = Param::get('filter');
+        $category = Param::get('filter_threads');
         $date = Param::get('date');
         $trend = Param::get('trend');
         $row_count = Thread::getNumRowsCat($category, $date, $search);
@@ -137,7 +141,7 @@ class ThreadController extends AppController
         switch ($page) {
             case 'create':
                 break;
-            case 'create_end';
+            case 'create_end':
                 $thread->title = Param::get('title');
                 $comment->username = $username;
                 $comment->body = Param::get('body');

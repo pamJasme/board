@@ -5,21 +5,30 @@
 			<li style="margin-top: 10px;">Filter by: &nbsp;</li>
 			<li style="margin-top: 10px">Category&nbsp;</li>
 			<li>
-				<select name="filter" style="height:25px; width:100px; margin-top:6px">
-					<option selected="All" value="0">All</option>
-					<option value="1">Job</option>
-					<option value="2">Love</option>
-					<option value="3">Others</option>
+				<select name="filter_threads" style="height:25px; width:100px; margin-top:6px">
+					<option <?php if (Param::get('filter_threads') == 0) echo "selected='selected'"; ?>
+						value="0">All</option>
+					<option <?php if (Param::get('filter_threads') == 1) echo "selected='selected'"; ?>
+						value="1">Job</option>
+					<option <?php if (Param::get('filter_threads') == 2) echo "selected='selected'"; ?>
+						value="2">Love</option>
+					<option <?php if (Param::get('filter_threads') == 3) echo "selected='selected'"; ?>
+						value="3">Others</option>
 				</select>
 			</li>
 			<li style="margin-top: 10px">&nbsp;Date&nbsp;</li>
 			<li>
-				<select name="date" style="height:25px; width:100px; margin-top:6px">
-					<option selected="All" value="0">All</option>
-					<option value="1">1 day from NOW</option>
-					<option value="5">5 days from NOW</option>
-					<option value="10">10 days from NOW</option>
-					<option value="30">1 month from NOW</option>
+				<select name="date" style="height:25px; width:150px; margin-top:6px">
+					<option <?php if (Param::get('date') == 0) echo "selected='selected'"; ?>
+						value="0">All</option>
+					<option <?php if (Param::get('date') == 1) echo "selected='selected'"; ?>
+						value="1">1 day from NOW</option>
+					<option <?php if (Param::get('date') == 5) echo "selected='selected'"; ?>
+						value="5">5 days from NOW</option>
+					<option <?php if (Param::get('date') == 10) echo "selected='selected'"; ?>
+						value="10">10 days from NOW</option>
+					<option <?php if (Param::get('date') == 30) echo "selected='selected'"; ?>
+						value="30">1 month from NOW</option>
 				</select>
 			</li>
 			<li>&nbsp;&nbsp;</li>

@@ -13,7 +13,7 @@ class Registration extends AppModel
                 "validate_between", MIN_VALUE, MAX_VALUE,
                 ),
             "format" => array(
-                'validate_username', "Invalid Username"
+                'validate_username',
             )
         ),
         "password" => array(
@@ -24,7 +24,7 @@ class Registration extends AppModel
 
         "email" => array(
             "format" => array(
-                "validate_email", "Invalid Email Address"
+                "validate_email",
                 )
             ),
         );
@@ -49,7 +49,7 @@ class Registration extends AppModel
         $this->password = $user_password;
         $this->email = $email;
         if (!$this->validate()) {
-            throw new ValidationException("Invalid Username/Password");
+            throw new ValidationException("Invalid input");
         }
         $db = DB::conn();
         $query = "SELECT username, email FROM user_info
