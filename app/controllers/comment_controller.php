@@ -22,13 +22,13 @@ class CommentController extends AppController
         $id = Param::get('id');
         $new_body = Param::get('body');
         $task = Param::get('task');
-        $user_id = $_SESSION['user_id'];
         switch ($task) {
             case 'edit':
-                $title = Comment::changeComment($id, $new_body);
+                Comment::changeComment($id, $new_body);
                 break;
             case 'delete':
-                $title = Comment::deleteComment($id, $user_id);
+                Comment::deleteComment($id);
+                redirect(url('thread/index'));
                 break;
             default:
                 redirect(url('thread/index'));

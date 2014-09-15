@@ -29,7 +29,6 @@ class Thread extends AppModel
         if ($this->hasError() || $comment -> hasError()) {
             throw new ValidationException('invalid thread or comment');
         }
-        $date = date('Y-m-d h:i:s');
         $db = DB::conn();
         try {
             $db->begin();
@@ -37,7 +36,7 @@ class Thread extends AppModel
                 'title' => $this->title,
                 'category' => $this->category,
                 'user_id' => $this->user_id,
-                'created' => $date,
+                'created' => date('Y-m-d h:i:s'),
                 );
             $db->insert('thread', $params);
             $this->id = $db->lastInsertId();
@@ -61,24 +60,22 @@ class Thread extends AppModel
         }
 
         $db = DB::conn();
-        $db->update('thread', array('title' => $title), array('id' =>  $id));
-        $status = "Successfully change";
-        return $status;
+        $update = $db->update('thread', array('title' => $title), array('id' =>  $id));
     }
 
     /**
     * To delete thread
     **/
-    public static function deleteThread($id) 
+    public static function deleteThread($id, $user_id) 
     {
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
-
         $db = DB::conn();
-        $db->query("DELETE FROM thread WHERE id = ?", array($id));
-        $status = "Successfully deleted";
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        $query = "DELETE FROM thread, comment USING thread INNER JOIN comment
+            WHERE thread.id = ? AND comment.thread_id = ? AND thread.user_id = ?";
+        $params = array($id, $id, $user_id);
+        $db->query($query, $params);
     }
 
     /**
@@ -86,7 +83,7 @@ class Thread extends AppModel
     * Used for checking
     * Function is subject for modification
     **/
-    public static function myposts()
+    public static function myPosts()
     {
         $own_posts = array();
         $db = DB::conn();

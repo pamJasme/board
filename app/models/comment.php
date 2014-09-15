@@ -24,12 +24,11 @@ class Comment extends AppModel
     **/
     public static function getTrends()
     {
-        $trends = array();
         $max = self::TREND_COUNT;
         $db = DB::conn();
         $row = $db->rows("SELECT thread_id, COUNT(*) AS 'count' FROM comment 
             GROUP BY thread_id ORDER BY COUNT(*) DESC LIMIT $max");
-        return ($row);
+        return $row;
     }
 
     /**
@@ -49,17 +48,13 @@ class Comment extends AppModel
         $db->update('comment', array('body' => $body), array('id' =>  $id));
     }
 
-    public static function deleteComment($id, $user_id) 
+    public static function deleteComment($id) 
     {
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
         $db = DB::conn();
-        $query = "DELETE FROM thread, comment USING thread INNER JOIN comment
-            WHERE thread.id = ? AND comment.thread_id = ? AND thread.user_id = ?";
-        $params = array($id, $id, $user_id);
-        $db->query($query, $params);
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        $db->query("DELETE FROM thread WHERE id = ?", array($id));
     }
 }
 

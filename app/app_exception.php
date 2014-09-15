@@ -21,3 +21,7 @@ class ExistingUserException extends AppException
 {
 
 }
+class NotFoundException extends AppException
+{
+
+}

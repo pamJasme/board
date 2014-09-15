@@ -31,12 +31,14 @@ class ThreadController extends AppController
         $id = Param::get('id');
         $new_title = Param::get('title');
         $task = Param::get('task');
+        $user_id = $_SESSION['user_id'];
         switch ($task) {
             case 'edit':
                 $title = Thread::changeTitle($id, $new_title);
                 break;
             case 'delete':
-                $title = Thread::deleteThread($id);
+                $title = Thread::deleteThread($id, $user_id);
+                redirect(url('thread/my_posts'));
                 break;
             default:
                 redirect(url('thread/index'));
@@ -50,7 +52,7 @@ class ThreadController extends AppController
     public function my_posts()
     {
         $id = $_SESSION['user_id'];
-        $own_threads = Thread::myposts();
+        $own_threads = Thread::myPosts();
         $own_comments = Comment::myComments($id);
         $thread = Thread::getTrendTitle($own_comments);
         $this->set(get_defined_vars());
@@ -107,7 +109,7 @@ class ThreadController extends AppController
                 try {
                     $thread->write($comment);
                 } catch (ValidationException $e) {
-                    $page='write';
+                    $page = 'write';
                 }
                 break;
 
