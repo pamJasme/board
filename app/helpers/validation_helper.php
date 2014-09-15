@@ -69,3 +69,16 @@ function is_password_match($password_a, $password_b)
         return false;
     }
 }
+
+/**
+* To check if names are valid
+**/
+function validate_name($name)
+{
+    if (ctype_alpha($name)) {
+        die("tama");
+        return true;
+    } else {
+        return false;
+    }
+}

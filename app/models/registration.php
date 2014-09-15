@@ -27,6 +27,16 @@ class Registration extends AppModel
                 "validate_email",
                 )
             ),
+        "fname" => array(
+            "format" => array(
+                "validate_name",
+                )
+            ),
+        "lname" => array(
+            "format" => array(
+                "validate_name",
+                )
+            ),
         );
     
     /**
@@ -48,6 +58,9 @@ class Registration extends AppModel
         $this->username = $username;
         $this->password = $user_password;
         $this->email = $email;
+        $this->fname = $fname;
+        $this->lname = $lname;
+
         if (!$this->validate()) {
             throw new ValidationException("Invalid input");
         }

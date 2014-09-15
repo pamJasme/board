@@ -21,8 +21,7 @@ class CommentController extends AppController
     {
         $id = Param::get('id');
         $new_body = Param::get('body');
-        $task = Param::get('task');
-        switch ($task) {
+        switch (Param::get('task')) {
             case 'edit':
                 Comment::changeComment($id, $new_body);
                 break;
