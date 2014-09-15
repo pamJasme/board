@@ -56,7 +56,7 @@ class Thread extends AppModel
     **/
     public static function changeTitle($id, $title)
     {
-        if (!$is_logged_in) {
+        if (!is_logged_in()) {
             redirect(url('user/index'));
         }
 
@@ -71,7 +71,7 @@ class Thread extends AppModel
     **/
     public static function deleteThread($id) 
     {
-        if (!$is_logged_in) {
+        if (!is_logged_in()) {
             redirect(url('user/index'));
         }
 
