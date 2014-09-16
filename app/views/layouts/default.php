@@ -23,6 +23,7 @@
                     <li><a href="<?php encode_quotes(url('thread/home'));?>">Home</a></li>
                     <li><a href="<?php encode_quotes(url('thread/index'));?>">Threads</a></li>
                     <li><a href="<?php encode_quotes(url('thread/my_posts'));?>">My Posts</a></li>
+                    <li><a href="<?php encode_quotes(url('user/edit'));?>">Account</a></li>
                     <li><a href="<?php encode_quotes(url('thread/logout'));?>">Logout</a></li>
                   </ul>
                   <span class="label label-info" style="float:right; margin-top: 10px; font-size:15px">

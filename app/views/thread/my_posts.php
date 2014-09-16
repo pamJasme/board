@@ -1,4 +1,4 @@
-<div style="background-color: BlanchedAlmond; height:600px; width: 450px; float:left ">
+<div style="background-color: BlanchedAlmond; height:400px; width: 450px; float:left ">
     <table border=0><tr>
         <?php foreach ($own_threads as $v => $value): ?>
             <td style="font-style: italic" width=100px><small>Thread Title</small></td>

@@ -31,7 +31,12 @@ class CommentController extends AppController
         $new_body = Param::get('body');
         switch (Param::get('task')) {
             case 'edit':
-                Comment::changeComment($id, $new_body);
+                try {
+                    $status = Comment::changeComment($id, $new_body);    
+                } catch (ValidationException $e) {
+                    $status = notice($e->getMessage(), "error");
+                }
+                
                 break;
             case 'delete':
                 Comment::deleteComment($id);
@@ -41,5 +46,6 @@ class CommentController extends AppController
                 redirect(url('thread/index'));
                 break;
         }
+        $this->set(get_defined_vars());
     }
 }

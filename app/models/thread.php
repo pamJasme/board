@@ -8,6 +8,13 @@ class Thread extends AppModel
     const MIN_VALUE = 1;    
     const MAX_TITLE_LENGTH = 30;
     const HOME_THREADS = 15;
+    const DEFAULT_OPTION_ALL = 0;
+    const CATEGORY_JOB = 1;
+    const CATEGORY_LOVE = 2;
+    const CATEGORY_OTHERS = 3;
+    const DATE_FILTER_YESTERDAY = 1;
+    const DATE_FILTER_ONE_WEEK = 7;
+    const DATE_FILTER_ONE_MONTH = 30;
 
     public $validation =array(
         'title' => array(
@@ -161,20 +168,17 @@ class Thread extends AppModel
         return array_slice($threads, $offset, $limit);
     }
 
-    /**
-    * To view threads for Home page
-    **/
-    public static function getTrendTitle($trend_id)
+    
+    public static function getTrendTitle($thread_comments)
     {
-        $trend_title = array();
         $db = DB::conn();
-        foreach ($trend_id as $value) {
-            $id = $value['thread_id'];
-            $row = $db->row("SELECT * FROM thread where id = ?", array($id));
-            $row['count'] = $value['comment_count'];
-            $trend_title[] = $row;
+        $thread_ids = array_keys($thread_comments);
+        $rows = $db->rows('SELECT * FROM thread WHERE id IN (?)', array($thread_ids));
+        foreach ($rows as $row) {
+            $row['comment_count'] = $thread_comments[$row['id']];
+            $threads[] = new self($row);
         }
-            return $trend_title;
+        return $threads;
     }
 
     /**

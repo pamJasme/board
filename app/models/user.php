@@ -18,6 +18,7 @@ class User extends AppModel
                 'validate_between', MIN_VALUE, MAX_VALUE,
             ),
         ),
+
     );
 
     /**
@@ -67,5 +68,30 @@ class User extends AppModel
         $db = DB::conn();
         $username = $db->value("SELECT username FROM user_info where user_id = ?", array($id));
         return $username;
+    }
+
+    public function updateAccount($username, $password, $match_password, $user_id)
+    {
+        $this->username = $username;
+        $this->password = $password;
+        $this->match_password = $match_password;
+        if (!isset($username) || !isset($password) || !isset($match_password)) {
+             return "";
+        }
+        if (!$this->validate()) {
+            throw new ValidationException("Invalid Username/Password");
+        }
+        $db = DB::conn();
+        $params = array (
+            'username' => $username,
+            'user_password' => $password,
+        );
+        $update = $db->update('user_info', $params, array('user_id' => $user_id));
+        
+        //returns 1;
+        if (!$update) {
+            return "success";
+        }
+        return "<span class='label label-success'>Successfully changed!</span>";
     }
 }

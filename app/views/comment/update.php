@@ -4,3 +4,4 @@
 	<input type = "text" name = "body"><br>
 	<input type = "submit" value = "Change">
 </form>
+<?php echo $status ?>

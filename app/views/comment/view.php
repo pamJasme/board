@@ -17,12 +17,11 @@
             <?php if ($v->user_id == $_SESSION['user_id']) :?>
             <input type="hidden" name="id" value="<?php encode_quotes($v->id) ?>">
           <a href="<?php encode_quotes(url('comment/update', array('id' => $v->id, 'task' => 'edit')))?>">
-            <input type="button" class="btn btn-primary" value="Edit">
-          </a>
+            <i class="icon-pencil"></i>
+          </a></td><td>
           <a href="<?php encode_quotes(url('comment/update', array('id' => $v->id, 'task' => 'delete')))?>">
-            <input type="button" class="btn btn-primary" value="Delete">
-          </a>
-
+            <i class="icon-trash"></i>
+          </a></td>
         <?php endif ?>
           </td>       
         </tr>
@@ -44,7 +43,9 @@
   <br/>
   <input type="hidden" name="thread_id" value="<?php encode_quotes($thread->id) ?>">
   <input type="hidden" name="page_next" value="write_end">
-   <div style="float:right; font-size:20px">&larr;<?php echo "<a href=\"javascript:history.go(-1)\">Back</a>"; ?></div>
+   <div style="float:right; font-size:20px">&larr;
+    <a href="<?php encode_quotes(url('/index'))?>">
+    Back</a></div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <div>

@@ -25,11 +25,17 @@ class Comment extends AppModel
     **/
     public static function getTrends()
     {
+        $thread_comments = array();
         $db = DB::conn();
-        $row = $db->rows("SELECT thread_id, COUNT(*) AS 'comment_count' FROM comment 
+        $rows = $db->rows("SELECT thread_id, COUNT(*) AS 'comment_count' FROM comment 
             GROUP BY thread_id ORDER BY comment_count DESC LIMIT " . self::TREND_COUNT);
-        return $row;
+        foreach ($rows as $row) {
+            $thread_comments[$row['thread_id']] = $row['comment_count'];
+        }
+        return $thread_comments;        
     }
+
+
 
     /**
     * To get logged-in user's thread comments
@@ -63,6 +69,14 @@ class Comment extends AppModel
     **/
     public static function changeComment($id, $body)
     { 
+        if (!isset($body)) {
+            $status = "";
+            return $status;
+        }
+
+        if (!validate_between($body, self::MIN_VALUE, self::BODY_MAX_VALUE)) {
+            throw new ValidationException("Invalid input");
+        }
         $db = DB::conn();
         $db->update('comment', array('body' => $body), array('id' =>  $id));
     }
@@ -86,8 +100,10 @@ class Comment extends AppModel
         $thread_comments = array();
         $db = DB::conn();
         foreach ($threads as $key) {
-            $thread_comments[] = $db->row("SELECT * FROM comment INNER JOIN thread
-                ON thread.id = comment.thread_id
+            $thread_comments[] = $db->row("SELECT comment.body, thread.title,  
+                user_info.username FROM comment INNER JOIN thread
+                ON thread.id = comment.thread_id INNER JOIN user_info ON
+                comment.user_id=user_info.user_id
                 WHERE thread.id = ? ORDER BY comment.created 
                 DESC LIMIT " . self::COMMENT_DISPLAY_COUNT, array($key->id));
         }

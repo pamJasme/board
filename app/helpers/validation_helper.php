@@ -77,3 +77,9 @@ function validate_name($name)
     }
     return false;
 }
+
+function sessionRefresh($key, $value)
+{
+    $_SESSION["$key"] = $value;
+    return;
+}

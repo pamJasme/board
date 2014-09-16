@@ -4,7 +4,7 @@
 
 <div style="background-color: BlanchedAlmond; height:300px; ">
 <ul class="nav nav-list">
-    <li class="nav-header">Thread List</li>
+    <li class="nav-header">Timeline</li>
         <?php foreach ($comments as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v['id']))) ?>">
                 "<?php encode_quotes($v['body']);?>"<br>  </a>
@@ -32,11 +32,11 @@
 <div style="background-color: BlanchedAlmond; height:300px; width: 450px; float: left ">
 <ul class="nav nav-list">
     <li class="nav-header">Trending posts</li>
-        <?php foreach ($trend_title as $v): ?>
-            <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v['id']))) ?>">
-                <?php encode_quotes($v['title']);?>
+        <?php foreach ($top_threads as $v): ?>
+            <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
+                <?php encode_quotes($v->title);?>
                 <small style="font-style: italic; font-size: 10px;">
-                    (<?php encode_quotes($v['count']);?> Posts)
+                    (<?php encode_quotes($v->comment_count);?> Posts)
                 </small>
                 </a>
             </li>

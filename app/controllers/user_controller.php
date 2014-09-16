@@ -76,7 +76,7 @@ class UserController extends AppController
                     }
                 }
 
-                if(!is_password_match($password, $password_match)) {
+                if (!is_password_match($password, $password_match)) {
                     throw new ValidationException("Password did not match");
                 }
 
@@ -89,6 +89,28 @@ class UserController extends AppController
                 }
             }
        $this->set(get_defined_vars());
+    }
+
+    public function edit()
+    {
+        $new_username = Param::get('username');
+        $new_password = Param::get('password');
+        $confirm_password = Param::get('match_password');
+        $status = "";
+        $user_id = $_SESSION['user_id'];
+        try {
+            if (!is_password_match($new_password, $confirm_password)) {
+                    throw new ValidationException("Password did not match");
+                }
+            $user = new User();
+            $status = $user->updateAccount($new_username, $new_password, $confirm_password, $user_id);
+            if ($status == 'success') {
+                redirect(url('thread/logout'));
+            }
+        } catch (ValidationException $e) {
+            $status = notice($e->getMessage(), 'error');
+        }
+        $this->set(get_defined_vars());   
     }
 }
 

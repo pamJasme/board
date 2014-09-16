@@ -23,8 +23,8 @@ class ThreadController extends AppController
         $members = User::getNewMembers();
 
         //to get posts with highest number of comments
-        $trends = Comment::getTrends();
-        $trend_title = Thread::getTrendTitle($trends);
+        $thread_comments = Comment::getTrends();
+        $top_threads = Thread::getTrendTitle($thread_comments);
         $this->set(get_defined_vars());
     }
 
@@ -84,10 +84,6 @@ class ThreadController extends AppController
         }
 
         $page = Pagination::setPage(Param::get('page'));
-        
-        //to get posts with highest number of comments
-        $trends = Comment::getTrends();
-        $trend_title = Thread::getTrendTitle($trends);
 
         //to get posts according to their category
         $search = Param::get('search');
