@@ -25,7 +25,6 @@ function is_logged_in()
     if (isset($_SESSION['user_id'])) {
         return true;
     }
-    
     return false;
 }
 
@@ -53,9 +52,8 @@ function is_complete($value)
     $check_if_complete = validate_between($value, NULL, NULL);
     if ($check_if_complete) {
         return false;
-    } else {
-        return true;
     }
+    return true;
 }
 
 /**
@@ -65,9 +63,8 @@ function is_password_match($password_a, $password_b)
 {
     if ($password_a === $password_b) {
         return true;
-    } else {
-        return false;
     }
+    return false;
 }
 
 /**
@@ -76,9 +73,7 @@ function is_password_match($password_a, $password_b)
 function validate_name($name)
 {
     if (ctype_alpha($name)) {
-        die("tama");
         return true;
-    } else {
-        return false;
     }
+    return false;
 }

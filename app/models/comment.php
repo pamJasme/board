@@ -49,9 +49,6 @@ class Comment extends AppModel
 
     public static function deleteComment($id) 
     {
-        if (!is_logged_in()) {
-            redirect(url('user/index'));
-        }
         $db = DB::conn();
         $db->query("DELETE FROM thread WHERE id = ?", array($id));
     }

@@ -55,10 +55,6 @@ class Thread extends AppModel
     **/
     public static function changeTitle($id, $title)
     {
-        
-        if (!is_logged_in()) {
-            redirect(url('user/index'));
-        }
         if (!isset($title)) {
             $status = "";
             return $status;
@@ -77,9 +73,6 @@ class Thread extends AppModel
     **/
     public static function deleteThread($id, $user_id) 
     {
-        if (!is_logged_in()) {
-            redirect(url('user/index'));
-        }
         $db = DB::conn();
         $query = "DELETE FROM thread, comment USING thread INNER JOIN comment
             WHERE thread.id = ? AND comment.thread_id = ? AND thread.user_id = ?";

@@ -28,6 +28,10 @@ class ThreadController extends AppController
     **/
     public function update()
     {
+        if (!is_logged_in()) {
+            redirect(url('user/index'));
+        }
+        
         $id = Param::get('id');
         $new_title = Param::get('title');
         $task = Param::get('task');

@@ -19,6 +19,10 @@ class CommentController extends AppController
     **/
     public function update()
     {
+        if (!is_logged_in()) {
+            redirect(url('user/index'));
+        }
+        
         $id = Param::get('id');
         $new_body = Param::get('body');
         switch (Param::get('task')) {
