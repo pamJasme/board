@@ -15,9 +15,11 @@ class ThreadController extends AppController
         }
         $page = Pagination::setPage(Param::get('page'));
         $row_count = Thread::getNumRows();
-        $links = Pagination::createPages($page, $row_count);
         $threads = Thread::getAll($page);
         $comments = Comment::getThreadComments($threads);
+        
+        $links = Pagination::createPages($page, $row_count);
+
         $members = User::getNewMembers();
 
         //to get posts with highest number of comments
@@ -63,10 +65,12 @@ class ThreadController extends AppController
     **/
     public function my_posts()
     {
+        $page = Pagination::setPage(Param::get('page'));
         $id = $_SESSION['user_id'];
         $own_threads = Thread::myPosts();
         $own_comments = Comment::myComments($id);
         $thread = Thread::getTrendTitle($own_comments);
+
         $this->set(get_defined_vars());
     }
 
@@ -91,7 +95,6 @@ class ThreadController extends AppController
         $date = Param::get('date');
         $trend = Param::get('trend');
         $row_count = Thread::getNumRowsCat($category, $date, $search);
-
         if (!array_filter(array($category, $date, $search))) {
             $row_count = Thread::getNumRows();
         }

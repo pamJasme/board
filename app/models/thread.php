@@ -64,7 +64,8 @@ class Thread extends AppModel
             throw new ValidationException("<span class='label label-important'>Invalid title!</span>");
         }
         $db = DB::conn();
-        $update = $db->update('thread', array('title' => $title), array('id' =>  $id));
+        $update = $db->update('thread', array('title' => $title, 'updated' => date('Y-m-d h:i:s')), 
+            array('id' =>  $id));
         return "<span class='label label-success'>Successfully changed!</span>";
     }
 
@@ -150,15 +151,8 @@ class Thread extends AppModel
     {
         $threads = array();
         $db = DB::conn();
-        if ($page == NULL) {
-            $rows = $db->rows("SELECT * FROM thread");
-            foreach ($rows as $row) {
-                $threads[] = new Thread($row);
-            }
-            return $threads;    
-        }
 
-        $rows = $db->rows("SELECT * FROM thread");
+        $rows = $db->rows("SELECT * FROM thread ORDER BY updated DESC");
         foreach ($rows as $row) {
             $threads[] = new Thread($row);
         }
@@ -200,16 +194,18 @@ class Thread extends AppModel
     /**
     * To view comments in ascending order
     **/
-    public function getComments()
+    public function getComments($page)
     {
         $comments = array();
         $db = DB::conn();
-        $rows = $db->search('comment', 'thread_id = ?', array($this->id), 'created ASC');
+        $rows = $db->search('comment', 'thread_id = ?', array($this->id), 'created DESC');
         new self($rows);
         foreach ($rows as $row) {
             $comments[] = new Comment($row);
         }
-        return $comments;
+        $limit = Pagination::ROWS_PER_PAGE;
+        $offset = ($page - 1) * $limit;
+        return array_slice($comments, $offset, $limit);
     }
 
     /**
@@ -229,6 +225,7 @@ class Thread extends AppModel
             'user_id' => $_SESSION['user_id'],
             );
         $db->insert('comment', $params);
+        $db->update('thread', array('updated' => date('Y-m-d h:i:s')), array('id' => $this->id));
     }
 
     /**
@@ -252,15 +249,15 @@ class Thread extends AppModel
         $db = DB::conn();
         $like_clause = "title LIKE ?";
         $keyword = "%$search%";
-        if ($cat_id == 0) {
+        if ($date == 0 && $cat_id == 0) {
+            $query .= "$like_clause";
+            $params = array($keyword);
+        } elseif ($cat_id == 0) {
             $query .= "created BETWEEN ? AND ? AND {$like_clause}";
             $params = array($start, $end, $keyword);
         } elseif ($date == 0) {
             $query .= "category = ? AND {$like_clause}";
             $params = array($cat_id, $keyword);
-        } elseif ($date == 0 && $cat_id == 0) {
-            $query .= "$like_clause";
-            $params = array($keyword);
         } else {
             $query .= "category = ? AND created BETWEEN ? AND ? AND {$like_clause}";
             $params = array($cat_id, $start, $end, $keyword);

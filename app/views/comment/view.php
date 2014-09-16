@@ -1,5 +1,5 @@
 <h1><?php encode_quotes($thread->title);?></h1>
-<fieldset class='well' name="comment_area">
+<div style="background-color: BlanchedAlmond; height:350px;">
   <?php foreach ($comments as $k => $v): ?>
   <div class="comment">
     <div class="meta">
@@ -30,8 +30,12 @@
     </div>
   </div>
 <?php endforeach ?>
-
-<hr>
+</div>
+<div class = "pagination pagination-centered">
+    <ul>
+        <li><?php echo $links; ?></li>
+    </ul>
+</div>
 <form class="well" method="post" action="<?php encode_quotes(url('thread/write')) ?>">
   <label>Your name</label>
   <input type="text" class="span2" name="username" value="<?php echo $_SESSION['username'] ?>" disabled>

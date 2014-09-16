@@ -85,6 +85,10 @@ class Pagination
                     return '<a href="?page=' . $prev_page . '&filter='. Param::get('filter') .
                     '&date='.Param::get('date').'&search=' .Param::get('search').'">
                     <span>&laquo;</span></a> &nbsp; &nbsp; ';
+                case 'comment':
+                    return '<a href="?page=' . $prev_page . '&thread_id='. 
+                    Param::get('thread_id') .'">
+                    <span>&laquo;</span></a> &nbsp; &nbsp; ';
                 default:
                     return '<a href="?page=' . $prev_page .'">
                     <span>&laquo;</span></a> &nbsp; &nbsp; ';
@@ -103,6 +107,10 @@ class Pagination
                 case 'filter':
                     return '<a href="?page=' . $i . '&filter='. Param::get('filter') .
                     '&date='. Param::get('date'). '&search=' .Param::get('search').'">' . $i . 
+                    '</a> &nbsp; ' ;
+                case 'comment':
+                    return '<a href="?page=' . $i . '&thread_id='. 
+                    Param::get('thread_id') .'">' . $i . 
                     '</a> &nbsp; ' ;
                 default:
                     return '<a href="?page=' . $i .'">' . $i . '</a> &nbsp; ' ;
@@ -124,6 +132,10 @@ class Pagination
                     return '<a href="?page=' . $i . '&filter='. Param::get('filter') .
                     '&date='. Param::get('date') . '&search=' .Param::get('search').'">'
                     . $i . '</a> &nbsp; ' ;
+                case 'comment':
+                    return '<a href="?page=' . $i . '&thread_id='. 
+                    Param::get('thread_id') .'">'
+                    . $i . '</a> &nbsp; ' ;
                 default:
                     return '<a href="?page=' . $i . '">'. $i . '</a> &nbsp; ' ;
             }
@@ -142,6 +154,10 @@ class Pagination
                 case 'filter':
                     return '<a href="?page=' . $next_page . '&filter='. Param::get('filter') .
                     '&date='. Param::get('date') . '&search=' .Param::get('search').'">
+                    <span>&raquo;</span></a> &nbsp; &nbsp; ';
+                case 'comment':
+                    return '<a href="?page=' . $next_page . '&thread_id='. 
+                    Param::get('thread_id') .'">
                     <span>&raquo;</span></a> &nbsp; &nbsp; ';
                 default:
                     return '<a href="?page=' . $next_page .'"><span>&raquo;</span></a> &nbsp; &nbsp; ';

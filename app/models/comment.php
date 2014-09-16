@@ -38,8 +38,11 @@ class Comment extends AppModel
     public static function myComments($id)
     {
         $db = DB::conn();
-        $rows = $db->rows("SELECT *, COUNT(*) as 'comment_count' FROM comment 
-            WHERE user_id = ?", array($id));
+        $rows = $db->rows("SELECT *, (SELECT COUNT(*) FROM comment) 
+            comment_count FROM comment INNER JOIN thread
+            ON comment.thread_id = thread.id 
+            WHERE thread.user_id = ? ORDER BY comment.created 
+                DESC LIMIT " . self::TREND_COUNT, array($id));
         return $rows;
     }
 
@@ -55,7 +58,7 @@ class Comment extends AppModel
     }
 
     /**
-    * To chenge comments on a thread
+    * To change comments on a thread
     * @param $id, $body
     **/
     public static function changeComment($id, $body)
@@ -85,7 +88,7 @@ class Comment extends AppModel
         foreach ($threads as $key) {
             $thread_comments[] = $db->row("SELECT * FROM comment INNER JOIN thread
                 ON thread.id = comment.thread_id
-                WHERE thread_id = ? ORDER BY comment.id 
+                WHERE thread.id = ? ORDER BY comment.created 
                 DESC LIMIT " . self::COMMENT_DISPLAY_COUNT, array($key->id));
         }
         return $thread_comments;

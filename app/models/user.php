@@ -2,6 +2,7 @@
 
 class User extends AppModel
 {
+    const USER_DISPLAY_LIMIT = 10;
     public $validation = array(
         'username' => array(
             'length' => array(
@@ -49,7 +50,8 @@ class User extends AppModel
     {
         $members = array();
         $db = DB::conn();
-        $row = $db->rows("SELECT username FROM user_info ORDER BY created DESC LIMIT 3");
+        $row = $db->rows("SELECT username FROM user_info 
+            ORDER BY created DESC LIMIT ". self::USER_DISPLAY_LIMIT);
         foreach ($row as $rows) {
             $members[] = new User($rows);
         }

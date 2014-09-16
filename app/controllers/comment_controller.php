@@ -7,9 +7,13 @@ class CommentController extends AppController
     **/
     public function view()
     {
+        $page = Pagination::setPage(Param::get('page'));
+        $row_count = Comment::getNumComments(Param::get('thread_id'));
         $thread = Thread::get(Param::get('thread_id'));
-        $comments = $thread->getComments();
+        $comments = $thread->getComments($page);
         $user_name = $_SESSION['username'];
+        Pagination::$pagination_page = 'comment';
+        $links = Pagination::createPages($page, $row_count);
         $this->set(get_defined_vars());
     }
 
