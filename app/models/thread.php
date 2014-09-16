@@ -105,6 +105,7 @@ class Thread extends AppModel
     public static function filter($cat_id, $date, $page, $search)
     {
         $filter_threads = array();
+        $query = "SELECT * FROM thread WHERE ";
         $db = DB::conn();
         $end = date('Y-m-d');
         $start = date('Y-m-d', strtotime("-{$date} days"));
@@ -112,18 +113,16 @@ class Thread extends AppModel
         $keyword = "%$search%";
 
         if ($date == 0 && $cat_id == 0) {
-            $query = "SELECT * FROM thread WHERE {$like_clause}";
+            $query .= "$like_clause";
             $params = array($keyword);
         } elseif ($date == 0) {
-            $query = "SELECT * FROM thread WHERE category = ? AND {$like_clause}";
+            $query .= "category = ? AND {$like_clause}";
             $params = array($cat_id, $keyword);
         } elseif ($cat_id == 0) {
-            $query = "SELECT * FROM thread 
-            WHERE created BETWEEN ? AND ? AND {$like_clause}";
+            $query .= "created BETWEEN ? AND ? AND {$like_clause}";
             $params = array($start, $end, $keyword);
         } else {
-            $query = "SELECT * FROM thread 
-            WHERE category = ? AND created BETWEEN ? AND ? AND {$like_clause}";
+            $query .= "category = ? AND created BETWEEN ? AND ? AND {$like_clause}";
             $params = array($cat_id, $start, $end, $keyword);
         }
 
@@ -135,6 +134,8 @@ class Thread extends AppModel
         foreach ($filter_threads as $key) {
             $username = User::getUsername($key->user_id);
             $key->username = $username;
+            $count = Comment::getNumComments($key->id);
+            $key->count = $count;
         }
 
         $limit = Pagination::ROWS_PER_PAGE;
@@ -147,14 +148,20 @@ class Thread extends AppModel
     **/
     public static function getAll($page)
     {
-
         $threads = array();
         $db = DB::conn();
+        if ($page == NULL) {
+            $rows = $db->rows("SELECT * FROM thread");
+            foreach ($rows as $row) {
+                $threads[] = new Thread($row);
+            }
+            return $threads;    
+        }
+
         $rows = $db->rows("SELECT * FROM thread");
         foreach ($rows as $row) {
             $threads[] = new Thread($row);
         }
-        
         $limit = Pagination::ROWS_PER_PAGE;
         $offset = ($page - 1) * $limit;
         return array_slice($threads, $offset, $limit);
@@ -170,7 +177,7 @@ class Thread extends AppModel
         foreach ($trend_id as $value) {
             $id = $value['thread_id'];
             $row = $db->row("SELECT * FROM thread where id = ?", array($id));
-            $row['count'] = $value['count'];
+            $row['count'] = $value['comment_count'];
             $trend_title[] = $row;
         }
             return $trend_title;
@@ -241,20 +248,21 @@ class Thread extends AppModel
     {
         $end = date('Y-m-d');
         $start = date('Y-m-d', strtotime("-{$date} days"));
+        $query = "SELECT COUNT(*) FROM thread WHERE ";
         $db = DB::conn();
         $like_clause = "title LIKE ?";
         $keyword = "%$search%";
         if ($cat_id == 0) {
-            $query = "SELECT COUNT(*) FROM thread 
-            WHERE created BETWEEN ? AND ? AND {$like_clause}";
+            $query .= "created BETWEEN ? AND ? AND {$like_clause}";
             $params = array($start, $end, $keyword);
-        } else if ($date == 0) {
-            $query = "SELECT COUNT(*) FROM thread 
-               WHERE category = ? AND {$like_clause}";
+        } elseif ($date == 0) {
+            $query .= "category = ? AND {$like_clause}";
             $params = array($cat_id, $keyword);
+        } elseif ($date == 0 && $cat_id == 0) {
+            $query .= "$like_clause";
+            $params = array($keyword);
         } else {
-            $query = "SELECT COUNT(*) FROM thread 
-            WHERE category = ? AND created BETWEEN ? AND ? AND {$like_clause}";
+            $query .= "category = ? AND created BETWEEN ? AND ? AND {$like_clause}";
             $params = array($cat_id, $start, $end, $keyword);
         }
         $count = $db->value($query, $params);

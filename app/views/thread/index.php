@@ -41,25 +41,27 @@
 		</ul>
 	</div>
 </div>
- 
-<div class="container-threads">   
+<div style="background-color: BlanchedAlmond; height:300px">
+<center>
 <ul class="nav nav-list">
     <li class="nav-header">Thread List (<?php echo $row_count; ?>)</li>
         <?php foreach ($threads as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
-            	<?php encode_quotes($v->title);?><br>
+            	<?php encode_quotes($v->title);?>
+            	(<?php encode_quotes($v->count);?> Posts)</a>
             	<div style="font-size: 10px; font-style: italic;">
-            		&nbsp;&nbsp;By <?php encode_quotes($v->username);?>
+            		&nbsp;&nbsp;By <b><?php encode_quotes($v->username);?></b>
             		<?php encode_quotes($v->created);?>
             	</div>
-            	</a>
+            	
             </li>
         <?php endforeach ?>
-        <a class="btn btn-medium btn-primary" href="<?php encode_quotes(url('thread/create')) ?>">Create</a><br><br>
-        <div class = "pagination pagination-centered">
+</center>
+</div>
+<center><a class="btn btn-medium btn-primary" href="<?php encode_quotes(url('thread/create')) ?>">Create</a>
+</center>
+<div class = "pagination pagination-centered">
     <ul>
         <li><?php echo $links; ?></li>
     </ul>
 </div>
-</div>
-

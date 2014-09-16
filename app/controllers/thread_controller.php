@@ -14,10 +14,13 @@ class ThreadController extends AppController
             redirect(url('user/index'));
         }
         $page = Pagination::setPage(Param::get('page'));
+        $row_count = Thread::getNumRows();
+        $links = Pagination::createPages($page, $row_count);
         $threads = Thread::getAll($page);
+        $comments = Comment::getThreadComments($threads);
         $members = User::getNewMembers();
 
-        //to get posts with highest number of threads
+        //to get posts with highest number of comments
         $trends = Comment::getTrends();
         $trend_title = Thread::getTrendTitle($trends);
         $this->set(get_defined_vars());
@@ -31,7 +34,7 @@ class ThreadController extends AppController
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
-        
+
         $id = Param::get('id');
         $new_title = Param::get('title');
         $task = Param::get('task');
@@ -78,7 +81,7 @@ class ThreadController extends AppController
 
         $page = Pagination::setPage(Param::get('page'));
         
-        //to get posts with highest number of threads
+        //to get posts with highest number of comments
         $trends = Comment::getTrends();
         $trend_title = Thread::getTrendTitle($trends);
 
@@ -94,6 +97,7 @@ class ThreadController extends AppController
         }
 
         $threads = Thread::filter($category, $date, $page, $search);
+        Pagination::$pagination_page = 'filter';
         $links = Pagination::createPages($page, $row_count);
         $this->set(get_defined_vars());
     }
