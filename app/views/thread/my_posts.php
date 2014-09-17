@@ -8,12 +8,12 @@
                 </a>
             <td>
                 <a href="<?php encode_quotes(url('thread/update', array('id' => $value->id, 'task' => 'edit')));?>">
-                    <input type="button" class ="btn btn-primary" value="Edit">
+                    <i class="icon-pencil"></i>
                 </a>
             </td>
             <td>
                 <a href="<?php encode_quotes(url('thread/update', array('id' => $value->id, 'task' => 'delete')));?>">
-                    <input type="button" class ="btn btn-primary" value="Delete">
+                    <i class="icon-trash"></i>
                 </a>
             </td>
         </tr>
