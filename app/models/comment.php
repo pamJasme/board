@@ -39,17 +39,21 @@ class Comment extends AppModel
 
     /**
     * To get logged-in user's thread comments
-    * In-progress (Working)
     */
     public static function myComments($id)
     {
+        $my_comments = array();
         $db = DB::conn();
         $rows = $db->rows("SELECT *, (SELECT COUNT(*) FROM comment) 
             comment_count FROM comment INNER JOIN thread
             ON comment.thread_id = thread.id 
             WHERE comment.user_id = ? ORDER BY comment.created 
                 DESC LIMIT " . self::TREND_COUNT, array($id));
-        return $rows;
+        foreach($rows as $row) {
+            $my_comments[] = new Thread($row);
+        }
+        return $my_comments;
+        
     }
 
     /**

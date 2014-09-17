@@ -6,7 +6,7 @@
                 <a href="<?php encode_quotes(url('comment/view', array('thread_id' => $value->id))) ?>">
                     <?php encode_quotes($value->title)?></td>
                 </a>
-            <td>
+            <td width=35px>
                 <a href="<?php encode_quotes(url('thread/update', array('id' => $value->id, 'task' => 'edit')));?>">
                     <i class="icon-pencil"></i>
                 </a>
@@ -26,10 +26,10 @@
 <div style="background-color: BlanchedAlmond; height:600px; width: 450px; float:right ">
     <span style="font-style:italic; font-color: gray">Your latest activities:</span><br><br>
 <?php foreach ($own_comments as $v): ?>
-            <a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v['id']))) ?>">
-                "<?php encode_quotes($v['body']);?>"<br>  </a>
+            <a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
+                "<?php encode_quotes($v->body);?>"<br>  </a>
                 <small style="font-style: italic"> 
                     <b>You</b>  commented on thread
-                <b><?php encode_quotes($v['title']);?></b></small><br>
+                <b><?php encode_quotes($v->title);?></b></small><br>
         <?php endforeach ?>
 </div>

@@ -4,7 +4,7 @@
 
 <div style="background-color: BlanchedAlmond; height:300px; ">
 <ul class="nav nav-list">
-    <li class="nav-header">Timeline</li>
+    <li class="nav-header">Timeline (For comments)</li>
         <?php foreach ($comments as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v['id']))) ?>">
                 "<?php encode_quotes($v['body']);?>"<br>  </a>
