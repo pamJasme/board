@@ -86,7 +86,15 @@ class User extends AppModel
             'username' => $username,
             'user_password' => $password,
         );
+        $query = "SELECT username, email FROM user_info
+                    WHERE username = ?";
+        $search = $db->row($query, array($username));
+        if ($search) {
+            throw new ExistingUserException(notice("Username/Email already used","error"));
+        }
+
         $update = $db->update('user_info', $params, array('user_id' => $user_id));
+        $db->update('comment', array('username' => $username), array('user_id' => $user_id));
         
         //returns 1;
         if (!$update) {

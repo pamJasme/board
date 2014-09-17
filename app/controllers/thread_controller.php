@@ -13,11 +13,13 @@ class ThreadController extends AppController
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
+
         $page = Pagination::setPage(Param::get('page'));
         $row_count = Thread::getNumRows();
+
         $threads = Thread::getAll($page);
         $comments = Comment::getThreadComments($threads);
-        
+
         $links = Pagination::createPages($page, $row_count);
 
         $members = User::getNewMembers();
@@ -70,7 +72,6 @@ class ThreadController extends AppController
         $own_threads = Thread::myPosts();
         $own_comments = Comment::myComments($id);
         $thread = Thread::getTrendTitle($own_comments);
-
         $this->set(get_defined_vars());
     }
 
@@ -89,8 +90,8 @@ class ThreadController extends AppController
         $search = Param::get('search');
         $category = Param::get('filter_threads');
         $date = Param::get('date');
-        $trend = Param::get('trend');
         $row_count = Thread::getNumRowsCat($category, $date, $search);
+
         if (!array_filter(array($category, $date, $search))) {
             $row_count = Thread::getNumRows();
         }

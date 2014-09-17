@@ -44,7 +44,7 @@
   <input type="hidden" name="thread_id" value="<?php encode_quotes($thread->id) ?>">
   <input type="hidden" name="page_next" value="write_end">
    <div style="float:right; font-size:20px">&larr;
-    <a href="<?php encode_quotes(url('/index'))?>">
+    <a href="<?php encode_quotes(url('thread/index'))?>">
     Back</a></div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

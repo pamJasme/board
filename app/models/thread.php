@@ -13,7 +13,7 @@ class Thread extends AppModel
     const CATEGORY_LOVE = 2;
     const CATEGORY_OTHERS = 3;
     const DATE_FILTER_YESTERDAY = 1;
-    const DATE_FILTER_ONE_WEEK = 7;
+    const DATE_FILTER_ONE_WEEK = 5;
     const DATE_FILTER_ONE_MONTH = 30;
 
     public $validation =array(
@@ -171,6 +171,7 @@ class Thread extends AppModel
     
     public static function getTrendTitle($thread_comments)
     {
+        $threads = array();
         $db = DB::conn();
         $thread_ids = array_keys($thread_comments);
         $rows = $db->rows('SELECT * FROM thread WHERE id IN (?)', array($thread_ids));

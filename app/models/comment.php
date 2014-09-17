@@ -47,7 +47,7 @@ class Comment extends AppModel
         $rows = $db->rows("SELECT *, (SELECT COUNT(*) FROM comment) 
             comment_count FROM comment INNER JOIN thread
             ON comment.thread_id = thread.id 
-            WHERE thread.user_id = ? ORDER BY comment.created 
+            WHERE comment.user_id = ? ORDER BY comment.created 
                 DESC LIMIT " . self::TREND_COUNT, array($id));
         return $rows;
     }
@@ -101,7 +101,7 @@ class Comment extends AppModel
         $db = DB::conn();
         foreach ($threads as $key) {
             $thread_comments[] = $db->row("SELECT comment.body, thread.title,  
-                user_info.username FROM comment INNER JOIN thread
+                user_info.username, thread.id FROM comment INNER JOIN thread
                 ON thread.id = comment.thread_id INNER JOIN user_info ON
                 comment.user_id=user_info.user_id
                 WHERE thread.id = ? ORDER BY comment.created 

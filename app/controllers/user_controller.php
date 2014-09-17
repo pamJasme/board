@@ -93,6 +93,10 @@ class UserController extends AppController
 
     public function edit()
     {
+        if (!is_logged_in()) {
+            redirect(url('user/index'));
+        }
+        
         $new_username = Param::get('username');
         $new_password = Param::get('password');
         $confirm_password = Param::get('match_password');
@@ -108,6 +112,8 @@ class UserController extends AppController
                 redirect(url('thread/logout'));
             }
         } catch (ValidationException $e) {
+            $status = notice($e->getMessage(), 'error');
+        } catch (ExistingUserException $e) {
             $status = notice($e->getMessage(), 'error');
         }
         $this->set(get_defined_vars());   

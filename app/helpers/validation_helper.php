@@ -41,7 +41,7 @@ function validate_username($username)
 **/
 function validate_email($email)
 {
-    return (preg_match("/^[A-z](.*)@(.*)\.(.*)/", $email));
+    return (preg_match("/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/", $email));
 }
 
 /**
@@ -76,10 +76,4 @@ function validate_name($name)
         return true;
     }
     return false;
-}
-
-function sessionRefresh($key, $value)
-{
-    $_SESSION["$key"] = $value;
-    return;
 }

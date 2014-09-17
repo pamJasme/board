@@ -36,7 +36,6 @@ class CommentController extends AppController
                 } catch (ValidationException $e) {
                     $status = notice($e->getMessage(), "error");
                 }
-                
                 break;
             case 'delete':
                 Comment::deleteComment($id);
