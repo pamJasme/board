@@ -101,14 +101,17 @@ class Comment extends AppModel
     public static function getThreadComments($threads)
     {
         $thread_comments = array();
+        $limit = self::COMMENT_DISPLAY_COUNT;
         $db = DB::conn();
+        $query = "SELECT comment.body, thread.title,  
+                    user_info.username, thread.id FROM comment INNER JOIN thread
+                    ON thread.id = comment.thread_id INNER JOIN user_info ON
+                    comment.user_id=user_info.user_id
+                    WHERE thread.id = ? ORDER BY comment.created 
+                    DESC LIMIT {$limit}";
         foreach ($threads as $key) {
-            $thread_comments[] = $db->row("SELECT comment.body, thread.title,  
-                user_info.username, thread.id FROM comment INNER JOIN thread
-                ON thread.id = comment.thread_id INNER JOIN user_info ON
-                comment.user_id=user_info.user_id
-                WHERE thread.id = ? ORDER BY comment.created 
-                DESC LIMIT " . self::COMMENT_DISPLAY_COUNT, array($key->id));
+            $params = array($key->id);
+            $thread_comments[] = $db->row($query, $params);
         }
         return array_filter($thread_comments);
     }
