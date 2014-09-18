@@ -12,8 +12,9 @@ class ThreadController extends AppController
     {
         if (!is_logged_in()) {
             redirect(url('user/index'));
+        } else {
+            redirect(url('thread/index'));
         }
-        is_logged_out();
 
         $page = Pagination::setPage(Param::get('page'));
         $row_count = Thread::getNumRows();

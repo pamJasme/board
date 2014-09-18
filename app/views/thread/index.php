@@ -39,10 +39,10 @@
 		</ul>
 	</div>
 </div>
-<div style="background-color: BlanchedAlmond; height:300px">
+<div style="background-color: lightcoral; height:300px">
 <center>
 <ul class="nav nav-list">
-    <li class="nav-header">Thread List (<?php echo $row_count; ?>)</li>
+    <h>THREAD LIST<h> (<?php echo $row_count; ?>)
         <?php foreach ($threads as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
             	<?php encode_quotes($v->title);?>

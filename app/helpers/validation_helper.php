@@ -29,17 +29,6 @@ function is_logged_in()
 }
 
 /**
-* To check if there is a running session
-**/
-function is_logged_out()
-{
-    if (isset($_SESSION['user_id'])) {
-        return;
-    }
-    redirect(url('thread/index'));
-}
-
-/**
 * To check user's username format
 **/
 function validate_username($username)
