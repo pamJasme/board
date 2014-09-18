@@ -1,4 +1,4 @@
-<div style="background-color: BlanchedAlmond; height:400px; width: 450px; float:left ">
+<div style="background-color: BlanchedAlmond; height:200px; width: 450px; float:left ">
     <table border=0><tr>
         <?php foreach ($own_threads as $v => $value): ?>
             <td style="font-style: italic" width=100px><small>Thread Title</small></td>
@@ -32,4 +32,9 @@
                     <b>You</b>  commented on thread
                 <b><?php encode_quotes($v->title);?></b></small><br>
         <?php endforeach ?>
+</div>
+<div class = "pagination pagination-centered">
+    <ul>
+        <li><?php echo $links; ?></li>
+    </ul>
 </div>

@@ -7,6 +7,9 @@ class CommentController extends AppController
     **/
     public function view()
     {
+        if (!is_logged_in()) {
+            redirect(url('user/index'));
+        }
         $page = Pagination::setPage(Param::get('page'));
         $row_count = Comment::getNumComments(Param::get('thread_id'));
         $thread = Thread::get(Param::get('thread_id'));
@@ -38,8 +41,12 @@ class CommentController extends AppController
                 }
                 break;
             case 'delete':
-                Comment::deleteComment($id);
-                redirect(url('thread/index'));
+                try {
+                    Comment::deleteComment($id);
+                    echo "<script> history.go(-1) </script>";
+                } catch (ValidationException $e) {
+                    redirect(encode_quotes('comment/view', array('thread_id' => $thread_id)));
+                }
                 break;
             default:
                 redirect(url('thread/index'));

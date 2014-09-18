@@ -54,7 +54,7 @@ class Registration extends AppModel
                 'lname' => $lname,
                 'email' => $email,
                 'created' => date('Y-m-d H:i:s'),
-                );
+        );
         $this->username = $username;
         $this->password = $user_password;
         $this->email = $email;

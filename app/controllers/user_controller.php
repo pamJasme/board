@@ -39,7 +39,7 @@ class UserController extends AppController
                 } catch (RecordNotFoundException $e) {
                     $status = notice($e->getMessage(),"error");
                 }
-            }
+        }
         $this->set(get_defined_vars());        
     }
 
@@ -105,7 +105,7 @@ class UserController extends AppController
         try {
             if (!is_password_match($new_password, $confirm_password)) {
                     throw new ValidationException("Password did not match");
-                }
+            }
             $user = new User();
             $status = $user->updateAccount($new_username, $new_password, $confirm_password, $user_id);
             if ($status == 'success') {

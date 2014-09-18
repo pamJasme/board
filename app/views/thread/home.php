@@ -2,7 +2,7 @@
 
 </div>
 
-<div style="background-color: BlanchedAlmond; height:300px; ">
+<div style="background-color: salmon; height:300px; ">
 <ul class="nav nav-list">
     <li class="nav-header">Timeline (For comments)</li>
         <?php foreach ($comments as $v): ?>
@@ -20,16 +20,16 @@
         <li><?php echo $links; ?></li>
     </ul>
 </div>
-<div style="background-color: BlanchedAlmond; height:300px; width: 450px; float: right ">
+<div style="background-color: plum; height:300px; width: 450px; float: right ">
 <ul class="nav nav-list">
-    <li class="nav-header">Members</li>
+    <li class="nav-header">New Members</li>
         <?php foreach ($members as $v): ?>
             <li><?php echo $v->username;?></li>
         <?php endforeach ?>
 </ul>
 </div>
 
-<div style="background-color: BlanchedAlmond; height:300px; width: 450px; float: left ">
+<div style="background-color: pink; height:300px; width: 450px; float: left ">
 <ul class="nav nav-list">
     <li class="nav-header">Trending posts</li>
         <?php foreach ($top_threads as $v): ?>

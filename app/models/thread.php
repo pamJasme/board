@@ -82,9 +82,16 @@ class Thread extends AppModel
     public static function deleteThread($id, $user_id) 
     {
         $db = DB::conn();
-        $query = "DELETE FROM thread, comment USING thread INNER JOIN comment
-            WHERE thread.id = ? AND comment.thread_id = ? AND thread.user_id = ?";
-        $params = array($id, $id, $user_id);
+        $search = $db->search('comment', 'thread_id = ?', array($id));
+        $query = "DELETE FROM thread";
+        if (!$search) {
+            $query .= " WHERE id = ?";
+            $params = array($id);
+        } else {
+            $query .= ", comment USING thread INNER JOIN comment
+                ON thread.id=comment.thread_id WHERE thread.id = ? AND thread.user_id = ?";
+            $params = array($id, $user_id);
+        }
         $db->query($query, $params);
     }
 
@@ -93,16 +100,19 @@ class Thread extends AppModel
     * Used for checking
     * Function is subject for modification
     **/
-    public static function myPosts()
+    public static function myPosts($page)
     {
         $own_posts = array();
         $db = DB::conn();
         $id = $_SESSION['user_id'];
-        $rows = $db->rows("SELECT * from thread WHERE user_id = ?", array($id));
+        $rows = $db->rows("SELECT * from thread
+            WHERE user_id = ? ORDER BY created DESC", array($id));
         foreach ($rows as $row) {
             $own_posts[] = new Thread($row);
         }
-        return $own_posts;
+        $limit = Pagination::ROWS_PER_PAGE;
+        $offset = ($page - 1) * $limit;
+        return array_slice($own_posts, $offset, $limit);
     }
 
     /*
@@ -174,7 +184,7 @@ class Thread extends AppModel
         $threads = array();
         $db = DB::conn();
         $thread_ids = array_keys($thread_comments);
-        $rows = $db->rows('SELECT * FROM thread WHERE id IN (?)', array($thread_ids));
+        $rows = $db->rows('SELECT * FROM thread WHERE id IN (?) ', array($thread_ids));
         foreach ($rows as $row) {
             $row['comment_count'] = $thread_comments[$row['id']];
             $threads[] = new self($row);
@@ -191,7 +201,7 @@ class Thread extends AppModel
         $db = DB::conn();
         $row = $db->row('SELECT * FROM thread WHERE id = ?', array($id));
         if (!$row) {
-            redirect("thread", "index");
+            redirect(url('thread/index'));
         }
         return new self($row);
     }
@@ -204,6 +214,9 @@ class Thread extends AppModel
         $comments = array();
         $db = DB::conn();
         $rows = $db->search('comment', 'thread_id = ?', array($this->id), 'created DESC');
+        if (!$rows) {
+            return "none";
+        }
         new self($rows);
         foreach ($rows as $row) {
             $comments[] = new Comment($row);
@@ -228,7 +241,7 @@ class Thread extends AppModel
             'username' => $comment->username,
             'body' => $comment->body,
             'user_id' => $_SESSION['user_id'],
-            );
+        );
         $db->insert('comment', $params);
         $db->update('thread', array('updated' => date('Y-m-d h:i:s')), array('id' => $this->id));
     }

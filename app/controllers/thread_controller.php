@@ -13,6 +13,7 @@ class ThreadController extends AppController
         if (!is_logged_in()) {
             redirect(url('user/index'));
         }
+        is_logged_out();
 
         $page = Pagination::setPage(Param::get('page'));
         $row_count = Thread::getNumRows();
@@ -66,12 +67,17 @@ class ThreadController extends AppController
     * To get logged-in users's threads
     **/
     public function my_posts()
-    {
+    {   
+        if (!is_logged_in()) {
+            redirect(url('user/index'));
+        }        
         $page = Pagination::setPage(Param::get('page'));
+        $row_count = Thread::getNumRows();
         $id = $_SESSION['user_id'];
-        $own_threads = Thread::myPosts();
+        $own_threads = Thread::myPosts($page);
         $own_comments = Comment::myComments($id);
         $thread = Thread::getTrendTitle($own_comments);
+        $links = Pagination::createPages($page, $row_count);
         $this->set(get_defined_vars());
     }
 
@@ -109,6 +115,9 @@ class ThreadController extends AppController
     **/
     public function write()
     {
+        if (!is_logged_in()) {
+            redirect(url('user/index'));
+        }
         $thread = Thread::get(Param::get('thread_id'));
         $comment = new Comment;
         $page = Param::get('page_next', 'write');
@@ -139,6 +148,10 @@ class ThreadController extends AppController
     **/
     public function create()
     {
+        if (!is_logged_in()) {
+            redirect(url('user/index'));
+        }
+
         $thread = new Thread;
         $thread->category = Param::get('thread_category');
         $thread->user_id = $_SESSION['user_id'];

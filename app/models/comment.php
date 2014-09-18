@@ -35,8 +35,6 @@ class Comment extends AppModel
         return $thread_comments;        
     }
 
-
-
     /**
     * To get logged-in user's thread comments
     */
@@ -92,7 +90,8 @@ class Comment extends AppModel
     public static function deleteComment($id) 
     {
         $db = DB::conn();
-        $db->query("DELETE FROM thread WHERE id = ?", array($id));
+        $db->query("DELETE FROM comment WHERE id = ?", array($id));
+        return;
     }
 
     /**
@@ -111,7 +110,6 @@ class Comment extends AppModel
                 WHERE thread.id = ? ORDER BY comment.created 
                 DESC LIMIT " . self::COMMENT_DISPLAY_COUNT, array($key->id));
         }
-        return $thread_comments;
+        return array_filter($thread_comments);
     }
 }
-

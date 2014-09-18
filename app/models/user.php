@@ -90,7 +90,7 @@ class User extends AppModel
                     WHERE username = ?";
         $search = $db->row($query, array($username));
         if ($search) {
-            throw new ExistingUserException(notice("Username/Email already used","error"));
+            throw new ExistingUserException(notice("Username already used","error"));
         }
 
         $update = $db->update('user_info', $params, array('user_id' => $user_id));
