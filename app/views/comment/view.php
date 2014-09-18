@@ -1,5 +1,5 @@
 <h1><?php encode_quotes($thread->title);?></h1>
-<div style="background-color: BlanchedAlmond; height:280px;">
+<div style="background-color: #F8ECDE; height:280px;">
   <?php if ($comments != 'none') { ?>
   <?php foreach ($comments as $k => $v): ?>
   <div class="comment">

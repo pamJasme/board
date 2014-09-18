@@ -249,7 +249,7 @@ class Thread extends AppModel
     /**
     * To count number of rows (All)
     */
-    public static function getNumRows()
+    public static function getRowCount()
     {
         $db = DB::conn();
         $count = $db->value("SELECT COUNT(*) from thread");
@@ -259,7 +259,7 @@ class Thread extends AppModel
     /**
     * To count table rows with category
     **/
-    public static function getNumRowsCat($cat_id, $date, $search)
+    public static function getRowCountCategory($cat_id, $date, $search)
     {
         $end = date('Y-m-d');
         $start = date('Y-m-d', strtotime("-{$date} days"));

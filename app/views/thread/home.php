@@ -1,8 +1,4 @@
-<div>
-
-</div>
-
-<div style="background-color: lightcoral; height:300px; ">
+<div style="background-color: #F8ECDE; height:460px; ">
 <ul class="nav nav-list">
     <li class="nav-header">Timeline (For comments)</li>
         <?php foreach ($comments as $v): ?>
@@ -11,7 +7,7 @@
                 <small style="font-style: italic"> 
                     <b><?php encode_quotes($v['username']);?></b> commented on a thread
                 <b><?php encode_quotes($v['title']);?></b></small>
-            </li>
+            </li><hr>
         <?php endforeach ?>
 </ul>
 </div>
@@ -20,7 +16,7 @@
         <li><?php echo $links; ?></li>
     </ul>
 </div>
-<div style="background-color: palevioletred; height:300px; width: 450px; float: right ">
+<div style="background-color: #F8ECDE; height:250px; width: 450px; float: right ">
 <ul class="nav nav-list">
     <li class="nav-header">New Members</li>
         <?php foreach ($members as $v): ?>
@@ -29,8 +25,9 @@
 </ul>
 </div>
 
-<div style="background-color: palevioletred; height:300px; width: 450px; float: left ">
+<div style="background-color: #F8ECDE; height:250px; width: 450px; float: left ">
 <ul class="nav nav-list">
+     <li class="nav-header">Top threads</li>
         <?php foreach ($top_threads as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
                 <?php encode_quotes($v->title);?>

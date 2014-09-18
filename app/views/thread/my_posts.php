@@ -1,4 +1,4 @@
-<div style="background-color: BlanchedAlmond; height:200px; width: 450px; float:left ">
+<div style="background-color: #F8ECDE; height:200px; width: 450px; float:left ">
     <table border=0><tr>
         <?php foreach ($own_threads as $v => $value): ?>
             <td style="font-style: italic" width=100px><small>Thread Title</small></td>
@@ -18,12 +18,12 @@
             </td>
         </tr>
         <?php endforeach ?>
-    </table>
-    <a href="<?php encode_quotes(url('thread/create')) ?>">
-        <input class="btn btn-alert" type="button" value="Create">
+    </table><br>
+    <center><a href="<?php encode_quotes(url('thread/create')) ?>">
+        <input class="btn btn-alert" type="button" value="Create"></center>
     </a>
 </div>
-<div style="background-color: BlanchedAlmond; height:600px; width: 450px; float:right ">
+<div style="background-color: #F8ECDE; height:600px; width: 450px; float:right ">
     <span style="font-style:italic; font-color: gray">Your latest activities:</span><br><br>
 <?php foreach ($own_comments as $v): ?>
             <a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
@@ -33,6 +33,7 @@
                 <b><?php encode_quotes($v->title);?></b></small><br>
         <?php endforeach ?>
 </div>
+<br>
 <div class = "pagination pagination-centered">
     <ul>
         <li><?php echo $links; ?></li>

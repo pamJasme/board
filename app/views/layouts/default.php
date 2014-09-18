@@ -13,7 +13,7 @@
     </style>
   </head>
 
-  <body background="/bootstrap/img/">
+  <body style="background-color:#A5C5AF">
         <div>
           <?php if (is_logged_in()) : ?>
             <div class="navbar navbar-inverse" style="margin-left: 100px; margin-right: 100px;">

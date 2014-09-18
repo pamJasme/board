@@ -39,10 +39,11 @@
 		</ul>
 	</div>
 </div>
-<div style="background-color: lightcoral; height:300px">
+<div style="background-color: #F8ECDE; height:450px">
 <center>
 <ul class="nav nav-list">
-    <h>THREAD LIST<h> (<?php echo $row_count; ?>)
+ <li class="nav-header">thread list
+	(<?php echo $row_count; ?>)</li>
         <?php foreach ($threads as $v): ?>
             <li><a href="<?php encode_quotes(url('comment/view', array('thread_id' => $v->id))) ?>">
             	<?php encode_quotes($v->title);?>
@@ -52,10 +53,10 @@
             		<?php encode_quotes($v->created);?>
             	</div>
             	
-            </li>
+            </li><hr>
         <?php endforeach ?>
 </center>
-</div>
+</div><br>
 <center><a class="btn btn-medium btn-primary" href="<?php encode_quotes(url('thread/create')) ?>">Create</a>
 </center>
 <div class = "pagination pagination-centered">
