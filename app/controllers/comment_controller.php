@@ -22,7 +22,6 @@ class CommentController extends AppController
 
     /**
     * To edit logged-in user's posts/comments
-    * IN PROGRESS (Working)
     **/
     public function update()
     {

@@ -61,7 +61,6 @@ class User extends AppModel
 
     /**
     * To get username
-    * Function subject for modification (WORKING)
     **/
     public static function getUsername($id)
     {

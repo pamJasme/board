@@ -97,8 +97,6 @@ class Thread extends AppModel
 
     /**
     * To get logged-in users's threads
-    * Used for checking
-    * Function is subject for modification
     **/
     public static function myPosts($page)
     {
