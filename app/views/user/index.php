@@ -1,7 +1,6 @@
 <!--
     User Login Page
 -->
-<?php $title="Login" ?>
 <div class='register' style='margin-top:100px'>
 <center>
 <form class="well" action='<?php encode_quotes(url(''));?>' method='POST'>

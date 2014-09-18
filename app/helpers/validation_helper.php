@@ -22,10 +22,9 @@ function redirect($url)
 **/
 function is_logged_in()
 {
-    if (isset($_SESSION['username'])) {
+    if (isset($_SESSION['user_id'])) {
         return true;
     }
-    
     return false;
 }
 
@@ -42,7 +41,7 @@ function validate_username($username)
 **/
 function validate_email($email)
 {
-    return (preg_match("/^[A-z](.*)@(.*)\.(.*)/", $email));
+    return (preg_match("/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/", $email));
 }
 
 /**
@@ -53,9 +52,8 @@ function is_complete($value)
     $check_if_complete = validate_between($value, NULL, NULL);
     if ($check_if_complete) {
         return false;
-    } else {
-        return true;
     }
+    return true;
 }
 
 /**
@@ -65,7 +63,17 @@ function is_password_match($password_a, $password_b)
 {
     if ($password_a === $password_b) {
         return true;
-    } else {
-        return false;
     }
+    return false;
+}
+
+/**
+* To check if names are valid
+**/
+function validate_name($name)
+{
+    if (ctype_alpha($name)) {
+        return true;
+    }
+    return false;
 }
